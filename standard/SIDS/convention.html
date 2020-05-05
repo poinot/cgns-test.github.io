@@ -1,0 +1,171 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>3. Conventions &#8212; CGNS Official Web Site</title>
+    <link rel="stylesheet" href="../../_static/p_sphinx_theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/local_fonts.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/jquery.cookie.js"></script>
+    <script src="../../_static/p_sphinx_theme.js"></script>
+    <link rel="shortcut icon" href="../../_static/CGNS_tiny.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="4. Building Block Structure Definition" href="block.html" />
+    <link rel="prev" title="2. Design Philosophy of Standard Interface Data Structures" href="design.html" /> 
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+      <div class="relbar-top">
+            
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="block.html" title="4. Building Block Structure Definition"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="design.html" title="2. Design Philosophy of Standard Interface Data Structures"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+      <li><a href="../../index.html">CGNS Official Web Site</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../standard.html" >Standard Specification</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="CGNS_SIDS.html" accesskey="U">CGNS/SIDS - Standard Interface Data Structures</a> &#187;</li> 
+      </ul>
+    </div>
+      </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="conventions">
+<h1><span class="section-number">3. </span>Conventions<a class="headerlink" href="#conventions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-structure-notation-conventions">
+<h2><span class="section-number">3.1. </span>Data Structure Notation Conventions<a class="headerlink" href="#data-structure-notation-conventions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="structured-grid-notation-and-indexing-conventions">
+<h2><span class="section-number">3.2. </span>Structured Grid Notation and Indexing Conventions<a class="headerlink" href="#structured-grid-notation-and-indexing-conventions" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="unstructured-grid-element-numbering-conventions">
+<h2><span class="section-number">3.3. </span>Unstructured Grid Element Numbering Conventions<a class="headerlink" href="#unstructured-grid-element-numbering-conventions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="d-line-elements">
+<h3><span class="section-number">3.3.1. </span>1D (Line) Elements<a class="headerlink" href="#d-line-elements" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="d-surface-elements">
+<h3><span class="section-number">3.3.2. </span>2D (Surface) Elements<a class="headerlink" href="#d-surface-elements" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="d-volume-elements">
+<h3><span class="section-number">3.3.3. </span>3D (Volume) Elements<a class="headerlink" href="#d-volume-elements" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="unstructured-grid-example">
+<h3><span class="section-number">3.3.4. </span>Unstructured Grid Example<a class="headerlink" href="#unstructured-grid-example" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="multizone-interfaces">
+<h3><span class="section-number">3.3.5. </span>Multizone interfaces<a class="headerlink" href="#multizone-interfaces" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+  <div class="sphinxlocaltoc">
+    <hr>
+    <h3><a href="../../index.html">In this page</a></h3>
+    <br>
+    <ul>
+<li><a class="reference internal" href="#">3. Conventions</a><ul>
+<li><a class="reference internal" href="#data-structure-notation-conventions">3.1. Data Structure Notation Conventions</a></li>
+<li><a class="reference internal" href="#structured-grid-notation-and-indexing-conventions">3.2. Structured Grid Notation and Indexing Conventions</a></li>
+<li><a class="reference internal" href="#unstructured-grid-element-numbering-conventions">3.3. Unstructured Grid Element Numbering Conventions</a><ul>
+<li><a class="reference internal" href="#d-line-elements">3.3.1. 1D (Line) Elements</a></li>
+<li><a class="reference internal" href="#d-surface-elements">3.3.2. 2D (Surface) Elements</a></li>
+<li><a class="reference internal" href="#d-volume-elements">3.3.3. 3D (Volume) Elements</a></li>
+<li><a class="reference internal" href="#unstructured-grid-example">3.3.4. Unstructured Grid Example</a></li>
+<li><a class="reference internal" href="#multizone-interfaces">3.3.5. Multizone interfaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+
+
+
+
+
+
+<div class="sphinxlocaltoc">
+    <hr>
+    <!-- <h3><a href="../../index.html">Home page</a></h3> -->
+    <h3><a href="../../current/news.html">News</a></h3>
+    <!-- <h3><a href="../CGNS_SIDS.html">CGNS/SIDS</a></h3> -->
+    <h3><a href="../../governance/support.html">Support</a></h3>
+    <!-- <h3><a href="../../general/glossary.html">Glossary</a></h3> -->
+    <h3><a href="../../site.html">Site map</a></h3>
+    <br>
+    <hr>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+      <div class="relbar-bottom">
+            
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="block.html" title="4. Building Block Structure Definition"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="design.html" title="2. Design Philosophy of Standard Interface Data Structures"
+             >previous</a> &nbsp; &nbsp;</li>
+      <li><a href="../../index.html">CGNS Official Web Site</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../standard.html" >Standard Specification</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="CGNS_SIDS.html" >CGNS/SIDS - Standard Interface Data Structures</a> &#187;</li> 
+      </ul>
+    </div>
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1991-2020, CGNS Steering Commmittee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.1.
+    </div>
+      <!-- PSphinxTheme -->
+  </body>
+</html>

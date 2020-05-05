@@ -1,0 +1,187 @@
+
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>9. Boundary Conditions &#8212; CGNS Official Web Site</title>
+    <link rel="stylesheet" href="../../_static/p_sphinx_theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/local_fonts.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/language_data.js"></script>
+    <script src="../../_static/jquery.cookie.js"></script>
+    <script src="../../_static/p_sphinx_theme.js"></script>
+    <link rel="shortcut icon" href="../../_static/CGNS_tiny.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="10. Governing Flow Equations" href="equation.html" />
+    <link rel="prev" title="8. Multizone Interface Connectivity" href="multizone.html" /> 
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head><body>
+      <div class="relbar-top">
+            
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="equation.html" title="10. Governing Flow Equations"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="multizone.html" title="8. Multizone Interface Connectivity"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+      <li><a href="../../index.html">CGNS Official Web Site</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../standard.html" >Standard Specification</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="CGNS_SIDS.html" accesskey="U">CGNS/SIDS - Standard Interface Data Structures</a> &#187;</li> 
+      </ul>
+    </div>
+      </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="boundary-conditions">
+<h1><span class="section-number">9. </span>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="boundary-condition-structures-overview">
+<h2><span class="section-number">9.1. </span>Boundary Condition Structures Overview<a class="headerlink" href="#boundary-condition-structures-overview" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="zonal-boundary-condition-structure-definition-zonebc-t">
+<h2><span class="section-number">9.2. </span>Zonal Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">ZoneBC_t</span></code><a class="headerlink" href="#zonal-boundary-condition-structure-definition-zonebc-t" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="boundary-condition-structure-definition-bc-t">
+<h2><span class="section-number">9.3. </span>Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">BC_t</span></code><a class="headerlink" href="#boundary-condition-structure-definition-bc-t" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="boundary-condition-data-set-structure-definition-bcdataset-t">
+<h2><span class="section-number">9.4. </span>Boundary Condition Data Set Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCDataSet_t</span></code><a class="headerlink" href="#boundary-condition-data-set-structure-definition-bcdataset-t" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="boundary-condition-data-structure-definition-bcdata-t">
+<h2><span class="section-number">9.5. </span>Boundary Condition Data Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCData_t</span></code><a class="headerlink" href="#boundary-condition-data-structure-definition-bcdata-t" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="boundary-condition-property-structure-definition-bcproperty-t">
+<h2><span class="section-number">9.6. </span>Boundary Condition Property Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCProperty_t</span></code><a class="headerlink" href="#boundary-condition-property-structure-definition-bcproperty-t" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="wall-function-structure-definition-wallfunction-t">
+<h3><span class="section-number">9.6.1. </span>Wall Function Structure Definition: <code class="docutils literal notranslate"><span class="pre">WallFunction_t</span></code><a class="headerlink" href="#wall-function-structure-definition-wallfunction-t" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="area-structure-definition-area-t">
+<h3><span class="section-number">9.6.2. </span>Area Structure Definition: <code class="docutils literal notranslate"><span class="pre">Area_t</span></code><a class="headerlink" href="#area-structure-definition-area-t" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="boundary-condition-type-structure-definition-bctype-t">
+<h2><span class="section-number">9.7. </span>Boundary Condition Type Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCType_t</span></code><a class="headerlink" href="#boundary-condition-type-structure-definition-bctype-t" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="matching-boundary-condition-data-sets">
+<h2><span class="section-number">9.8. </span>Matching Boundary Condition Data Sets<a class="headerlink" href="#matching-boundary-condition-data-sets" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="boundary-condition-specification-data">
+<h2><span class="section-number">9.9. </span>Boundary Condition Specification Data<a class="headerlink" href="#boundary-condition-specification-data" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="boundary-condition-examples">
+<h2><span class="section-number">9.10. </span>Boundary Condition Examples<a class="headerlink" href="#boundary-condition-examples" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+  <div class="sphinxlocaltoc">
+    <hr>
+    <h3><a href="../../index.html">In this page</a></h3>
+    <br>
+    <ul>
+<li><a class="reference internal" href="#">9. Boundary Conditions</a><ul>
+<li><a class="reference internal" href="#boundary-condition-structures-overview">9.1. Boundary Condition Structures Overview</a></li>
+<li><a class="reference internal" href="#zonal-boundary-condition-structure-definition-zonebc-t">9.2. Zonal Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">ZoneBC_t</span></code></a></li>
+<li><a class="reference internal" href="#boundary-condition-structure-definition-bc-t">9.3. Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">BC_t</span></code></a></li>
+<li><a class="reference internal" href="#boundary-condition-data-set-structure-definition-bcdataset-t">9.4. Boundary Condition Data Set Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCDataSet_t</span></code></a></li>
+<li><a class="reference internal" href="#boundary-condition-data-structure-definition-bcdata-t">9.5. Boundary Condition Data Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCData_t</span></code></a></li>
+<li><a class="reference internal" href="#boundary-condition-property-structure-definition-bcproperty-t">9.6. Boundary Condition Property Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCProperty_t</span></code></a><ul>
+<li><a class="reference internal" href="#wall-function-structure-definition-wallfunction-t">9.6.1. Wall Function Structure Definition: <code class="docutils literal notranslate"><span class="pre">WallFunction_t</span></code></a></li>
+<li><a class="reference internal" href="#area-structure-definition-area-t">9.6.2. Area Structure Definition: <code class="docutils literal notranslate"><span class="pre">Area_t</span></code></a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#boundary-condition-type-structure-definition-bctype-t">9.7. Boundary Condition Type Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCType_t</span></code></a></li>
+<li><a class="reference internal" href="#matching-boundary-condition-data-sets">9.8. Matching Boundary Condition Data Sets</a></li>
+<li><a class="reference internal" href="#boundary-condition-specification-data">9.9. Boundary Condition Specification Data</a></li>
+<li><a class="reference internal" href="#boundary-condition-examples">9.10. Boundary Condition Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+
+
+
+
+
+
+
+<div class="sphinxlocaltoc">
+    <hr>
+    <!-- <h3><a href="../../index.html">Home page</a></h3> -->
+    <h3><a href="../../current/news.html">News</a></h3>
+    <!-- <h3><a href="../CGNS_SIDS.html">CGNS/SIDS</a></h3> -->
+    <h3><a href="../../governance/support.html">Support</a></h3>
+    <!-- <h3><a href="../../general/glossary.html">Glossary</a></h3> -->
+    <h3><a href="../../site.html">Site map</a></h3>
+    <br>
+    <hr>
+</div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+      <div class="relbar-bottom">
+            
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="equation.html" title="10. Governing Flow Equations"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="multizone.html" title="8. Multizone Interface Connectivity"
+             >previous</a> &nbsp; &nbsp;</li>
+      <li><a href="../../index.html">CGNS Official Web Site</a> &#187;</li>
+
+          <li class="nav-item nav-item-1"><a href="../../standard.html" >Standard Specification</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="CGNS_SIDS.html" >CGNS/SIDS - Standard Interface Data Structures</a> &#187;</li> 
+      </ul>
+    </div>
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 1991-2020, CGNS Steering Commmittee.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 3.0.1.
+    </div>
+      <!-- PSphinxTheme -->
+  </body>
+</html>
