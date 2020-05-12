@@ -57,4 +57,59 @@ vice-versa.
    is not provided, and flow solvers are free to enforce any
    appropriate boundary condition equations. 
 
+
+
+Block quotes:
+----------------
+
+    This theory, that is mine, is mine.
+
+    -- Anne Elk (Miss)
+
+
+Simple Table
+-----------------
+
+.. cssclass:: table-bordered
+	      
++--------+--------+-----------+
+| Header | Header with 2 cols |
++========+========+===========+
+| A      | Lists: | **C**     |
++--------+  - aha +-----------+
+| B::    |  - yes | | a block |
+|        |        |   of text |
+|  *hey* |  #. hi | | a break |
++--------+--------+-----------+
+
+
+Citation
+------------
+
+In the text [2]_, [1]_, [CIT2002]_.
+
+.. [2] In the footnote.
+       
+.. [1] A footnote contains body elements, consistently
+   indented by at least 3 spaces.
+
+.. [CIT2002] Just like a footnote, except the label is
+   textual.
+
+.. _Python: http://www.python.org
+
+.. |example| function:: module=xml.xslt class=Processor
+
+.. _example:
+
+The "_example" target above points to this paragraph.
+
+.. note::
+
+   if you do not read the doc
+
+.. warning::
+
+   no way you succeed
+
 .. last line

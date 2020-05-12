@@ -256,9 +256,9 @@ img.align-center, .figure.align-center, object.align-center {
 /* -- sidebars -------------------------------------------------------------- */
 
 div.sidebar {
-    margin: 0 0 0.5em 0.5em;
+    margin: 0 0 0.5em 1em;
     border: 1px solid #ddb;
-    padding: 5px 5px 0 5px;
+    padding: 7px 7px 0 7px;
     background-color: #ffe;
     width: 40%;
     float: right;
@@ -311,7 +311,7 @@ div.body p.centered {
 /* -- tables ---------------------------------------------------------------- */
 
 table.docutils {
-    border: 0;
+    border: 1;
     border-collapse: collapse;
 }
 
@@ -489,7 +489,6 @@ tt.xref, a tt {
 
 h1 tt, h2 tt, h3 tt, h4 tt, h5 tt, h6 tt {
     background-color: transparent;
-    text-align: left;
 }
 
 .viewcode-link {

@@ -43,6 +43,8 @@ applications.
 Quick Links
 -----------
 
+.. cssclass:: table-bordered
+
 .. list-table::
    :widths: 33 34 33
    :width: 100%
@@ -60,10 +62,10 @@ Quick Links
    * - Example CGNS Files
      - Proposals for Extensions (CPEX)
      - FAQs
-       
+
 Documentation links
 -------------------
-       
+
 .. list-table::
    :widths: 33 34 33
    :width: 100%
