@@ -82,9 +82,18 @@
 <li><a class="reference internal" href="#data-structure-notation-conventions">3.1. Data Structure Notation Conventions</a></li>
 <li><a class="reference internal" href="#structured-grid-notation-and-indexing-conventions">3.2. Structured Grid Notation and Indexing Conventions</a></li>
 <li><a class="reference internal" href="#unstructured-grid-element-numbering-conventions">3.3. Unstructured Grid Element Numbering Conventions</a><ul>
-<li><a class="reference internal" href="#d-line-elements">3.3.1. 1D (Line) Elements</a></li>
+<li><a class="reference internal" href="#d-line-elements">3.3.1. 1-D (Line) Elements</a><ul>
+<li><a class="reference internal" href="#linear-and-quadratic-elements">3.3.1.1. Linear and Quadratic Elements</a></li>
+<li><a class="reference internal" href="#cubic-elements">3.3.1.2. Cubic Elements</a></li>
+<li><a class="reference internal" href="#quartic-elements">3.3.1.3. Quartic Elements</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#d-surface-elements">3.3.2. 2D (Surface) Elements</a></li>
-<li><a class="reference internal" href="#d-volume-elements">3.3.3. 3D (Volume) Elements</a></li>
+<li><a class="reference internal" href="#d-volume-elements">3.3.3. 3D (Volume) Elements</a><ul>
+<li><a class="reference internal" href="#id1">3.3.3.1. Linear and Quadratic Elements</a></li>
+<li><a class="reference internal" href="#id2">3.3.3.2. Cubic Elements</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#unstructured-grid-example">3.3.4. Unstructured Grid Example</a></li>
 <li><a class="reference internal" href="#multizone-interfaces">3.3.5. Multizone interfaces</a></li>
 </ul>
@@ -132,13 +141,91 @@
 <div class="section" id="unstructured-grid-element-numbering-conventions">
 <h2><span class="section-number">3.3. </span>Unstructured Grid Element Numbering Conventions<a class="headerlink" href="#unstructured-grid-element-numbering-conventions" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="d-line-elements">
-<h3><span class="section-number">3.3.1. </span>1D (Line) Elements<a class="headerlink" href="#d-line-elements" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">3.3.1. </span>1-D (Line) Elements<a class="headerlink" href="#d-line-elements" title="Permalink to this headline">¶</a></h3>
+<p>1-D elements represent geometrically a line (or bar).
+The linear form, <code class="docutils literal notranslate"><span class="pre">BAR_2</span></code>, is composed of two nodes at each extremity
+of the line.
+The quadratic form, <code class="docutils literal notranslate"><span class="pre">BAR_3</span></code>, has an additional node located at
+the middle of the line.
+The cubic form of the line, <code class="docutils literal notranslate"><span class="pre">BAR_4</span></code>, contains two nodes
+interior to the endpoints.
+The quartic form of the line, <code class="docutils literal notranslate"><span class="pre">BAR_5</span></code>, contains three nodes
+interior to the endpoints.</p>
+<div class="section" id="linear-and-quadratic-elements">
+<h4><span class="section-number">3.3.1.1. </span>Linear and Quadratic Elements<a class="headerlink" href="#linear-and-quadratic-elements" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/bar_2.png"><img alt="../../_images/bar_2.png" src="../../_images/bar_2.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">BAR_2</span></code></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/bar_3.png"><img alt="../../_images/bar_3.png" src="../../_images/bar_3.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">BAR_3</span></code></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="cubic-elements">
+<h4><span class="section-number">3.3.1.2. </span>Cubic Elements<a class="headerlink" href="#cubic-elements" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/bar_4.png"><img alt="../../_images/bar_4.png" src="../../_images/bar_4.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">BAR_4</span></code></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="quartic-elements">
+<h4><span class="section-number">3.3.1.3. </span>Quartic Elements<a class="headerlink" href="#quartic-elements" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/bar_5.png"><img alt="../../_images/bar_5.png" src="../../_images/bar_5.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">BAR_5</span></code></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Nodes are uniformly spaced on all edges for all higher order elements.</p>
+</div>
+</div>
 </div>
 <div class="section" id="d-surface-elements">
 <h3><span class="section-number">3.3.2. </span>2D (Surface) Elements<a class="headerlink" href="#d-surface-elements" title="Permalink to this headline">¶</a></h3>
+<p>2-D elements represent a surface in either 2-D or 3-D space.
+Note that in physical space, the surface need not be planar, but
+may be curved.
+In a 2-D mesh the elements represent the cells themselves; in a 3-D
+mesh they represent faces.
+CGNS supports two shapes of 2-D elements - triangles
+and quadrangles.</p>
+<p>The normal vector of a 2-D element is computed using the cross product
+of a vector from the first to second node, with a vector from the first
+to third node.
+The direction of the normal is such that the three vectors
+(i.e., <img alt="inline_image_N21" src="../../_images/N21.gif" />, <img alt="inline_image_N31" src="../../_images/N31.gif" />, and
+<img alt="inline_image_N" src="../../_images/N.gif" />) form a right-handed triad.</p>
+<p><img alt="inline_image_normal" src="../../_images/normal.gif" /></p>
+<p>In a 2-D mesh, all elements must be oriented the same way; i.e., all
+normals must point toward the same side of the mesh.</p>
 </div>
 <div class="section" id="d-volume-elements">
 <h3><span class="section-number">3.3.3. </span>3D (Volume) Elements<a class="headerlink" href="#d-volume-elements" title="Permalink to this headline">¶</a></h3>
+<p>Six types of triangular elements are supported in CGNS, <code class="docutils literal notranslate"><span class="pre">TRI_3</span></code>,
+<code class="docutils literal notranslate"><span class="pre">TRI_6</span></code>, <code class="docutils literal notranslate"><span class="pre">TRI_9</span></code>, <code class="docutils literal notranslate"><span class="pre">TRI_10</span></code>, <code class="docutils literal notranslate"><span class="pre">TRI_12</span></code>, and <code class="docutils literal notranslate"><span class="pre">TRI_15</span></code>.
+<code class="docutils literal notranslate"><span class="pre">TRI_3</span></code> elements are composed of three nodes located at the
+three geometric corners of the triangle.
+<code class="docutils literal notranslate"><span class="pre">TRI_6</span></code> elements have three additional nodes located at the
+middles of the three edges.
+The cubic forms of triangular elements, <code class="docutils literal notranslate"><span class="pre">TRI_9</span></code> and <code class="docutils literal notranslate"><span class="pre">TRI_10</span></code>
+contain two interior nodes along each edge, and an interior face node
+in the case of <code class="docutils literal notranslate"><span class="pre">TRI_10</span></code>.
+The quartic forms of triangular elements, <code class="docutils literal notranslate"><span class="pre">TRI_12</span></code> and <code class="docutils literal notranslate"><span class="pre">TRI_15</span></code>
+contain three interior nodes along each edge, and three interior face nodes
+in the case of <code class="docutils literal notranslate"><span class="pre">TRI_15</span></code>.</p>
+<div class="section" id="id1">
+<h4><span class="section-number">3.3.3.1. </span>Linear and Quadratic Elements<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/tri_3_6.png"><img alt="../../_images/tri_3_6.png" src="../../_images/tri_3_6.png" style="width: 800px;" /></a>
+</div>
+</div>
+<div class="section" id="id2">
+<h4><span class="section-number">3.3.3.2. </span>Cubic Elements<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../../_images/tri_9_10.png"><img alt="../../_images/tri_9_10.png" src="../../_images/tri_9_10.png" style="width: 800px;" /></a>
+</div>
+</div>
 </div>
 <div class="section" id="unstructured-grid-example">
 <h3><span class="section-number">3.3.4. </span>Unstructured Grid Example<a class="headerlink" href="#unstructured-grid-example" title="Permalink to this headline">¶</a></h3>

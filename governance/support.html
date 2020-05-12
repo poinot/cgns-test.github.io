@@ -75,10 +75,16 @@
       <ul>
 <li><a class="reference internal" href="#">Support</a><ul>
 <li><a class="reference internal" href="#discussion-list">Discussion list</a></li>
-<li><a class="reference internal" href="#doc-conventions-for-these-cgns-web-pages">Doc Conventions for these CGNS web pages</a></li>
-<li><a class="reference internal" href="#block-quotes">Block quotes:</a></li>
+<li><a class="reference internal" href="#doc-conventions-for-these-cgns-web-pages">Doc Conventions for these CGNS web pages</a><ul>
+<li><a class="reference internal" href="#header">header</a></li>
+<li><a class="reference internal" href="#internal-link">Internal link</a></li>
+<li><a class="reference internal" href="#block-quote">Block quote</a></li>
 <li><a class="reference internal" href="#simple-table">Simple Table</a></li>
+<li><a class="reference internal" href="#image">Image</a></li>
 <li><a class="reference internal" href="#citation">Citation</a></li>
+<li><a class="reference internal" href="#admonition">Admonition</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -112,13 +118,15 @@
   <div class="section" id="support">
 <span id="id1"></span><h1>Support<a class="headerlink" href="#support" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="discussion-list">
-<h2>Discussion list<a class="headerlink" href="#discussion-list" title="Permalink to this headline">¶</a></h2>
+<span id="supportcgnstalk"></span><h2>Discussion list<a class="headerlink" href="#discussion-list" title="Permalink to this headline">¶</a></h2>
 <p>This is a mailman system, if you want to join you have
 <a class="reference external" href="https://lists.nasa.gov/mailman/listinfo/cgnstalk/">to register on this page</a></p>
 <p>Doc is built using <a class="reference internal" href="../general/glossary.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a></p>
 </div>
 <div class="section" id="doc-conventions-for-these-cgns-web-pages">
 <h2>Doc Conventions for these CGNS web pages<a class="headerlink" href="#doc-conventions-for-these-cgns-web-pages" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="header">
+<h3>header<a class="headerlink" href="#header" title="Permalink to this headline">¶</a></h3>
 <div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="gh">Top level header</span>
 <span class="gh">================</span>
 
@@ -130,6 +138,9 @@
 
 <span class="gh">Fourth level</span>
 <span class="gh">~~~~~~~~~~~~</span>
+
+<span class="gh">Fith level</span>
+<span class="gh">++++++++++</span>
 </pre></div>
 </div>
 <p>The index is generated, you just have to mention an index entry in the text.
@@ -153,15 +164,33 @@ appropriate boundary condition equations.
 </pre></div>
 </div>
 </div>
-<div class="section" id="block-quotes">
-<h2>Block quotes:<a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="internal-link">
+<h3>Internal link<a class="headerlink" href="#internal-link" title="Permalink to this headline">¶</a></h3>
+<p>An internal link is composed of its <em>anchor</em> (the place in the web site
+where you want to go to) and a <em>reference</em> (the words wich triggers
+the jump to the anchor).</p>
+<p>An <em>anchor</em> is defined with:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_ThisIsThePlaceYouWantToJumpTo:</span>
+</pre></div>
+</div>
+<p>Note the leading underscode and the single colon. The anchor test
+should be contiguous and we suggest using the camel case syntax.</p>
+<p>The actual link is inserted with:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>You read this text with your eyes but you
+can also <span class="na">:ref:</span><span class="nv">`click on to jump elsewhere &lt;ThisIsThePlaceYouWantToJumpTo&gt;`</span>.
+</pre></div>
+</div>
+<p>The anchor in into angular brackets, the clickable text is user defined.</p>
+</div>
+<div class="section" id="block-quote">
+<h3>Block quote<a class="headerlink" href="#block-quote" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>This theory, that is mine, is mine.</p>
 <p class="attribution">—Anne Elk (Miss)</p>
 </div></blockquote>
 </div>
 <div class="section" id="simple-table">
-<h2>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h2>
+<h3>Simple Table<a class="headerlink" href="#simple-table" title="Permalink to this headline">¶</a></h3>
 <table class="table-bordered docutils align-default">
 <colgroup>
 <col style="width: 30%" />
@@ -203,8 +232,47 @@ of text</div>
 </tbody>
 </table>
 </div>
+<div class="section" id="image">
+<h3>Image<a class="headerlink" href="#image" title="Permalink to this headline">¶</a></h3>
+<p>There are several ways to insert an image.
+The first example adds an
+image as a new paragraph:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">image</span><span class="p">::</span> ../path/to/image/file.png
+   <span class="nc">:width:</span> 200px
+   <span class="nc">:align:</span> center
+</pre></div>
+</div>
+<p>The second way is to <em>inline</em> the image so that it appears in the text
+without creating a new paragraph. You have to declare the image using
+a label enclosed with vertical bars:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">|inline_image_label|</span> <span class="ow">image</span><span class="p">::</span> ../../path/to/image/file.png
+</pre></div>
+</div>
+<p>Then you refer to thus label in the text where you want the insertion:</p>
+<div class="highlight-rest notranslate"><div class="highlight"><pre><span></span>When you read this text you have an image like |inline_image_label| without
+any break.
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Preferred image formats are <code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.jpg</span></code>, <code class="docutils literal notranslate"><span class="pre">.gif</span></code> or even <code class="docutils literal notranslate"><span class="pre">.svg</span></code>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Image file path is relative to current doc directory and should refer to
+the <code class="docutils literal notranslate"><span class="pre">images</span></code> directory where all images are. It is sometimes a bit
+difficult to find out which is the level of directory you are into. You
+have to go back to the root directory of the doc generation, you add as
+many <code class="docutils literal notranslate"><span class="pre">../</span></code> as you entered directories up to your file.
+The root directory is the one where you can see <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> or <code class="docutils literal notranslate"><span class="pre">source</span></code>.</p>
+<p>For example, if you are editing <code class="docutils literal notranslate"><span class="pre">source/standard/SIDS/convention.rst</span></code>
+an image path should have three backwards items, <code class="docutils literal notranslate"><span class="pre">../../..</span></code> which are
+related to <code class="docutils literal notranslate"><span class="pre">source/standard/SIDS</span></code>.</p>
+<p>Your image in this file has the path: <code class="docutils literal notranslate"><span class="pre">../../../images/sids/figs/bar_2.png</span></code></p>
+</div>
+</div>
 <div class="section" id="citation">
-<h2>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h2>
+<h3>Citation<a class="headerlink" href="#citation" title="Permalink to this headline">¶</a></h3>
 <p>In the text <a class="footnote-reference brackets" href="#id5" id="id2">2</a>, <a class="footnote-reference brackets" href="#id6" id="id3">1</a>, <a class="reference internal" href="#cit2002" id="id4"><span>[CIT2002]</span></a>.</p>
 <dl class="footnote brackets">
 <dt class="label" id="id5"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
@@ -227,6 +295,10 @@ textual.</p>
 <dd></dd></dl>
 
 <p id="example">The “_example” target above points to this paragraph.</p>
+</div>
+<div class="section" id="admonition">
+<h3>Admonition<a class="headerlink" href="#admonition" title="Permalink to this headline">¶</a></h3>
+<p>A set of special blocks are called <em>admonitions</em>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>if you do not read the doc</p>
@@ -234,6 +306,7 @@ textual.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>no way you succeed</p>
+</div>
 </div>
 </div>
 </div>

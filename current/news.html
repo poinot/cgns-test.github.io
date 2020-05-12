@@ -78,6 +78,7 @@
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">News</a><ul>
+<li><a class="reference internal" href="#hot-topics">Hot topics</a></li>
 <li><a class="reference internal" href="#previous-releases">Previous releases</a></li>
 </ul>
 </li>
@@ -111,17 +112,25 @@
           <div class="document clearer body">
             
   <div class="section" id="news">
-<h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
-<p>The news below are listed by date. There is a specific section for
-the documentation news and fixes and end of this page.</p>
-<div class="sidebar">
-<p class="sidebar-title">DO NOT MISS…</p>
+<span id="latestnews"></span><h1>News<a class="headerlink" href="#news" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="hot-topics">
+<h2>Hot topics<a class="headerlink" href="#hot-topics" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>New web site layout</p>
+<ul class="simple">
+<li><p>the pages you are reading now are test pages</p></li>
+<li><p>send feedback to the CGNS mailing list</p></li>
+<li><p>see how to contribute</p></li>
+</ul>
+</div>
+<div class="admonition-do-not-miss admonition">
+<p class="admonition-title">DO NOT MISS…</p>
 <ul class="simple">
 <li><p>Next Telecon May 3rd, 4PM (CST)</p></li>
 <li><p>AIAA Scitech 2021 Nashville</p></li>
 </ul>
 </div>
-<p>The latest news item:</p>
 <div class="topic">
 <p class="topic-title">March 4, 2020 - <a class="reference external" href="https://github.com/CGNS/CGNS/releases/tag/v4.1.0">version v4.1.0</a> of the CGNS Software is released.</p>
 <ul class="simple">
@@ -129,8 +138,11 @@ the documentation news and fixes and end of this page.</p>
 <li><p>Added <span class="xref std std-ref">CPEX 43</span> Family hierarchy as a tree (<a class="reference external" href="https://cgnsorg.atlassian.net/projects/CGNS/issues/CGNS-180">#CGNS-180</a>).</p></li>
 </ul>
 </div>
+</div>
 <div class="section" id="previous-releases">
 <h2>Previous releases<a class="headerlink" href="#previous-releases" title="Permalink to this headline">¶</a></h2>
+<p>The news below are listed by date. There is a specific section for
+the documentation news and fixes and end of this page.</p>
 <div class="topic">
 <p class="topic-title">Febuary 17, 2020 - <a class="reference external" href="https://github.com/CGNS/CGNS/releases/tag/v3.4.1">version v3.4.1</a> (patch) of the CGNS Software is released.</p>
 <ul class="simple">
@@ -1000,31 +1012,31 @@ Windows NT and Linux !!!</p></li>
 </ul>
 </div>
 <p>Added external link image to places it was missing.
-New Parallel CGNS capability.
-.. topic:: 15 Feb 2013</p>
-<blockquote>
-<div><ul class="simple">
+New Parallel CGNS capability.</p>
+<div class="topic">
+<p class="topic-title">15 Feb 2013</p>
+<ul class="simple">
 <li><p>Introduced Version 3.2 (beta).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>Added AdditionalFamilyName_t under BC_t, Zone_t, and ZoneSubRegion_t, and added FamilyName_t under Family_t (a hierarchy of families is now possible); according to CPEX 0033 and 0034.
-Added new cubic elements in Conventions, according to CPEX 0036.
-.. topic:: 15 Feb 2013</p>
-<blockquote>
-<div><ul class="simple">
+Added new cubic elements in Conventions, according to CPEX 0036.</p>
+<div class="topic">
+<p class="topic-title">15 Feb 2013</p>
+<ul class="simple">
 <li><p>Changes associated with update to 3.1.4.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>Updated MLL to version 3.1.15: One set of changes is in BC and include new description under location, as well as under “Notes: (see CPEX 0031)”. Another change is in File Operations to the default for CG_CONFIG_COMPRESS.
 Added new function, cg_precision, to read precision (32 or 64 bit) in the MLL File Operations.
 Updated SIDS to version 3.1.8: Changes are in BC and include modified table describing usage of GridLocation vis CellDimension under BC_t.
-Updated CGNSTools to version 3.1.2: Added new Tools description under CGNSTools.
-.. topic:: 11 Dec 2012</p>
-<blockquote>
-<div><ul class="simple">
+Updated CGNSTools to version 3.1.2: Added new Tools description under CGNSTools.</p>
+<div class="topic">
+<p class="topic-title">11 Dec 2012</p>
+<ul class="simple">
 <li><p>Posted draft minutes from the December 10, 2012 (PDF) Steering Committee telecon.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">25 Oct 2012</p>
 <ul class="simple">
@@ -1128,6 +1140,13 @@ Updated CGNSTools to version 3.1.2: Added new Tools description under CGNSTools.
 </ul>
 </div>
 <div class="topic">
+<p class="topic-title">31 Aug 2011</p>
+<ul class="simple">
+<li><p>Posted draft minutes from the August 30, 2011 (PDF) Steering Com</p></li>
+<li><p>mittee telecon. (Other Minutes from April 19, 2011 (PDF) and June 7, 2011 (PDF) are also available.)</p></li>
+</ul>
+</div>
+<div class="topic">
 <p class="topic-title">11 Aug 2011</p>
 <ul class="simple">
 <li><p>Added minor clarification in Element Connectivity in the Mid Level documentation, regarding global numbering system to insure that every element within a zone has a unique number.</p></li>
@@ -1154,13 +1173,13 @@ Updated CGNSTools to version 3.1.2: Added new Tools description under CGNSTools.
 <p>In MLL, added clarity that in Fortran, float values are Real*4, in: Special Boundary Condition Properties, Gravity, Axisymmetry, Rotating Coordinates, Special Grid Connectivity Properties.
 In MLL, added clarity that for RotationAngle, if rotating about more than 1 axis, then it is done in a particular order in Special Grid Connectivity Properties.
 In SIDS, added clarity that if rotating about more than 1 axis, then it is done in a particular order in Periodic_t and in Data-Name Identifiers for Rigid Grid Motion.
-In SIDS, corrected GridLocation definitions for ZoneSubRegion_t.
-.. topic:: 28 Apr 2011</p>
-<blockquote>
-<div><ul class="simple">
+In SIDS, corrected GridLocation definitions for ZoneSubRegion_t.</p>
+<div class="topic">
+<p class="topic-title">28 Apr 2011</p>
+<ul class="simple">
 <li><p>In SIDS, added ZoneSubRegion_t node under Zone_t (mistakenly left out) in Zone_t. Also minor descriptor change regarding file mapping in intro.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">26 Apr 2011</p>
 <ul class="simple">
@@ -1174,13 +1193,13 @@ In SIDS, corrected GridLocation definitions for ZoneSubRegion_t.
 </ul>
 </div>
 <p>SIDS, SIDS File Mapping and MLL documentation all updated to include CPEX 0027 (Time-dependent Connectivities), CPEX 0030 (Regions) and CPEX 0031 (General SIDS Improvements).
-Added CGIO User’s Guide which documents the low-level interface replacement for the ADF Core routines. The CGIO calls work for both ADF and HDF5.
-.. topic:: 23 Mar 2011</p>
-<blockquote>
-<div><ul class="simple">
+Added CGIO User’s Guide which documents the low-level interface replacement for the ADF Core routines. The CGIO calls work for both ADF and HDF5.</p>
+<div class="topic">
+<p class="topic-title">23 Mar 2011</p>
+<ul class="simple">
 <li><p>Added cg_boco_gridlocation_read and write functions to Mid-Level Library.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">04 Mar 2011</p>
 <ul class="simple">
@@ -1200,13 +1219,13 @@ Added CGIO User’s Guide which documents the low-level interface replacement fo
 </ul>
 </div>
 <p>Posted new SIDS-to-Python file mapping manual (PDF only).
-Updated version numbering for User’s Guide, SIDS-to-ADF, and SIDS-to-HDF documents (no other changes to the documents), to reflect the release of CGNS Version 3.1.
-.. topic:: 01 Mar 2011</p>
-<blockquote>
-<div><ul class="simple">
+Updated version numbering for User’s Guide, SIDS-to-ADF, and SIDS-to-HDF documents (no other changes to the documents), to reflect the release of CGNS Version 3.1.</p>
+<div class="topic">
+<p class="topic-title">01 Mar 2011</p>
+<ul class="simple">
 <li><p>In Mid-Level Library, added information in File Operations about file_type = CG_FILE_ADF2, which can be used to write a Version 2.5 file from Version 3 when compiled in 32-bit.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">25 Feb 2011</p>
 <ul class="simple">
@@ -1222,13 +1241,13 @@ Updated version numbering for User’s Guide, SIDS-to-ADF, and SIDS-to-HDF docum
 <p>Moved PYRA_13 in list to come after MIXED in Typedefs.
 Moved Acquiring the Software and Documentation and Organization of This Manual sections to come first.
 Minor correction of ParentData in cg_parent_data_write and cg_parent_data_partial_write to no longer be slanted typeface (because it is input type) in Element Connectivity section.
-New Document Version is 3.1.4, corresponding to CGNS Version 3.1.
-.. topic:: 23 Feb 2011</p>
-<blockquote>
-<div><ul class="simple">
+New Document Version is 3.1.4, corresponding to CGNS Version 3.1.</p>
+<div class="topic">
+<p class="topic-title">23 Feb 2011</p>
+<ul class="simple">
 <li><p>Modified Mid-Level Library:</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>Added particular changes of “int” to “cgsize_t” throughout.
 Added new sections on 64-bit C and Fortran Portability and Issues.
 Added references to xxxxNull and xxxxUserDefined under Typedefs.
@@ -1237,25 +1256,25 @@ Modified SIDS Document:
 Changed description of BCType_t slightly, to clarify the simple and compound types.
 Added section Model Type Structure Definition.
 Corrected ModelTypeNull and ModelTypeUserDefined listings (where enumerated values are a subset of the ModelType_t enumeration).
-New Document Version is 3.1.2, corresponding to CGNS Version 3.1.
-.. topic:: 04 Feb 2011</p>
-<blockquote>
-<div><ul class="simple">
+New Document Version is 3.1.2, corresponding to CGNS Version 3.1.</p>
+<div class="topic">
+<p class="topic-title">04 Feb 2011</p>
+<ul class="simple">
 <li><p>Modified Mid-Level Library:</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>Changed Null to CG_Null and UserDefined to CG_UserDefined, and added comment under General Remarks about their usage.
 New Document Version is 3.1.2, corresponding to CGNS Version 3.1.
 Modified SIDS Document:
 Changed Null to xxxxNull and UserDefined to xxxxUserDefined, as appropriate.
 Also made sure that the xxxxNull is listed first, and the xxxxUserDefined is listed second.
-New Document Version is 3.1.1, corresponding to CGNS Version 3.1.
-.. topic:: 01 Feb 2011</p>
-<blockquote>
-<div><ul class="simple">
+New Document Version is 3.1.1, corresponding to CGNS Version 3.1.</p>
+<div class="topic">
+<p class="topic-title">01 Feb 2011</p>
+<ul class="simple">
 <li><p>Modified doc home page to change mention of ADFviewer to CGNSview.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>Modified User’s Guide
 Changed references of ADFviewer to CGNSview.
 Updated code snippet examples to reflect changes in new UserGuideCodeV3.1, including changes of MODE_READ to CG_MODE_READ (for example) in cg_open calls.
@@ -1268,21 +1287,20 @@ Added description of cg_elements_partial_write.
 Added descriptions of cg_save_as, cg_set_file_type, cg_get_file_type, cg_error_handler, cg_set_compress, cg_get_compress, cg_set_path, and cg_add_path.
 New Document Version is 3.1.1, corresponding to CGNS Version 3.1.
 On Sitemap for CGNS Tools and Utilities, updated old ADFviewer to new CGNSview, along with relevant new information.
-Major update of CGNS tools and utilities, including switch from use of ADFviewer to CGNSview; New Document Version is 2.0.
-.. topic:: 11 Jan 2011</p>
+Major update of CGNS tools and utilities, including switch from use of ADFviewer to CGNSview; New Document Version is 2.0.</p>
 <div class="topic">
 <p class="topic-title">26 May 2009</p>
 <ul class="simple">
 <li><p>In the Applications Software section of the CGNS Overview and Entry-Level Document, changed the contact person for notification about new CGNS applications.</p></li>
 </ul>
 </div>
-<p>In the SIDS document, deleted the contact info for questions about the SIDS, since it was no longer valid, and is now covered by the CGNStalk mailing list.
-.. topic:: 22 May 2009</p>
-<blockquote>
-<div><ul class="simple">
+<p>In the SIDS document, deleted the contact info for questions about the SIDS, since it was no longer valid, and is now covered by the CGNStalk mailing list.</p>
+<div class="topic">
+<p class="topic-title">22 May 2009</p>
+<ul class="simple">
 <li><p>Posted draft minutes from the May 20 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">21 May 2009</p>
 <ul class="simple">
@@ -1379,20 +1397,20 @@ Major update of CGNS tools and utilities, including switch from use of ADFviewer
 <li><p>In the SIDS document, added a PYRA_13 element to the description of the unstructured grid element numbering conventions for pyramid elements.</p></li>
 </ul>
 </div>
-<p>Made a minor change in the Getting Started section of the User’s Guide to CGNS, involving the use of PointList or PointRange with GridLocation set to FaceCenter.
-.. topic:: 12 Mar 2008</p>
-<blockquote>
-<div><ul class="simple">
+<p>Made a minor change in the Getting Started section of the User’s Guide to CGNS, involving the use of PointList or PointRange with GridLocation set to FaceCenter.</p>
+<div class="topic">
+<p class="topic-title">12 Mar 2008</p>
+<ul class="simple">
 <li><p>In the CGNS Tools and Utilities, modified the description of ADF_Edit to note that it’s been superseded by the more capable ADFviewer.</p></li>
 </ul>
-</div></blockquote>
-<p>In the Overview and Entry-Level Document, removed references to the utility ADF_Edit, in favor of ADFviewer.
-.. topic:: 7 Mar 2008</p>
-<blockquote>
-<div><ul class="simple">
+</div>
+<p>In the Overview and Entry-Level Document, removed references to the utility ADF_Edit, in favor of ADFviewer.</p>
+<div class="topic">
+<p class="topic-title">7 Mar 2008</p>
+<ul class="simple">
 <li><p>Modified the User’s Guide to CGNS, primarily in the section on writing boundary conditions for an unstructured grid to illustrate the recommended procedure using ElementList, rather than PointList with GridLocation=FaceCenter. Also removed references to the utility ADF_Edit, in favor of ADFviewer.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">8 Feb 2008</p>
 <ul class="simple">
@@ -1408,12 +1426,10 @@ Major update of CGNS tools and utilities, including switch from use of ADFviewer
 <div class="topic">
 <p class="topic-title">23 Jan 2008</p>
 <ul class="simple">
-<li><p>Added HTML versions of the following papers.</p></li>
-</ul>
-</div>
-<div class="topic">
-<p class="topic-title">18 Jan 2008</p>
-<ul class="simple">
+<li><p>Added HTML versions of the following papers.
+“Advances in the CGNS Database Standard for Aerodynamics and CFD” (AIAA Paper 2000-0681)
+“CFD General Notation System (CGNS): Status and Future Directions” (AIAA Paper 2002-0752)
+“Benchmarking Parallel I/O Performance for Computational Fluid Dynamics Applications” (AIAA Paper 2005-1381)18 Jan 2008</p></li>
 <li><p>Posted draft minutes from the Jan 6 CGNS Steering Committee meeting. (HTML, PDF).</p></li>
 </ul>
 </div>
@@ -1460,13 +1476,13 @@ rel2.4/index.html
 Documentation for CGNS Version 2.3 has been deleted.
 Updated the Overview and Entry-Level Document to reflect the release of CGNS Version 2.5.
 In the SIDS document, modified the description of the GridConnectivity_t structure to clarify the use of CellListDonor and InterpolantsDonor for both structured and unstructured grids. Also added some General Interface Connectivity Examples.
-Modified the CGNS Steering Committee Charter to add Concepts NREC external link to the list of current member organizations.
-.. topic:: 11 July 2007</p>
-<blockquote>
-<div><ul class="simple">
+Modified the CGNS Steering Committee Charter to add Concepts NREC external link to the list of current member organizations.</p>
+<div class="topic">
+<p class="topic-title">11 July 2007</p>
+<ul class="simple">
 <li><p>Updated the SIDS document to include information on the newly-released AIAA Recommended Practice R-101A-2005, and made the PDF version of the Recommended Practice available.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">5 July 2007</p>
 <ul class="simple">
@@ -1501,13 +1517,13 @@ Modified the CGNS Steering Committee Charter to add Concepts NREC external link 
 New functions to check file validity and configure some internal CGNS library options.
 Additional functions providing alternate ways to access a node.
 Changes in the use of functions for partial writes of coordinate, element, and solution data. The result is now always the union of the existing and new data. As part of this, the functions cg_section_read_ext and cg_elements_read_ext are no longer needed and have been removed, and new functions cg_ElementPartialSize and cg_elements_partial_read have been added.
-Corrected typo in the data type of the argument data in the Mid-Level Library function cg_free.
-.. topic:: 30 Nov 2006</p>
-<blockquote>
-<div><ul class="simple">
+Corrected typo in the data type of the argument data in the Mid-Level Library function cg_free.</p>
+<div class="topic">
+<p class="topic-title">30 Nov 2006</p>
+<ul class="simple">
 <li><p>Corrected error in the table at the top of the Export Utilities section. cgns_to_tecplot converts from CGNS to Tecplot, not the other way round.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">16 Oct 2006</p>
 <ul class="simple">
@@ -1520,13 +1536,13 @@ Corrected typo in the data type of the argument data in the Mid-Level Library fu
 <li><p>Posted minutes from the Oct 4 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
 </div>
-<p>In the CGNS Steering Committee Charter, added Tecplot external link to the list of current member organizations.
-.. topic:: 25 Sep 2006</p>
-<blockquote>
-<div><ul class="simple">
+<p>In the CGNS Steering Committee Charter, added Tecplot external link to the list of current member organizations.</p>
+<div class="topic">
+<p class="topic-title">25 Sep 2006</p>
+<ul class="simple">
 <li><p>Updated some links and contact points listed in the Applications Software section of the CGNS Overview and Entry-Level Document.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">5 Sep 2006</p>
 <ul class="simple">
@@ -1538,13 +1554,13 @@ Added a paragraph in the Representation section about the responsibilities of in
 In the Mid-Level Library, modified the description of the size argument for the Zone Information routines, attempting to clarify the definition for unstructured grids.
 In the SIDS,
 Modified the description of VertexSize for the Zone_t structure to clarify its definition for unstructured grids.
-Modified the description of the GridConnectivity_t structure to allow GridLocation to be either Vertex or FaceCenter for Abutting and Abutting1to1 interfaces.
-.. topic:: 8 Aug 2006</p>
-<blockquote>
-<div><ul class="simple">
+Modified the description of the GridConnectivity_t structure to allow GridLocation to be either Vertex or FaceCenter for Abutting and Abutting1to1 interfaces.</p>
+<div class="topic">
+<p class="topic-title">8 Aug 2006</p>
+<ul class="simple">
 <li><p>Posted minutes from the Aug 2 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">28 July 2006</p>
 <ul class="simple">
@@ -1560,8 +1576,7 @@ Made the following mods due to the SIDS change making zone connectivity donor in
 Modified the description of the GridConnectivity_t structure in the SIDS document.
 In the GridConnectivity node figure in both the SIDS-to-ADF and SIDS-to-HDF File Mapping Manual, changed the Cardinality of CellListDonor/PointListDonor from “1” to “0,1”.
 Added the function cg_conn_write_short in the Mid-Level Library Manual, to write generalized zone connectivity data without donor information.
-In the SIDS document, added a sentence to the description of ElementRange for the Elements_t structure to clarify the use of the global numbering system.
-.. topic:: 14 June 2006</p>
+In the SIDS document, added a sentence to the description of ElementRange for the Elements_t structure to clarify the use of the global numbering system.</p>
 <div class="topic">
 <p class="topic-title">17 May 2006</p>
 <ul class="simple">
@@ -1574,26 +1589,26 @@ In the SIDS document, added a sentence to the description of ElementRange for th
 <li><p>Updated the paragraph in the Overview and Entry-Level Document about the status of the inclusion of CGNS as part of an ISO standard.</p></li>
 </ul>
 </div>
-<p>In the list of current member organizations in the CGNS Steering Committee Charter, changed the name “ICEM CFD Engineering” to “ANSYS-ICEM CFD”.
-.. topic:: 10 Apr 2006</p>
-<blockquote>
-<div><ul class="simple">
+<p>In the list of current member organizations in the CGNS Steering Committee Charter, changed the name “ICEM CFD Engineering” to “ANSYS-ICEM CFD”.</p>
+<div class="topic">
+<p class="topic-title">10 Apr 2006</p>
+<ul class="simple">
 <li><p>Updated some links and contact points listed in the Applications Software section of the CGNS Overview and Entry-Level Document.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">27 Mar 2006</p>
 <ul class="simple">
 <li><p>Added Pacific Northwest National Laboratory external link to the list of current member organizations in the CGNS Steering Committee Charter.</p></li>
 </ul>
 </div>
-<p>Posted minutes from the Mar 22 CGNS Steering Committee telecon. (HTML, PDF).
-.. topic:: 1 Mar 2006</p>
-<blockquote>
-<div><ul class="simple">
+<p>Posted minutes from the Mar 22 CGNS Steering Committee telecon. (HTML, PDF).</p>
+<div class="topic">
+<p class="topic-title">1 Mar 2006</p>
+<ul class="simple">
 <li><p>Corrected a couple of typos in the Time-Dependent Flow and Conventions for Data-Name Identifiers sections of the SIDS document, and in the Navigating a CGNS File section of the Mid-Level Library Manual (where FlowSolution had been written as FlowSolutions).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">3 Feb 2006</p>
 <ul class="simple">
@@ -1606,13 +1621,13 @@ In the SIDS document, added a sentence to the description of ElementRange for th
 <li><p>Updated (and alphabetized) the list of current member organizations in the CGNS Steering Committee Charter.</p></li>
 </ul>
 </div>
-<p>Posted minutes from the Jan 11 CGNS Steering Committee meeting. (HTML, PDF).
-.. topic:: 10 Jan 2006</p>
-<blockquote>
-<div><ul class="simple">
+<p>Posted minutes from the Jan 11 CGNS Steering Committee meeting. (HTML, PDF).</p>
+<div class="topic">
+<p class="topic-title">10 Jan 2006</p>
+<ul class="simple">
 <li><p>Corrected a typo in the PDF version of the SIDS document involving an escaped underscore. Thanks to Marc Poinot for spotting it.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">21 Dec 2005</p>
 <ul class="simple">
@@ -1710,15 +1725,20 @@ Minor modifications to the Mid-Level Library document, in the Introduction, Gene
 Minor modifications to the SIDS-to-ADF File Mapping Manual, in the Brief Description of CGNS, CGNS Documentation, and Summary Description of ADF, sections, due to the option of using HDF instead of ADF.
 Added a note to the list of CGNS Data Structures saying that the “File Mapping” links connect to the SIDS-to-ADF File Mapping Manual.
 Added the SIDS-to-HDF File Mapping Manual to the lists in the instructions for downloading the HTML and LaTeX source files.
-Added the SIDS-to-HDF File Mapping Manual to the document sitemaps.
-.. topic:: 23 Aug 2005</p>
-<p>In the Mid-Level Library manual, added a paragraph to the description of the function cg_bcdata_write about writing the boundary condition data itself.
-.. topic:: 14 Jul 2005</p>
-<blockquote>
-<div><ul class="simple">
+Added the SIDS-to-HDF File Mapping Manual to the document sitemaps.</p>
+<div class="topic">
+<p class="topic-title">23 Aug 2005</p>
+<ul class="simple">
+<li><p>Posted slides CFD General Notation System, an overview of the CGNS project and its current status, presented by Bruce Wedan of ANSYS/ICEM CFD at NASA Ames, Jan 2005. [PowerPoint (345K, 46 pages)].</p></li>
+</ul>
+</div>
+<p>In the Mid-Level Library manual, added a paragraph to the description of the function cg_bcdata_write about writing the boundary condition data itself.</p>
+<div class="topic">
+<p class="topic-title">14 Jul 2005</p>
+<ul class="simple">
 <li><p>Modified the information on the CGNS Documentation Home Page about the CGNStalk mailing list, due to the move to a new list server.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">20 Jun 2005</p>
 <ul class="simple">
@@ -1749,13 +1769,13 @@ Added a routine for writing a partial flow solution.
 Added routines for reading/writing special grid connectivity information for 1-to-1 grid connectivity.
 Added detail about reading/writing point set information to BCDataSet_t nodes that are children of a BC_t node.
 Added routines for reading/writing BCDataSet_t nodes for a CFD family.
-Added a routine for reading electromagnetic equation set info, and added types for electromagnetic models.
-.. topic:: 6 Jun 2005</p>
-<blockquote>
-<div><ul class="simple">
+Added a routine for reading electromagnetic equation set info, and added types for electromagnetic models.</p>
+<div class="topic">
+<p class="topic-title">6 Jun 2005</p>
+<ul class="simple">
 <li><p>Posted minutes from the May 25 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">27 May 2005</p>
 <ul class="simple">
@@ -1786,13 +1806,7 @@ Added a routine for reading electromagnetic equation set info, and added types f
 <li><p>Corrected an error in the Mid-Level Library manual, in the description of the data conversion routines cg_conversion_write and cg_conversion_read. The scale and offset factors are stored in a two-element array, not as separate scalars.</p></li>
 </ul>
 </div>
-<p>Corrected an error in the SIDS document, in the Elements_t data structure examples. The examples included DataArray_t data structures defining ParentData for 3-D elements, where it doesn’t apply.
-.. topic:: In the list of <a class="reference external" href="https://cgnsorg.atlassian.net/projects/CGNS/issues/CGNS-related">#CGNS-related</a> conference papers, added R. Magn</p>
-<blockquote>
-<div><ul class="simple">
-<li><p>an as an author for AIAA Paper 2005-0334. Apologies for inadvertantly omitting him in the original update.</p></li>
-</ul>
-</div></blockquote>
+<p>Corrected an error in the SIDS document, in the Elements_t data structure examples. The examples included DataArray_t data structures defining ParentData for 3-D elements, where it doesn’t apply.</p>
 <div class="topic">
 <p class="topic-title">19 Jan 2005</p>
 <ul class="simple">
@@ -1812,13 +1826,13 @@ Added a routine for reading electromagnetic equation set info, and added types f
 </ul>
 </div>
 <p>Modified the Steering Committee Charter to add Utah State University, Stanford University, and ANSYS-CFX as Steering Committee members.
-Posted minutes from the Nov 17 CGNS Steering Committee telecon. (HTML, PDF).
-.. topic:: 20 Oct 2004</p>
-<blockquote>
-<div><ul class="simple">
+Posted minutes from the Nov 17 CGNS Steering Committee telecon. (HTML, PDF).</p>
+<div class="topic">
+<p class="topic-title">20 Oct 2004</p>
+<ul class="simple">
 <li><p>Corrected an error in the section on Unstructured Grid Element Numbering Conventions in the SIDS document. For pyramid elements, the oriented edges for face F4 were listed as E6,E8,-E7, and the correct values are E3,E8,-E7. Thanks to Alan Sayre for spotting this.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">6 Oct 2004</p>
 <ul class="simple">
@@ -1878,13 +1892,13 @@ index.html
 CGNS Version 2.2
 rel2.2/index.html
 Documentation for CGNS Version 2.1 has been deleted.
-Updated the Overview document to reflect the release of CGNS Version 2.3.
-.. topic:: 19 Mar 2004</p>
-<blockquote>
-<div><ul class="simple">
+Updated the Overview document to reflect the release of CGNS Version 2.3.</p>
+<div class="topic">
+<p class="topic-title">19 Mar 2004</p>
+<ul class="simple">
 <li><p>Removed the web page showing access stats for the CGNS documentation web pages. The widespread use of indexing robots for search engines, and the local use of link validation tools, have made the access stats pretty meaningless.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">13 Feb 2004</p>
 <ul class="simple">
@@ -1893,26 +1907,26 @@ Updated the Overview document to reflect the release of CGNS Version 2.3.
 </div>
 <p>In the Mid-Level Library manual, modified the description of the routines related to the Boundary Condition Type and Location to reflect the addition of ElementRange and ElementList in the BC_t structure.
 In the File Mapping manual, modified the BC_t figure to reflect the addition of ElementRange and ElementList.
-In the User’s Guide to CGNS, modified the “Getting Started” section to reflect the addition of ElementRange and ElementList in the BC_t structure.
-.. topic:: 29 Jan 2004</p>
-<blockquote>
-<div><ul class="simple">
+In the User’s Guide to CGNS, modified the “Getting Started” section to reflect the addition of ElementRange and ElementList in the BC_t structure.</p>
+<div class="topic">
+<p class="topic-title">29 Jan 2004</p>
+<ul class="simple">
 <li><p>Changed names of some .gif files used in the HTML version of the SIDS document, to avoid file name conflicts on Windows systems, which (unfortunately) uses case-insensitive file names.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">13 Jan 2004</p>
 <ul class="simple">
 <li><p>Updated CGNS Steering Committee Charter.</p></li>
 </ul>
 </div>
-<p>Posted minutes from the Jan 7 CGNS Steering Committee meeting. (HTML, PDF).
-.. topic:: 24 Nov 2003</p>
-<blockquote>
-<div><ul class="simple">
+<p>Posted minutes from the Jan 7 CGNS Steering Committee meeting. (HTML, PDF).</p>
+<div class="topic">
+<p class="topic-title">24 Nov 2003</p>
+<ul class="simple">
 <li><p>Posted minutes from the Nov 20 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">24 Sep 2003</p>
 <ul class="simple">
@@ -1956,13 +1970,13 @@ rel2.1/index.html
 Documentation for Software Release 2.0 has been deleted.
 Updated the Overview document to reflect the release of Version 2.2 of the CGNS software.
 In the ADF User’s Guide, modified the section on Acquiring the Software and Documentation to reflect the current use of SourceForge external link for distribution.
-In the Mid-Level Library, modified the section on Acquiring the Software and Documentation to reflect the current use of SourceForge external link for distribution.
-.. topic:: 29 Apr 2003</p>
-<blockquote>
-<div><ul class="simple">
+In the Mid-Level Library, modified the section on Acquiring the Software and Documentation to reflect the current use of SourceForge external link for distribution.</p>
+<div class="topic">
+<p class="topic-title">29 Apr 2003</p>
+<ul class="simple">
 <li><p>Added site maps for the major CGNS documents.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">23 Apr 2003</p>
 <ul class="simple">
@@ -1975,26 +1989,26 @@ In the Mid-Level Library, modified the section on Acquiring the Software and Doc
 <li><p>Added a paragraph about the CGNStalk mailing list, with a link to the list archive.</p></li>
 </ul>
 </div>
-<p>Modified the description of cg_goto in the Mid-Level Library manual to note that when accessing a BCData_t node, the index must be set to either Dirichlet or Neumann.
-.. topic:: 26 Mar 2003</p>
-<blockquote>
-<div><ul class="simple">
+<p>Modified the description of cg_goto in the Mid-Level Library manual to note that when accessing a BCData_t node, the index must be set to either Dirichlet or Neumann.</p>
+<div class="topic">
+<p class="topic-title">26 Mar 2003</p>
+<ul class="simple">
 <li><p>Posted minutes from the Mar 20 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">20 Mar 2003</p>
 <ul class="simple">
 <li><p>Added a sentence to the description of the ZoneBC_t data structure in the SIDS document to clarify that each boundary condition patch must be represented by a single BC_t data structure.</p></li>
 </ul>
 </div>
-<p>Expanded Note 2 for the BC_t data structure in the SIDS document, to add some discussion about the interpretation of the points defining a BC patch when GridLocation is set to Vertex.
-.. topic:: 28 Jan 2003</p>
-<blockquote>
-<div><ul class="simple">
+<p>Expanded Note 2 for the BC_t data structure in the SIDS document, to add some discussion about the interpretation of the points defining a BC patch when GridLocation is set to Vertex.</p>
+<div class="topic">
+<p class="topic-title">28 Jan 2003</p>
+<ul class="simple">
 <li><p>Added a separate page describing the AIAA Recommended Practice R-101-2002, with a more obvious link near the top of the CGNS Documentation Home Page.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">23 Jan 2003</p>
 <ul class="simple">
@@ -2002,13 +2016,13 @@ In the Mid-Level Library, modified the section on Acquiring the Software and Doc
 </ul>
 </div>
 <p>Updated the History and Current Status section to reflect the publication of the AIAA Recommended Practice.
-In the SIDS document, corrected use of ParentData in the examples of the Elements_t data structure; change suggested by Diane Poirier an embarrassingly long time ago.
-.. topic:: 22 Jan 2003</p>
-<blockquote>
-<div><ul class="simple">
+In the SIDS document, corrected use of ParentData in the examples of the Elements_t data structure; change suggested by Diane Poirier an embarrassingly long time ago.</p>
+<div class="topic">
+<p class="topic-title">22 Jan 2003</p>
+<ul class="simple">
 <li><p>Added a paragraph to the SIDS document noting that it represents a draft revision of the AIAA Recommended Practice, and made the PDF version of the Recommended Practice available.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">15 Jan 2003</p>
 <ul class="simple">
@@ -2033,23 +2047,23 @@ In the SIDS document, corrected use of ParentData in the examples of the Element
 <li><p>Posted minutes from the Sep 18 CGNS Steering Committee telecon. (HTML, PDF).</p></li>
 </ul>
 </div>
-<p>In the General Remarks/Typedefs section of the Mid-Level Library manual, added the typedefs WallFunctionType_t, AreaType_t, and AverageInterfaceType_t.
-.. topic:: 25 Sep 2002</p>
-<blockquote>
-<div><ul class="simple">
+<p>In the General Remarks/Typedefs section of the Mid-Level Library manual, added the typedefs WallFunctionType_t, AreaType_t, and AverageInterfaceType_t.</p>
+<div class="topic">
+<p class="topic-title">25 Sep 2002</p>
+<ul class="simple">
 <li><p>In the Mid-Level Library manual:</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>Corrected a minor error in the syntax of the C call for cg_geo_read.
 Added several nodes to the list of nodes that can’t be deleted by cg_delete_node.
 Corrected the order of arguments for the routines used to read and write rotating coordinates.
-In the HTML version of the SIDS document, fixed a typo in the definition of the OversetHoles_t data structure.
-.. topic:: 20 Sep 2002</p>
-<blockquote>
-<div><ul class="simple">
+In the HTML version of the SIDS document, fixed a typo in the definition of the OversetHoles_t data structure.</p>
+<div class="topic">
+<p class="topic-title">20 Sep 2002</p>
+<ul class="simple">
 <li><p>Updated the documentation for consistency with Release 2.2, Beta 1, of the CGNS software. In the SIDS document this includes:</p></li>
 </ul>
-</div></blockquote>
+</div>
 <p>New data structures Axisymmetry_t, RotatingCoordinates_t, GridConnectivityProperty_t, Periodic_t, AverageInterface_t, BCProperty_t, WallFunction_t, Area_t, and Gravity_t.
 New flow solution data-name identifiers for variables in rotating coordinate systems.
 In the File Mapping Manual:
@@ -2057,13 +2071,13 @@ Detailed descriptions for the Axisymmetry_t, RotatingCoordinates_t, GridConnecti
 Added figures for the Axisymmetry_t, RotatingCoordinates_t, GridConnectivityProperty_t, Periodic_t, AverageInterface_t, BCProperty_t, WallFunction_t, Area_t, and Gravity_t nodes.
 And in the Mid-Level Library manual:
 Added the routine cg_delete_node for deleting a node.
-Added routines for reading/writing the Axisymmetry_t, RotatingCoordinates_t, GridConnectivityProperty_t, BCProperty_t, and Gravity_t nodes.
-.. topic:: 12 Sep 2002</p>
-<blockquote>
-<div><ul class="simple">
+Added routines for reading/writing the Axisymmetry_t, RotatingCoordinates_t, GridConnectivityProperty_t, BCProperty_t, and Gravity_t nodes.</p>
+<div class="topic">
+<p class="topic-title">12 Sep 2002</p>
+<ul class="simple">
 <li><p>Added an FAQ in the User’s Guide to CGNS about writing data sets associated with boundary conditions.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">6 Sep 2002</p>
 <ul class="simple">
@@ -2089,6 +2103,15 @@ Added routines for reading/writing the Axisymmetry_t, RotatingCoordinates_t, Gri
 </ul>
 </div>
 <div class="topic">
+<p class="topic-title">3 Jul 2002</p>
+<ul class="simple">
+<li><p>Posted slides presented by John Steinbrenner of Pointwise, Inc.,
+at the 8th International Conference on Numerical Grid Generation
+in Honolulu, Hawaii, June 2-6, 2002. [PDF (131K, 12 pages),
+PowerPoint (143K, 12 pages)].</p></li>
+</ul>
+</div>
+<div class="topic">
 <p class="topic-title">2 Jul 2002</p>
 <ul class="simple">
 <li><p>Posted minutes from the June 24 CGNS Steering Committee meeting. (HTML, PDF).</p></li>
@@ -2103,13 +2126,13 @@ Added routines for reading/writing the Axisymmetry_t, RotatingCoordinates_t, Gri
 <p>Software Release 2.1
 index.html
 Software Release 2.0
-rel2.0/index.html
-.. topic:: 23 May 2002</p>
-<blockquote>
-<div><ul class="simple">
+rel2.0/index.html</p>
+<div class="topic">
+<p class="topic-title">23 May 2002</p>
+<ul class="simple">
 <li><p>Corrected a minor error in the OversetHoles_t structure definition. PointRange and PointList are not both optional; one must be specified, but not both.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">22 May 2002</p>
 <ul class="simple">
@@ -2130,13 +2153,13 @@ rel2.0/index.html
 </div>
 <p>Updated and reorganized the Overview and Entry-Level Document.
 Modified the definition of NormalListFlag for the Boundary Condition Type and Location routines in the Mid-Level Library manual.
-Added a list summarizing the change history for the CGNS documentation.
-.. topic:: 25 Mar 2002</p>
-<blockquote>
-<div><ul class="simple">
+Added a list summarizing the change history for the CGNS documentation.</p>
+<div class="topic">
+<p class="topic-title">25 Mar 2002</p>
+<ul class="simple">
 <li><p>In the SIDS document, modified the introductory paragraph under Forces and Moments in the Conventions for Data-Name Identifiers section to note that the standard location for storing forces and moments is under a ConvergenceHistory_t node.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">20 Mar 2002</p>
 <ul class="simple">
@@ -2186,13 +2209,13 @@ Added routines for including user-defined data.
 Added material related to multi-species flows and chemistry..
 Added routines for links in CGNS files.
 In the User’s Guide:
-Added a bit to the section on Using Links.
-.. topic:: 5 Feb 2002</p>
-<blockquote>
-<div><ul class="simple">
+Added a bit to the section on Using Links.</p>
+<div class="topic">
+<p class="topic-title">5 Feb 2002</p>
+<ul class="simple">
 <li><p>Added HTML versions of the minutes for all the CGNS Steering Committee Meetings and Telecons.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">4 Feb 2002</p>
 <ul class="simple">
@@ -2208,26 +2231,26 @@ Added a bit to the section on Using Links.
 <p>ISO Status (Ray Cosner)
 Documentation (Theresa Benyo)
 Extension Status (Chris Rumsey)
-PyCGNS (Marc Poinot)
-.. topic:: 25 Jan 2002</p>
-<blockquote>
-<div><ul class="simple">
+PyCGNS (Marc Poinot)</p>
+<div class="topic">
+<p class="topic-title">25 Jan 2002</p>
+<ul class="simple">
 <li><p>Added AIAA Paper 2002-0752, titled “CFD General Notation System (CGNS): Status and Future Directions”, presented at the 40th AIAA Aerospace Sciences Meeting and Exhibit. [PDF (289K, 13 pages)]</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">23 Jan 2002</p>
 <ul class="simple">
 <li><p>Added the CGNS Steering Committee charter.</p></li>
 </ul>
 </div>
-<p>Changed the link for the software change history to point to the CGNS Software Revisions external link page on the cgns.sourceforge.net external link web site, which is more up-to-date.
-.. topic:: 14 Nov 2001</p>
-<blockquote>
-<div><ul class="simple">
+<p>Changed the link for the software change history to point to the CGNS Software Revisions external link page on the cgns.sourceforge.net external link web site, which is more up-to-date.</p>
+<div class="topic">
+<p class="topic-title">14 Nov 2001</p>
+<ul class="simple">
 <li><p>Posted minutes from the Nov 6 CGNS Steering Committee telecon.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">2 Nov 2001</p>
 <ul class="simple">
@@ -2245,13 +2268,13 @@ the definition of bocotype in the Mid-Level Library Manual
 the description of FamilyName for the BC_t structure in the SIDS Manual
 the description of the BCTypeSimple_t structure and the table of Simple Boundary Condition Types in the SIDS Manual
 the description of the Family_t structure in the SIDS Manual
-Tried to clarify the definition of the family name, by adding to the description of FamilyName_t node in the File Mapping Manual.
-.. topic:: 1 Nov 2001</p>
-<blockquote>
-<div><ul class="simple">
+Tried to clarify the definition of the family name, by adding to the description of FamilyName_t node in the File Mapping Manual.</p>
+<div class="topic">
+<p class="topic-title">1 Nov 2001</p>
+<ul class="simple">
 <li><p>Added files and instructions for installing the HTML version of the CGNS documentation on a local system.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">10 Oct 2001</p>
 <ul class="simple">
@@ -2264,13 +2287,13 @@ Tried to clarify the definition of the family name, by adding to the description
 <li><p>In the SIDS document, fixed error in the units listed for the ideal gas constant in the tables of Data-Name Identifiers for Perfect Gas and Data-Name Identifiers for Flow Solution Quantities.</p></li>
 </ul>
 </div>
-<p>In the Mid-Level Library manual, fixed error in the description of the donor_datatype argument for the Generalized Connectivity functions.
-.. topic:: 17 Sep 2001</p>
-<blockquote>
-<div><ul class="simple">
+<p>In the Mid-Level Library manual, fixed error in the description of the donor_datatype argument for the Generalized Connectivity functions.</p>
+<div class="topic">
+<p class="topic-title">17 Sep 2001</p>
+<ul class="simple">
 <li><p>Posted minutes from the Sep 6 CGNS Steering Committee telecon.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">6 Sep 2001</p>
 <ul class="simple">
@@ -2307,13 +2330,13 @@ Tried to clarify the definition of the family name, by adding to the description
 <li><p>Reorganized the Mid-Level Library manual, and created a PDF version. The content is basically the same as the previous version, but mostly follows the organization used in the Detailed CGNS Node Descriptions section of the File Mapping Manual.</p></li>
 </ul>
 </div>
-<p>Converted the hard-copy version of the ADF User’s Guide to LaTeX, and added an HTML version.
-.. topic:: 5 Apr 2001</p>
-<blockquote>
-<div><ul class="simple">
+<p>Converted the hard-copy version of the ADF User’s Guide to LaTeX, and added an HTML version.</p>
+<div class="topic">
+<p class="topic-title">5 Apr 2001</p>
+<ul class="simple">
 <li><p>Posted minutes from the Mar 14 CGNS Steering Committee telecon.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">14 Mar 2001</p>
 <ul class="simple">
@@ -2326,13 +2349,13 @@ Tried to clarify the definition of the family name, by adding to the description
 <li><p>In the SIDS manual, added a statement in the 2-D (Surface) Elements subsection clarifying the normal direction for 2-D unstructured grid elements.</p></li>
 </ul>
 </div>
-<p>In the SIDS manual, added a statement in the section on data-name identifiers for flowfield variables stating that for vector quantities, data-name identifiers for components in cylindrical and spherical coordinates are established, even when they’re not explicitly listed.
-.. topic:: 6 Mar 2001</p>
-<blockquote>
-<div><ul class="simple">
+<p>In the SIDS manual, added a statement in the section on data-name identifiers for flowfield variables stating that for vector quantities, data-name identifiers for components in cylindrical and spherical coordinates are established, even when they’re not explicitly listed.</p>
+<div class="topic">
+<p class="topic-title">6 Mar 2001</p>
+<ul class="simple">
 <li><p>Included software change history in this “What’s New?” page.</p></li>
 </ul>
-</div></blockquote>
+</div>
 <div class="topic">
 <p class="topic-title">22 Feb 2001</p>
 <ul class="simple">
