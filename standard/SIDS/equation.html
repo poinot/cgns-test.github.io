@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
   
@@ -16,18 +16,19 @@
     <title>10. Governing Flow Equations &#8212; CGNS Official Web Site</title>
     <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../_static/CGNS_tiny.ico"/>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="11. Time-Dependent Flow" href="time.html" />
     <link rel="prev" title="9. Boundary Conditions" href="boundary.html" />
   
-  <link rel="apple-touch-icon" href="../../_static/images/logo/CGNS_empty.svg" />
+  <link rel="apple-touch-icon" href="../../_static/CGNS_empty.svg" />
   
    
 
@@ -69,13 +70,9 @@
     </div>
   </div>
 </div>
-
-
 <div class="sidebar-block">
   <div class="sidebar-wrapper">
-    <h2><a href="../../current/news.html">News</a></h2>
-    <hr>
-    <h2><a href="../../index.html">This page</a></h2>
+    <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">10. Governing Flow Equations</a><ul>
@@ -95,10 +92,6 @@
 </ul>
 
     </div>
-    <hr>
-    <h2><a href="../../genindex.html">Index</a></h2>
-    <hr>
-    <h2><a href="../../site.html">Site map</a></h2>
   </div>
 </div>
       
@@ -108,54 +101,52 @@
           
           <div role="navigation" aria-label="breadcrumbs navigation">
             <ol class="breadcrumb">
-              <li><a href="../../index.html">
-		  <img src="../../images/logo/CGNS_empty.svg" style="width: 30px;" /></a>
-	      </li>
+              <li><a href="../../index.html">Docs</a></li>
               
                 <li><a href="../../standard.html">Standard Specification</a></li>
               
                 <li><a href="CGNS_SIDS.html">CGNS/SIDS - Standard Interface Data Structures</a></li>
               
-              <li><span class="section-number">10. </span>Governing Flow Equations</li>
+              <li>10. Governing Flow Equations</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="governing-flow-equations">
-<h1><span class="section-number">10. </span>Governing Flow Equations<a class="headerlink" href="#governing-flow-equations" title="Permalink to this headline">¶</a></h1>
+<h1>10. Governing Flow Equations<a class="headerlink" href="#governing-flow-equations" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="flow-equation-set-structure-definition-flowequationset-t">
-<h2><span class="section-number">10.1. </span>Flow Equation Set Structure Definition: <code class="docutils literal notranslate"><span class="pre">FlowEquationSet_t</span></code><a class="headerlink" href="#flow-equation-set-structure-definition-flowequationset-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.1. Flow Equation Set Structure Definition: <code class="docutils literal notranslate"><span class="pre">FlowEquationSet_t</span></code><a class="headerlink" href="#flow-equation-set-structure-definition-flowequationset-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="governing-equations-structure-definition-governingequations-t">
-<h2><span class="section-number">10.2. </span>Governing Equations Structure Definition: <code class="docutils literal notranslate"><span class="pre">GoverningEquations_t</span></code><a class="headerlink" href="#governing-equations-structure-definition-governingequations-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.2. Governing Equations Structure Definition: <code class="docutils literal notranslate"><span class="pre">GoverningEquations_t</span></code><a class="headerlink" href="#governing-equations-structure-definition-governingequations-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="model-type-structure-definition-modeltype-t">
-<h2><span class="section-number">10.3. </span>Model Type Structure Definition: <code class="docutils literal notranslate"><span class="pre">ModelType_t</span></code><a class="headerlink" href="#model-type-structure-definition-modeltype-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.3. Model Type Structure Definition: <code class="docutils literal notranslate"><span class="pre">ModelType_t</span></code><a class="headerlink" href="#model-type-structure-definition-modeltype-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="thermodynamic-gas-model-structure-definition-gasmodel-t">
-<h2><span class="section-number">10.4. </span>Thermodynamic Gas Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">GasModel_t</span></code><a class="headerlink" href="#thermodynamic-gas-model-structure-definition-gasmodel-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.4. Thermodynamic Gas Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">GasModel_t</span></code><a class="headerlink" href="#thermodynamic-gas-model-structure-definition-gasmodel-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="molecular-viscosity-model-structure-definition-viscositymodel-t">
-<h2><span class="section-number">10.5. </span>Molecular Viscosity Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ViscosityModel_t</span></code><a class="headerlink" href="#molecular-viscosity-model-structure-definition-viscositymodel-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.5. Molecular Viscosity Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ViscosityModel_t</span></code><a class="headerlink" href="#molecular-viscosity-model-structure-definition-viscositymodel-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="thermal-conductivity-model-structure-definition-thermalconductivitymodel-t">
-<h2><span class="section-number">10.6. </span>Thermal Conductivity Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ThermalConductivityModel_t</span></code><a class="headerlink" href="#thermal-conductivity-model-structure-definition-thermalconductivitymodel-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.6. Thermal Conductivity Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ThermalConductivityModel_t</span></code><a class="headerlink" href="#thermal-conductivity-model-structure-definition-thermalconductivitymodel-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="turbulence-structure-definitions">
-<h2><span class="section-number">10.7. </span>Turbulence Structure Definitions<a class="headerlink" href="#turbulence-structure-definitions" title="Permalink to this headline">¶</a></h2>
+<h2>10.7. Turbulence Structure Definitions<a class="headerlink" href="#turbulence-structure-definitions" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="thermal-relaxation-model-structure-definition-thermalrelaxationmodel-t">
-<h2><span class="section-number">10.8. </span>Thermal Relaxation Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ThermalRelaxationModel_t</span></code><a class="headerlink" href="#thermal-relaxation-model-structure-definition-thermalrelaxationmodel-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.8. Thermal Relaxation Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ThermalRelaxationModel_t</span></code><a class="headerlink" href="#thermal-relaxation-model-structure-definition-thermalrelaxationmodel-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="chemical-kinetics-model-structure-definition-chemicalkineticsmodel-t">
-<h2><span class="section-number">10.9. </span>Chemical Kinetics Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ChemicalKineticsModel_t</span></code><a class="headerlink" href="#chemical-kinetics-model-structure-definition-chemicalkineticsmodel-t" title="Permalink to this headline">¶</a></h2>
+<h2>10.9. Chemical Kinetics Model Structure Definition: <code class="docutils literal notranslate"><span class="pre">ChemicalKineticsModel_t</span></code><a class="headerlink" href="#chemical-kinetics-model-structure-definition-chemicalkineticsmodel-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="electromagnetics-structure-definitions">
-<h2><span class="section-number">10.10. </span>Electromagnetics Structure Definitions<a class="headerlink" href="#electromagnetics-structure-definitions" title="Permalink to this headline">¶</a></h2>
+<h2>10.10. Electromagnetics Structure Definitions<a class="headerlink" href="#electromagnetics-structure-definitions" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="flow-equation-examples">
-<h2><span class="section-number">10.11. </span>Flow Equation Examples<a class="headerlink" href="#flow-equation-examples" title="Permalink to this headline">¶</a></h2>
+<h2>10.11. Flow Equation Examples<a class="headerlink" href="#flow-equation-examples" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -165,11 +156,11 @@
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="boundary.html" title="previous chapter (use the left arrow)"><span class="section-number">9. </span>Boundary Conditions</a>
+        <a class="btn btn-default" href="boundary.html" title="previous chapter (use the left arrow)">9. Boundary Conditions</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="time.html" title="next chapter (use the right arrow)"><span class="section-number">11. </span>Time-Dependent Flow</a>
+        <a class="btn btn-default" href="time.html" title="next chapter (use the right arrow)">11. Time-Dependent Flow</a>
       </div>
     </div>
     <div class="clearer"></div>

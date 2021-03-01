@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
   
@@ -16,18 +16,19 @@
     <title>9. Boundary Conditions &#8212; CGNS Official Web Site</title>
     <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../_static/CGNS_tiny.ico"/>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="10. Governing Flow Equations" href="equation.html" />
     <link rel="prev" title="8. Multizone Interface Connectivity" href="multizone.html" />
   
-  <link rel="apple-touch-icon" href="../../_static/images/logo/CGNS_empty.svg" />
+  <link rel="apple-touch-icon" href="../../_static/CGNS_empty.svg" />
   
    
 
@@ -69,13 +70,9 @@
     </div>
   </div>
 </div>
-
-
 <div class="sidebar-block">
   <div class="sidebar-wrapper">
-    <h2><a href="../../current/news.html">News</a></h2>
-    <hr>
-    <h2><a href="../../index.html">This page</a></h2>
+    <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">9. Boundary Conditions</a><ul>
@@ -98,10 +95,6 @@
 </ul>
 
     </div>
-    <hr>
-    <h2><a href="../../genindex.html">Index</a></h2>
-    <hr>
-    <h2><a href="../../site.html">Site map</a></h2>
   </div>
 </div>
       
@@ -111,57 +104,55 @@
           
           <div role="navigation" aria-label="breadcrumbs navigation">
             <ol class="breadcrumb">
-              <li><a href="../../index.html">
-		  <img src="../../images/logo/CGNS_empty.svg" style="width: 30px;" /></a>
-	      </li>
+              <li><a href="../../index.html">Docs</a></li>
               
                 <li><a href="../../standard.html">Standard Specification</a></li>
               
                 <li><a href="CGNS_SIDS.html">CGNS/SIDS - Standard Interface Data Structures</a></li>
               
-              <li><span class="section-number">9. </span>Boundary Conditions</li>
+              <li>9. Boundary Conditions</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="boundary-conditions">
-<h1><span class="section-number">9. </span>Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h1>
+<h1>9. Boundary Conditions<a class="headerlink" href="#boundary-conditions" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="boundary-condition-structures-overview">
-<h2><span class="section-number">9.1. </span>Boundary Condition Structures Overview<a class="headerlink" href="#boundary-condition-structures-overview" title="Permalink to this headline">¶</a></h2>
+<h2>9.1. Boundary Condition Structures Overview<a class="headerlink" href="#boundary-condition-structures-overview" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="zonal-boundary-condition-structure-definition-zonebc-t">
-<h2><span class="section-number">9.2. </span>Zonal Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">ZoneBC_t</span></code><a class="headerlink" href="#zonal-boundary-condition-structure-definition-zonebc-t" title="Permalink to this headline">¶</a></h2>
+<h2>9.2. Zonal Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">ZoneBC_t</span></code><a class="headerlink" href="#zonal-boundary-condition-structure-definition-zonebc-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="boundary-condition-structure-definition-bc-t">
-<h2><span class="section-number">9.3. </span>Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">BC_t</span></code><a class="headerlink" href="#boundary-condition-structure-definition-bc-t" title="Permalink to this headline">¶</a></h2>
+<h2>9.3. Boundary Condition Structure Definition: <code class="docutils literal notranslate"><span class="pre">BC_t</span></code><a class="headerlink" href="#boundary-condition-structure-definition-bc-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="boundary-condition-data-set-structure-definition-bcdataset-t">
-<h2><span class="section-number">9.4. </span>Boundary Condition Data Set Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCDataSet_t</span></code><a class="headerlink" href="#boundary-condition-data-set-structure-definition-bcdataset-t" title="Permalink to this headline">¶</a></h2>
+<h2>9.4. Boundary Condition Data Set Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCDataSet_t</span></code><a class="headerlink" href="#boundary-condition-data-set-structure-definition-bcdataset-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="boundary-condition-data-structure-definition-bcdata-t">
-<h2><span class="section-number">9.5. </span>Boundary Condition Data Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCData_t</span></code><a class="headerlink" href="#boundary-condition-data-structure-definition-bcdata-t" title="Permalink to this headline">¶</a></h2>
+<h2>9.5. Boundary Condition Data Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCData_t</span></code><a class="headerlink" href="#boundary-condition-data-structure-definition-bcdata-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="boundary-condition-property-structure-definition-bcproperty-t">
-<h2><span class="section-number">9.6. </span>Boundary Condition Property Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCProperty_t</span></code><a class="headerlink" href="#boundary-condition-property-structure-definition-bcproperty-t" title="Permalink to this headline">¶</a></h2>
+<h2>9.6. Boundary Condition Property Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCProperty_t</span></code><a class="headerlink" href="#boundary-condition-property-structure-definition-bcproperty-t" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="wall-function-structure-definition-wallfunction-t">
-<h3><span class="section-number">9.6.1. </span>Wall Function Structure Definition: <code class="docutils literal notranslate"><span class="pre">WallFunction_t</span></code><a class="headerlink" href="#wall-function-structure-definition-wallfunction-t" title="Permalink to this headline">¶</a></h3>
+<h3>9.6.1. Wall Function Structure Definition: <code class="docutils literal notranslate"><span class="pre">WallFunction_t</span></code><a class="headerlink" href="#wall-function-structure-definition-wallfunction-t" title="Permalink to this headline">¶</a></h3>
 </div>
 <div class="section" id="area-structure-definition-area-t">
-<h3><span class="section-number">9.6.2. </span>Area Structure Definition: <code class="docutils literal notranslate"><span class="pre">Area_t</span></code><a class="headerlink" href="#area-structure-definition-area-t" title="Permalink to this headline">¶</a></h3>
+<h3>9.6.2. Area Structure Definition: <code class="docutils literal notranslate"><span class="pre">Area_t</span></code><a class="headerlink" href="#area-structure-definition-area-t" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="boundary-condition-type-structure-definition-bctype-t">
-<h2><span class="section-number">9.7. </span>Boundary Condition Type Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCType_t</span></code><a class="headerlink" href="#boundary-condition-type-structure-definition-bctype-t" title="Permalink to this headline">¶</a></h2>
+<h2>9.7. Boundary Condition Type Structure Definition: <code class="docutils literal notranslate"><span class="pre">BCType_t</span></code><a class="headerlink" href="#boundary-condition-type-structure-definition-bctype-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="matching-boundary-condition-data-sets">
-<h2><span class="section-number">9.8. </span>Matching Boundary Condition Data Sets<a class="headerlink" href="#matching-boundary-condition-data-sets" title="Permalink to this headline">¶</a></h2>
+<h2>9.8. Matching Boundary Condition Data Sets<a class="headerlink" href="#matching-boundary-condition-data-sets" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="boundary-condition-specification-data">
-<h2><span class="section-number">9.9. </span>Boundary Condition Specification Data<a class="headerlink" href="#boundary-condition-specification-data" title="Permalink to this headline">¶</a></h2>
+<h2>9.9. Boundary Condition Specification Data<a class="headerlink" href="#boundary-condition-specification-data" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="boundary-condition-examples">
-<h2><span class="section-number">9.10. </span>Boundary Condition Examples<a class="headerlink" href="#boundary-condition-examples" title="Permalink to this headline">¶</a></h2>
+<h2>9.10. Boundary Condition Examples<a class="headerlink" href="#boundary-condition-examples" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -171,11 +162,11 @@
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="multizone.html" title="previous chapter (use the left arrow)"><span class="section-number">8. </span>Multizone Interface Connectivity</a>
+        <a class="btn btn-default" href="multizone.html" title="previous chapter (use the left arrow)">8. Multizone Interface Connectivity</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="equation.html" title="next chapter (use the right arrow)"><span class="section-number">10. </span>Governing Flow Equations</a>
+        <a class="btn btn-default" href="equation.html" title="next chapter (use the right arrow)">10. Governing Flow Equations</a>
       </div>
     </div>
     <div class="clearer"></div>

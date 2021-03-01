@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta charset="utf-8" />
   
@@ -16,18 +16,19 @@
     <title>4. Building Block Structure Definition &#8212; CGNS Official Web Site</title>
     <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-    <script src="../../_static/jquery.js"></script>
-    <script src="../../_static/underscore.js"></script>
-    <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <link rel="shortcut icon" href="../../_static/CGNS_tiny.ico"/>
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="5. Data-Array Structure Definitions" href="array.html" />
     <link rel="prev" title="3. Conventions" href="convention.html" />
   
-  <link rel="apple-touch-icon" href="../../_static/images/logo/CGNS_empty.svg" />
+  <link rel="apple-touch-icon" href="../../_static/CGNS_empty.svg" />
   
    
 
@@ -69,13 +70,9 @@
     </div>
   </div>
 </div>
-
-
 <div class="sidebar-block">
   <div class="sidebar-wrapper">
-    <h2><a href="../../current/news.html">News</a></h2>
-    <hr>
-    <h2><a href="../../index.html">This page</a></h2>
+    <h2>Contents</h2>
     <div class="sidebar-localtoc">
       <ul>
 <li><a class="reference internal" href="#">4. Building Block Structure Definition</a><ul>
@@ -92,10 +89,6 @@
 </ul>
 
     </div>
-    <hr>
-    <h2><a href="../../genindex.html">Index</a></h2>
-    <hr>
-    <h2><a href="../../site.html">Site map</a></h2>
   </div>
 </div>
       
@@ -105,45 +98,43 @@
           
           <div role="navigation" aria-label="breadcrumbs navigation">
             <ol class="breadcrumb">
-              <li><a href="../../index.html">
-		  <img src="../../images/logo/CGNS_empty.svg" style="width: 30px;" /></a>
-	      </li>
+              <li><a href="../../index.html">Docs</a></li>
               
                 <li><a href="../../standard.html">Standard Specification</a></li>
               
                 <li><a href="CGNS_SIDS.html">CGNS/SIDS - Standard Interface Data Structures</a></li>
               
-              <li><span class="section-number">4. </span>Building Block Structure Definition</li>
+              <li>4. Building Block Structure Definition</li>
             </ol>
           </div>
           
           <div class="document clearer body">
             
   <div class="section" id="building-block-structure-definition">
-<h1><span class="section-number">4. </span>Building Block Structure Definition<a class="headerlink" href="#building-block-structure-definition" title="Permalink to this headline">¶</a></h1>
+<h1>4. Building Block Structure Definition<a class="headerlink" href="#building-block-structure-definition" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="definition-dataclass-t">
-<h2><span class="section-number">4.1. </span>Definition <code class="docutils literal notranslate"><span class="pre">DataClass_t</span></code><a class="headerlink" href="#definition-dataclass-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.1. Definition <code class="docutils literal notranslate"><span class="pre">DataClass_t</span></code><a class="headerlink" href="#definition-dataclass-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-descriptor-t">
-<h2><span class="section-number">4.2. </span>Definition <code class="docutils literal notranslate"><span class="pre">Descriptor_t</span></code><a class="headerlink" href="#definition-descriptor-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.2. Definition <code class="docutils literal notranslate"><span class="pre">Descriptor_t</span></code><a class="headerlink" href="#definition-descriptor-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-dimensionalunits-t">
-<h2><span class="section-number">4.3. </span>Definition <code class="docutils literal notranslate"><span class="pre">DimensionalUnits_t</span></code><a class="headerlink" href="#definition-dimensionalunits-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.3. Definition <code class="docutils literal notranslate"><span class="pre">DimensionalUnits_t</span></code><a class="headerlink" href="#definition-dimensionalunits-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-dimensionalexponents-t">
-<h2><span class="section-number">4.4. </span>Definition <code class="docutils literal notranslate"><span class="pre">DimensionalExponents_t</span></code><a class="headerlink" href="#definition-dimensionalexponents-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.4. Definition <code class="docutils literal notranslate"><span class="pre">DimensionalExponents_t</span></code><a class="headerlink" href="#definition-dimensionalexponents-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-gridlocation-t">
-<h2><span class="section-number">4.5. </span>Definition <code class="docutils literal notranslate"><span class="pre">GridLocation_t</span></code><a class="headerlink" href="#definition-gridlocation-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.5. Definition <code class="docutils literal notranslate"><span class="pre">GridLocation_t</span></code><a class="headerlink" href="#definition-gridlocation-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-indexarray-t">
-<h2><span class="section-number">4.6. </span>Definition <code class="docutils literal notranslate"><span class="pre">IndexArray_t</span></code><a class="headerlink" href="#definition-indexarray-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.6. Definition <code class="docutils literal notranslate"><span class="pre">IndexArray_t</span></code><a class="headerlink" href="#definition-indexarray-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-indexrange-t">
-<h2><span class="section-number">4.7. </span>Definition <code class="docutils literal notranslate"><span class="pre">IndexRange_t</span></code><a class="headerlink" href="#definition-indexrange-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.7. Definition <code class="docutils literal notranslate"><span class="pre">IndexRange_t</span></code><a class="headerlink" href="#definition-indexrange-t" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="definition-rind-t">
-<h2><span class="section-number">4.8. </span>Definition <code class="docutils literal notranslate"><span class="pre">Rind_t</span></code><a class="headerlink" href="#definition-rind-t" title="Permalink to this headline">¶</a></h2>
+<h2>4.8. Definition <code class="docutils literal notranslate"><span class="pre">Rind_t</span></code><a class="headerlink" href="#definition-rind-t" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 
@@ -153,11 +144,11 @@
   <div class="footer-relations">
     
       <div class="pull-left">
-        <a class="btn btn-default" href="convention.html" title="previous chapter (use the left arrow)"><span class="section-number">3. </span>Conventions</a>
+        <a class="btn btn-default" href="convention.html" title="previous chapter (use the left arrow)">3. Conventions</a>
       </div>
     
       <div class="pull-right">
-        <a class="btn btn-default" href="array.html" title="next chapter (use the right arrow)"><span class="section-number">5. </span>Data-Array Structure Definitions</a>
+        <a class="btn btn-default" href="array.html" title="next chapter (use the right arrow)">5. Data-Array Structure Definitions</a>
       </div>
     </div>
     <div class="clearer"></div>
