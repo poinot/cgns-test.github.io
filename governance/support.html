@@ -88,7 +88,6 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#cpex-guidelines">CPEX guidelines</a></li>
-<li><a class="reference internal" href="#libraries-and-tools-development">Libraries and tools development</a></li>
 </ul>
 </li>
 </ul>
@@ -179,6 +178,13 @@ For example, on a Unix platform with a <em>sh</em> shell:</p>
 unzip guzzle_sphinx_theme-0.7.11-py3.7.egg
 </pre></div>
 </div>
+<p>Second you run the <cite>build.sh</cite> script, it generates all the stuff and
+copies a final/ usable html directory with all required files.
+You can copy this directory at any place you want, the directory is
+self-contained.</p>
+<p>The equation rendering makes a reference to an external link,
+so that you may have issues with the equations if you are not connected
+to the public internet.</p>
 </div>
 <div class="section" id="documentation-editing">
 <h3>Documentation editing<a class="headerlink" href="#documentation-editing" title="Permalink to this headline">¶</a></h3>
@@ -279,29 +285,32 @@ of our template), shift the text block on the right:</p>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>A</td>
+<tr class="row-even"><td>CFD</td>
 <td rowspan="2"><dl class="first last docutils">
-<dt>Lists:</dt><dd><ul class="simple">
-<li>aha</li>
-<li>yes</li>
+<dt>Data :</dt><dd><ul class="simple">
+<li>cfl</li>
+<li>rms</li>
 </ul>
 <ol class="arabic simple">
-<li>hi</li>
+<li>a</li>
+<li>b</li>
 </ol>
 </dd>
 </dl>
 </td>
-<td><strong>C</strong></td>
+<td><strong>TURB</strong></td>
 </tr>
-<tr class="row-odd"><td><p class="first">B:</p>
-<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">hey</span><span class="o">*</span>
+<tr class="row-odd"><td><p class="first">CSM:</p>
+<div class="last highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">*</span><span class="n">v1a</span><span class="o">*</span>
+<span class="o">*</span><span class="n">v2a</span><span class="o">*</span>
 </pre></div>
 </div>
 </td>
 <td><div class="first last line-block">
-<div class="line">a block
-of text</div>
-<div class="line">a break</div>
+<div class="line">K
+Epsilon</div>
+<div class="line">Spalart</div>
+<div class="line">K-l</div>
 </div>
 </td>
 </tr>
@@ -416,9 +425,7 @@ textual.</td></tr>
 </div>
 <div class="section" id="cpex-guidelines">
 <h3>CPEX guidelines<a class="headerlink" href="#cpex-guidelines" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="libraries-and-tools-development">
-<h3>Libraries and tools development<a class="headerlink" href="#libraries-and-tools-development" title="Permalink to this headline">¶</a></h3>
+<p>The CPEX process requires multiple docs.</p>
 </div>
 </div>
 </div>
