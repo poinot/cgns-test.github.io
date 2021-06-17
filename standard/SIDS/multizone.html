@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,15 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>8. Multizone Interface Connectivity &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -136,8 +135,8 @@ All indices used to describe interfaces are the dimensionality (<code class="cod
 In fact, this single structure type can be used to describe all zonal interfaces.</p>
 <p>A second design choice was to duplicate all 1-to-1 abutting interface information within the CGNS database. It is possible to describe a given 1-to-1 interface with a single set of connectivity data. In contrast, mismatched and overset interfaces require different connectivity information when the roles of receiver and donor zones are interchanged. Therefore, a given mismatched or overset interface requires two sets of connectivity data within the database. The decision to force two sets of connectivity data (one contained in each of the <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> entities for the two adjacent zones)for each 1-to-1 interface makes the connectivity structures for all interface types look and function similarly. It also fits better with the zone-by-zone hierarchy chosen for the CGNS database. The minor penalty in data duplication was deemed worth the advantages gained.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is a CGNS design intent that a given zone boundary segment or location should at most be defined (or covered) by either a boundary condition or a multizone interface connectivity, but not by both.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">It is a CGNS design intent that a given zone boundary segment or location should at most be defined (or covered) by either a boundary condition or a multizone interface connectivity, but not by both.</p>
 </div>
 <div class="section" id="zonal-connectivity-structure-definition-zonegridconnectivity-t">
 <h2><span class="section-number">8.1. </span>Zonal Connectivity Structure Definition: <code class="docutils literal notranslate"><span class="pre">ZoneGridConnectivity_t</span></code><a class="headerlink" href="#zonal-connectivity-structure-definition-zonegridconnectivity-t" title="Permalink to this headline">¶</a></h2>
@@ -161,9 +160,9 @@ This includes abutting interfaces (1-to-1 and general mismatched), overset-grid 
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
+<p class="first admonition-title">Note</p>
 <p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">GridConnectivity1to1_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">GridConnectivity_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">OversetHoles_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of ZoneGridConnectivity_t.</p>
-<p>All lists within the <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneGridConnectivity_t</span></code> structure may be empty.</p>
+<p class="last">All lists within the <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneGridConnectivity_t</span></code> structure may be empty.</p>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">ZoneGridConnectivity_t</span></code> requires two structure parameters, <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code>, which is passed onto all connectivity substructures, and <code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span></code>, which is passed to <code class="code sidsref docutils literal notranslate"><span class="pre">GridConnectivity_t</span></code> only.</p>
 <p>Connectivity information for 1-to-1 or matched multizone interfaces is contained in the <code class="code sidsref docutils literal notranslate"><span class="pre">GridConnectivity1to1_t</span></code> structure.
@@ -200,13 +199,13 @@ This convention requires that a single interface patch be described twice in the
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity1to1_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityProperty</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRangeDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Transform</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>.</p></li>
-<li><p>If Transform is absent, then its default value is <code class="code docutils literal notranslate"><span class="pre">[+1,+2,+3]</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> must be equated to a 32 character maximum zone identifier within the current CGNS database (i.e., it must be equal to one of the <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> identifiers contained in the current <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code> entity) or to a 65 character maximum zone identifier in another base of the same CGNS tree; in that case the <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> string has the pattern base/zone, <strong>only one single “/” character is allowed</strong>, and neither basename nor zonename should be empty. <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> should also not be empty.</p></li>
-<li><p>Beginning indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointRangeDonor</span></code> must coincide (i.e., must be the same physical point); ending indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointRangeDonor</span></code> must also coincide.</p></li>
-<li><p>Elements of <code class="code sidskey docutils literal notranslate"><span class="pre">Transform</span></code> must be signed integers in the range <code class="code sidskey docutils literal notranslate"><span class="pre">-IndexDimension,</span> <span class="pre">...,</span> <span class="pre">+IndexDimension</span></code>; element magnitudes may not be repeated. In 3-D allowed elements are 0, ±1, ±2, ±3.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity1to1_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityProperty</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRangeDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Transform</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>.</li>
+<li>If Transform is absent, then its default value is <code class="code docutils literal notranslate"><span class="pre">[+1,+2,+3]</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> must be equated to a 32 character maximum zone identifier within the current CGNS database (i.e., it must be equal to one of the <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> identifiers contained in the current <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code> entity) or to a 65 character maximum zone identifier in another base of the same CGNS tree; in that case the <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> string has the pattern base/zone, <strong>only one single “/” character is allowed</strong>, and neither basename nor zonename should be empty. <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> should also not be empty.</li>
+<li>Beginning indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointRangeDonor</span></code> must coincide (i.e., must be the same physical point); ending indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointRangeDonor</span></code> must also coincide.</li>
+<li>Elements of <code class="code sidskey docutils literal notranslate"><span class="pre">Transform</span></code> must be signed integers in the range <code class="code sidskey docutils literal notranslate"><span class="pre">-IndexDimension,</span> <span class="pre">...,</span> <span class="pre">+IndexDimension</span></code>; element magnitudes may not be repeated. In 3-D allowed elements are 0, ±1, ±2, ±3.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> contains the subrange of indices that makes up the interface patch in the current zone (i.e., that <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> entity that contains the given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity1to1_t</span></code>).
@@ -388,17 +387,17 @@ There is no restriction against a given fringe point being contained within mult
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityProperty</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> must be equated to a 32 character maximum zone identifier within the current CGNS database (i.e., it must be equal to one of the <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> identifiers contained in the current <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code> entity) or to a 65 character maximum zone identifier in another base of the same CGNS tree; in that case the <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> string has the pattern <em>base/zone</em>, only one single “/” character is allowed, and neither basename nor zonename should be empty. <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> should also not be empty.</p></li>
-<li><p>If <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Overset</span></code>.</p></li>
-<li><p>For <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code> interfaces, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> can be either <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to node indices, for both structured and unstructured grids. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to face elements. Face elements are indexed using different methods depending if the zone is structured or unstructured. For a structured zone, face elements are indexed using the minimum of the connecting vertex indices, as described in the section <a class="reference internal" href="convention.html#structgrid"><span class="std std-ref">Structured Grid Notation and Indexing Conventions</span></a>. For an unstructured zone, face elements are indexed using their element numbering, as defined in the <code class="code sidskey docutils literal notranslate"><span class="pre">Elements_t</span></code> data structures. For <code class="code sidskey docutils literal notranslate"><span class="pre">Overset</span></code> interfaces, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> can be either <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code>, allowing the description of the overlap region in the receiver zone to be consistent with the grid location used for storing the flow solution. If <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>.</p></li>
-<li><p>One of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> must be specified, but not both.</p></li>
-<li><p>If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> is specified, then an index ordering convention is needed to map receiver-zone grid points to donor-zone grid points. FORTRAN multidimensional array ordering is used.</p></li>
-<li><p>If <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code> is <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> must define points associated with a face subrange (if the zone is structured, all points must be in a single computational grid plane); the donor-zone grid locations defined by <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> must also be associated with a face subrange.</p></li>
-<li><p>If donor information is given, either <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code> alone, or <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> with or without <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>, must be used. The use of <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code> is restricted to <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code>, whereas <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> can be used for any interface type.</p></li>
-<li><p>Thus, for a <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code> that is not <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code>, there are three allowable levels of description concerning the connectivity information: (a) full, giving <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> with <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> plus <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>; (b) partial, giving <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> with <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> but no <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>; or (c) minimal, giving <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> only.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityProperty</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> must be equated to a 32 character maximum zone identifier within the current CGNS database (i.e., it must be equal to one of the <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> identifiers contained in the current <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code> entity) or to a 65 character maximum zone identifier in another base of the same CGNS tree; in that case the <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> string has the pattern <em>base/zone</em>, only one single “/” character is allowed, and neither basename nor zonename should be empty. <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> should also not be empty.</li>
+<li>If <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Overset</span></code>.</li>
+<li>For <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code> interfaces, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> can be either <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to node indices, for both structured and unstructured grids. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to face elements. Face elements are indexed using different methods depending if the zone is structured or unstructured. For a structured zone, face elements are indexed using the minimum of the connecting vertex indices, as described in the section <a class="reference internal" href="convention.html#structgrid"><span class="std std-ref">Structured Grid Notation and Indexing Conventions</span></a>. For an unstructured zone, face elements are indexed using their element numbering, as defined in the <code class="code sidskey docutils literal notranslate"><span class="pre">Elements_t</span></code> data structures. For <code class="code sidskey docutils literal notranslate"><span class="pre">Overset</span></code> interfaces, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> can be either <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code>, allowing the description of the overlap region in the receiver zone to be consistent with the grid location used for storing the flow solution. If <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>.</li>
+<li>One of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> must be specified, but not both.</li>
+<li>If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> is specified, then an index ordering convention is needed to map receiver-zone grid points to donor-zone grid points. FORTRAN multidimensional array ordering is used.</li>
+<li>If <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code> is <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> must define points associated with a face subrange (if the zone is structured, all points must be in a single computational grid plane); the donor-zone grid locations defined by <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> must also be associated with a face subrange.</li>
+<li>If donor information is given, either <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code> alone, or <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> with or without <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>, must be used. The use of <code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code> is restricted to <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code>, whereas <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> can be used for any interface type.</li>
+<li>Thus, for a <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityType</span></code> that is not <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code>, there are three allowable levels of description concerning the connectivity information: (a) full, giving <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> with <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> plus <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>; (b) partial, giving <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> with <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code> but no <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code>; or (c) minimal, giving <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneDonorName</span></code> only.</li>
 </ol>
 </div>
 <p>The type of multizone interface connectivity may be <code class="code sidskey docutils literal notranslate"><span class="pre">Overset</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting1to1</span></code>. <code class="code sidskey docutils literal notranslate"><span class="pre">Overset</span></code> refers to zones that overlap; for a 3-D configuration the overlap is a 3-D region. <code class="code sidskey docutils literal notranslate"><span class="pre">Abutting</span></code> refers to zones that abut or touch, but do not overlap (other than the vertices and faces that make up the interface).
@@ -419,17 +418,17 @@ For example, if the point is located within the cell at a position 75% in the <e
 <p>where <span class="math notranslate nohighlight">\(d\)</span> is the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, or <span class="math notranslate nohighlight">\(z\)</span> value at an interior point in the cell, <span class="math notranslate nohighlight">\(d_{i}\)</span> is the <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(y\)</span>, or <span class="math notranslate nohighlight">\(z\)</span> value at node <em>i</em>, and <span class="math notranslate nohighlight">\(W_{i}\)</span> is a weight at node <em>i</em>.
 The weights are functions of the parametric variables <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(s\)</span>, and <span class="math notranslate nohighlight">\(t\)</span> (corresponding with the <em>i</em>, <em>j</em>, and <em>k</em> directions, respectively), which vary from 0 to 1, inclusively.
 For structured grids in 3-D, <span class="math notranslate nohighlight">\(N = 8\)</span>. Note that for skewed, non-parallel grids, it is not always easy to determine the interpolants geometrically, and it may be necessary to solve an inverse problem using the interpolation function.</p>
-<table class="docutils align-default">
+<table class="table table-bordered">
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_struct.gif"><img alt="Structured grid cell" src="../../_images/cnct_struct.gif" style="width: 300px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{i,j,k} &amp;= (1 − r) (1 − s) (1 − t) \\
 W_{i+1,j,k} &amp;= r (1 − s) (1 − t) \\
 W_{i,j+1,k} &amp;= (1 − r) s (1 − t) \\
@@ -444,36 +443,36 @@ W_{i+1,j+1,k+1} &amp;= r s t\end{split}\]</div>
 </table>
 <p>For unstructured grids, <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code> is defined only for the basic linear element types: <code class="code sidskey docutils literal notranslate"><span class="pre">BAR_2</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">TRI_3</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">QUAD_4</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">TETRA_4</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PYRA_5</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PENTA_6</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">HEXA_8</span></code>.
 The directionality for the <span class="math notranslate nohighlight">\(r\)</span>, <span class="math notranslate nohighlight">\(s\)</span>, and <span class="math notranslate nohighlight">\(t\)</span> interpolants for the basic element types is defined as follows.</p>
-<table class="docutils align-default" id="id2">
+<table class="table table-bordered" id="id2">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">BAR_2</span></code></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_bar2.gif"><img alt="Unstructured grid line element" src="../../_images/cnct_unst_bar2.gif" style="width: 260px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= 1 − r \\
 W_{2} &amp;= r\end{split}\]</div>
 </td>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id3">
+<table class="table table-bordered" id="id3">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">TRI_3</span></code></span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_tri3.gif"><img alt="Unstructured grid triangular element" src="../../_images/cnct_unst_tri3.gif" style="width: 260px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= 1 − r - s \\
 W_{2} &amp;= r \\
 W_{3} &amp;= s\end{split}\]</div>
@@ -481,18 +480,18 @@ W_{3} &amp;= s\end{split}\]</div>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id4">
+<table class="table table-bordered" id="id4">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">QUAD_4</span></code></span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_quad4.gif"><img alt="Unstructured grid quadrilateral element" src="../../_images/cnct_unst_quad4.gif" style="width: 260px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= (1 − r) (1 - s) \\
 W_{2} &amp;= r (1 - s)\\
 W_{3} &amp;= r s \\
@@ -501,18 +500,18 @@ W_{4} &amp;= (1 - r) s\end{split}\]</div>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id5">
+<table class="table table-bordered" id="id5">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">TETRA_4</span></code></span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_tetra4.gif"><img alt="Unstructured grid tetrahedral element" src="../../_images/cnct_unst_tetra4.gif" style="width: 260px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= 1 − r - s - t \\
 W_{2} &amp;= r \\
 W_{3} &amp;= s \\
@@ -521,18 +520,18 @@ W_{4} &amp;= t\end{split}\]</div>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id6">
+<table class="table table-bordered" id="id6">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">PYRA_5</span></code></span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_pyra5.gif"><img alt="Unstructured grid pyramid element" src="../../_images/cnct_unst_pyra5.gif" style="width: 260px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= (1 − r)(1 - s)(1 - t) \\
 W_{2} &amp;= r (1 - s)(1 - t)\\
 W_{3} &amp;= r s (1 - t) \\
@@ -542,18 +541,18 @@ W_{5} &amp;= t\end{split}\]</div>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id7">
+<table class="table table-bordered" id="id7">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">PENTA_6</span></code></span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_penta6.gif"><img alt="Unstructured grid pentahedral element" src="../../_images/cnct_unst_penta6.gif" style="width: 260px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= (1 − r − s)(1 − t) \\
 W_{2} &amp;= r (1 - s)\\
 W_{3} &amp;= s (1 - t) \\
@@ -564,18 +563,18 @@ W_{6} &amp;= s t\end{split}\]</div>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id8">
+<table class="table table-bordered" id="id8">
 <caption><span class="caption-text"><code class="docutils literal notranslate"><span class="pre">HEXA_8</span></code></span><a class="headerlink" href="#id8" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center">
+<tbody valign="top">
+<tr class="row-even"><td><div class="first last figure align-center">
 <a class="reference internal image-reference" href="../../_images/cnct_unst_hexa8.gif"><img alt="Unstructured grid hexahedral element" src="../../_images/cnct_unst_hexa8.gif" style="width: 280px;" /></a>
 </div>
 </td>
-<td><div class="math notranslate nohighlight">
+<td><div class="first last math notranslate nohighlight">
 \[\begin{split}W_{1} &amp;= (1 − r)(1 − s)(1 − t) \\
 W_{2} &amp;= r (1 − s)(1 − t)\\
 W_{3} &amp;= r s (1 − t) \\
@@ -602,14 +601,10 @@ Since there are no restrictions on the values contained in <code class="code sid
 Use of <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code> is discouraged and is on a user-beware basis.</p>
 <dl class="c function">
 <dt id="c.PointListSize">
-FUNCTION <code class="sig-name descname">PointListSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PointListSize" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">PointListSize</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.PointListSize" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body"><code class="docutils literal notranslate"><span class="pre">int</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></dd>
 </dl>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">PointListDonor</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">CellListDonor</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">InterpolantsDonor</span></code> require the function <code class="code sidskey docutils literal notranslate"><span class="pre">PointListSize</span></code>, to identify the length of the array. If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> is specified by <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity_t</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointListSize</span></code> is obtained from the number of grid points (inclusive) between the beginning and ending indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.
 If <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is specified by <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivity_t</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointListSize</span></code> is actually a user input during creation of the database; it is the length of the array <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> whose elements are also user inputs (by “user” we mean the application code that is generating the CGNS database).</p>
@@ -699,8 +694,8 @@ At the current time, only two properties (<code class="code sidskey docutils lit
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityProperty_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">Periodic</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterface</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">GridConnectivityProperty_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">Periodic</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterface</span></code>.</p>
 </div>
 <p>The <code class="code sidskey docutils literal notranslate"><span class="pre">Periodic_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterface_t</span></code> data structures may be used to record properties associated with periodic interfaces, or interfaces where data is to be averaged in some way, respectively.</p>
 <p>The <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> data structure allows arbitrary user-defined data to be stored in <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> children without the restrictions or implicit meanings imposed on these node types at other node locations.</p>
@@ -724,8 +719,8 @@ At the current time, only two properties (<code class="code sidskey docutils lit
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Periodic_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">RotationAngle</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">RotationCenter</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Translation</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Periodic_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">RotationAngle</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">RotationCenter</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Translation</span></code>.</p>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">RotationCenter</span></code> is the origin for defining the rotation angle between the periodic interfaces. <code class="code sidskey docutils literal notranslate"><span class="pre">RotationAngle</span></code> defines the angle from the current interface to the connecting interface. If rotating about more than one axis, the rotation is performed first about the x-axis, then the y-axis, then the z-axis. <code class="code sidskey docutils literal notranslate"><span class="pre">Translation</span></code> defines the translation from the current interface to the connecting interface.</p>
 <p><code class="code sidsref docutils literal notranslate"><span class="pre">DataClass</span></code> defines the default for the class of data contained in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> structures. If the data is dimensional, <code class="code sidsref docutils literal notranslate"><span class="pre">DimensionalUnits</span></code> may be used to describe the system of dimensional units employed. If present, these two entities take precedence over all corresponding entities at higher levels of the hierarchy, following the <a class="reference internal" href="hierarchy.html#precedence"><span class="std std-ref">standard precedence rules</span></a>.</p>
@@ -745,8 +740,8 @@ At the current time, only two properties (<code class="code sidskey docutils lit
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterface_t</span></code> and shall not include the name <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterfaceType</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterface_t</span></code> and shall not include the name <code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterfaceType</span></code>.</p>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">AverageInterfaceType_t</span></code> is a required enumeration data structure that is used to define the type of averaging to be done.</p>
 <div class="highlight-sids notranslate"><div class="highlight"><pre><span></span><span class="kt">AverageInterfaceType_t</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">Enumeration</span><span class="p">(</span><span class="w"></span>
@@ -785,11 +780,11 @@ The structure <code class="code sidskey docutils literal notranslate"><span clas
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">IndexRange_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">OversetHoles_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>.</p></li>
-<li><p>If <code class="code sidsref docutils literal notranslate"><span class="pre">GridLocation</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>.</p></li>
-<li><p>One of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> must be specified, but not both.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">IndexRange_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">OversetHoles_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>.</li>
+<li>If <code class="code sidsref docutils literal notranslate"><span class="pre">GridLocation</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>.</li>
+<li>One of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> must be specified, but not both.</li>
 </ol>
 </div>
 <p>The location of grid indices specified in <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> and the <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> list is given by <code class="code sidsref docutils literal notranslate"><span class="pre">GridLocation</span></code>.</p>
@@ -797,14 +792,10 @@ The structure <code class="code sidskey docutils literal notranslate"><span clas
 <p>The <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> data structure allows arbitrary user-defined data to be stored in <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> children without the restrictions or implicit meanings imposed on these node types at other node locations.</p>
 <dl class="c function">
 <dt>
-FUNCTION <code class="sig-name descname">PointListSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">PointListSize</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body"><code class="docutils literal notranslate"><span class="pre">int</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></dd>
 </dl>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">OversetHoles_t</span></code> requires one structure function, <code class="code sidskey docutils literal notranslate"><span class="pre">PointListSize</span></code>, to identify the length of the <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> array. <code class="code sidskey docutils literal notranslate"><span class="pre">PointListSize</span></code> is a user input. (See the discussion on function <span class="xref std std-ref">PointListSize</span>.)</p>
 </dd></dl>

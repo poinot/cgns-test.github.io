@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Data Structure Management Routines &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -117,92 +115,73 @@
 <span id="standardcgiostructure"></span><h1>Data Structure Management Routines<a class="headerlink" href="#data-structure-management-routines" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="cgio-create-node">
 <h2>cgio_create_node<a class="headerlink" href="#cgio-create-node" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_create_node">
-int <code class="sig-name descname">cgio_create_node</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>pid</em>, <em class="property">const</em> char *<em>name</em>, double *<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_create_node" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_create_node</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">pid</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name</span></em>, <span class="pre">double</span> <span class="pre">*</span><em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_create_node" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_create_node_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_create_node_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">double pid</em>, <em class="sig-param">name</em>, <em class="sig-param">id</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_create_node_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">pid</span></code></p></td>
-<td><p>IN: Parent node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">pid</span></code></td>
+<td>IN: Parent node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">name</span></code></p></td>
-<td><p>IN: Node name (max length 32).</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">name</span></code></td>
+<td>IN: Node name (max length 32).</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>OUT: Node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>OUT: Node identifier.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>- w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>- w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Creates a new empty node in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code> as a child of the node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code>. The name of the new node is given by <code class="code docutils literal notranslate"><span class="pre">name</span></code>, and must not already exist as a child of the parent node. The node will contain no label, dimensions, or data. Use the <a class="reference internal" href="CGNS_CGIO_node.html#standardcgionodemanagement"><span class="std std-ref">Node Management Routines</span></a> to change the properties of the node, and the <a class="reference internal" href="CGNS_CGIO_dataio.html#standardcgiodataio"><span class="std std-ref">Data I/O Routines</span></a> to add data. Returns 0 and the identifier of the new node in <code class="code docutils literal notranslate"><span class="pre">id</span></code> on success, else an error code.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Creates a new empty node in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code> as a child of the node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code>. The name of the new node is given by <code class="code docutils literal notranslate"><span class="pre">name</span></code>, and must not already exist as a child of the parent node. The node will contain no label, dimensions, or data. Use the <a class="reference internal" href="CGNS_CGIO_node.html#standardcgionodemanagement"><span class="std std-ref">Node Management Routines</span></a> to change the properties of the node, and the <a class="reference internal" href="CGNS_CGIO_dataio.html#standardcgiodataio"><span class="std std-ref">Data I/O Routines</span></a> to add data. Returns 0 and the identifier of the new node in <code class="code docutils literal notranslate"><span class="pre">id</span></code> on success, else an error code.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-new-node">
 <h2>cgio_new_node<a class="headerlink" href="#cgio-new-node" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_new_node">
-int <code class="sig-name descname">cgio_new_node</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>pid</em>, <em class="property">const</em> char *<em>name</em>, <em class="property">const</em> char *<em>label</em>, <em class="property">const</em> char *<em>data_type</em>, int <em>ndims</em>, <em class="property">const</em> cgsize_t *<em>dims</em>, <em class="property">const</em> void *<em>data</em>, double *<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_new_node" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_new_node</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">pid</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">label</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">data_type</span></em>, <span class="pre">int</span> <em><span class="pre">ndims</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">cgsize_t</span> <span class="pre">*</span><em><span class="pre">dims</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">void</span> <span class="pre">*</span><em><span class="pre">data</span></em>, <span class="pre">double</span> <span class="pre">*</span><em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_new_node" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_new_node_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_new_node_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">pid</em>, <em class="sig-param">name</em>, <em class="sig-param">label</em>, <em class="sig-param">data_type</em>, <em class="sig-param">ndims</em>, <em class="sig-param">dims</em>, <em class="sig-param">data</em>, <em class="sig-param">id</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_new_node_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">pid</span></code></p></td>
-<td><p>IN: Parent node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">pid</span></code></td>
+<td>IN: Parent node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">name</span></code></p></td>
-<td><p>IN: Node name (max length 32).</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">name</span></code></td>
+<td>IN: Node name (max length 32).</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">label</span></code></p></td>
-<td><p>IN: Node label (max length 32).</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">label</span></code></td>
+<td>IN: Node label (max length 32).</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">data_type</span></code></p></td>
-<td><div class="line-block">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">data_type</span></code></td>
+<td><div class="first last line-block">
 <div class="line">IN: Type of data contained in the node. Options are:</div>
 <div class="line-block">
 <div class="line"><strong>MT</strong> - empty</div>
@@ -220,237 +199,192 @@ int <code class="sig-name descname">cgio_new_node</code><span class="sig-paren">
 </div>
 </td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">ndims</span></code></p></td>
-<td><p>IN: Number of dimensions for the data (max 12).</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">ndims</span></code></td>
+<td>IN: Number of dimensions for the data (max 12).</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">dims</span></code></p></td>
-<td><p>IN: Data dimension values (<code class="code docutils literal notranslate"><span class="pre">ndims</span></code> values).</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">dims</span></code></td>
+<td>IN: Data dimension values (<code class="code docutils literal notranslate"><span class="pre">ndims</span></code> values).</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">data</span></code></p></td>
-<td><p>IN: Data array to be stored with the node.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">data</span></code></td>
+<td>IN: Data array to be stored with the node.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>OUT: Node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>OUT: Node identifier.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>- w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>- w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Creates a new node in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code> as a child of the node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code>. The name of the new node is given by <code class="code docutils literal notranslate"><span class="pre">name</span></code>, and must not already exist as a child of the parent node. The node label is given by <code class="code docutils literal notranslate"><span class="pre">label</span></code>, the type of data by <code class="code docutils literal notranslate"><span class="pre">data_type</span></code>, the dimensions of the data by <code class="code docutils literal notranslate"><span class="pre">ndims</span></code> and <code class="code docutils literal notranslate"><span class="pre">dims</span></code>, and the data to write to the node by <code class="code docutils literal notranslate"><span class="pre">data</span></code>. This is equivalent to calling the routines:</p>
-<pre class="literal-block"><a class="reference internal" href="#c.cgio_create_node" title="cgio_create_node"><code class="xref c c-func docutils literal notranslate"><span class="pre">cgio_create_node()</span></code></a>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first">Creates a new node in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code> as a child of the node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code>. The name of the new node is given by <code class="code docutils literal notranslate"><span class="pre">name</span></code>, and must not already exist as a child of the parent node. The node label is given by <code class="code docutils literal notranslate"><span class="pre">label</span></code>, the type of data by <code class="code docutils literal notranslate"><span class="pre">data_type</span></code>, the dimensions of the data by <code class="code docutils literal notranslate"><span class="pre">ndims</span></code> and <code class="code docutils literal notranslate"><span class="pre">dims</span></code>, and the data to write to the node by <code class="code docutils literal notranslate"><span class="pre">data</span></code>. This is equivalent to calling the routines:</p>
+<pre class="literal-block">
+<a class="reference internal" href="#c.cgio_create_node" title="cgio_create_node"><code class="xref c c-func docutils literal notranslate"><span class="pre">cgio_create_node()</span></code></a>
 <a class="reference internal" href="CGNS_CGIO_node.html#c.cgio_set_label" title="cgio_set_label"><code class="xref c c-func docutils literal notranslate"><span class="pre">cgio_set_label()</span></code></a>
 <a class="reference internal" href="CGNS_CGIO_node.html#c.cgio_set_dimensions" title="cgio_set_dimensions"><code class="xref c c-func docutils literal notranslate"><span class="pre">cgio_set_dimensions()</span></code></a>
-<a class="reference internal" href="CGNS_CGIO_dataio.html#c.cgio_write_all_data" title="cgio_write_all_data"><code class="xref c c-func docutils literal notranslate"><span class="pre">cgio_write_all_data()</span></code></a></pre>
-<p>Returns 0 and the identifier of the new node in <code class="code docutils literal notranslate"><span class="pre">id</span></code> on success, else an error code.</p>
+<a class="reference internal" href="CGNS_CGIO_dataio.html#c.cgio_write_all_data" title="cgio_write_all_data"><code class="xref c c-func docutils literal notranslate"><span class="pre">cgio_write_all_data()</span></code></a>
+</pre>
+<p class="last">Returns 0 and the identifier of the new node in <code class="code docutils literal notranslate"><span class="pre">id</span></code> on success, else an error code.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-delete-node">
 <h2>cgio_delete_node<a class="headerlink" href="#cgio-delete-node" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_delete_node">
-int <code class="sig-name descname">cgio_delete_node</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>pid</em>, double <em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_delete_node" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_delete_node</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">pid</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_delete_node" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_delete_node_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_delete_node_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">pid</em>, <em class="sig-param">id</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_delete_node_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">pid</span></code></p></td>
-<td><p>IN: Parent node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">pid</span></code></td>
+<td>IN: Parent node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>- w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>- w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Deletes the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> below the parent node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>. All children of the deleted node will also be deleted unless a link is encountered. The link node will be deleted but nothing below it. Returns 0 on success, else an error code.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Deletes the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> below the parent node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>. All children of the deleted node will also be deleted unless a link is encountered. The link node will be deleted but nothing below it. Returns 0 on success, else an error code.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-move-node">
 <h2>cgio_move_node<a class="headerlink" href="#cgio-move-node" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_move_node">
-int <code class="sig-name descname">cgio_move_node</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>pid</em>, double <em>id</em>, double <em>new_pid</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_move_node" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_move_node</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">pid</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">double</span> <em><span class="pre">new_pid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_move_node" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_move_node_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_move_node_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">pid</em>, <em class="sig-param">id</em>, <em class="sig-param">new_pid</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_move_node_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">pid</span></code></p></td>
-<td><p>IN: Parent node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">pid</span></code></td>
+<td>IN: Parent node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">new_pid</span></code></p></td>
-<td><p>IN: New parent node identifier under which the node is to be moved.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">new_pid</span></code></td>
+<td>IN: New parent node identifier under which the node is to be moved.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>- w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>- w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Moves the node indentified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> below the parent node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code> to below the new parent node identified by <code class="code docutils literal notranslate"><span class="pre">new_pid</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>. A node by the same name as that that for id must not already exist under <code class="code docutils literal notranslate"><span class="pre">new_pid</span></code>. A node may only be moved if it and the parent nodes all reside in the same physical database. Returns 0 on success, else an error code.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Moves the node indentified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> below the parent node identified by <code class="code docutils literal notranslate"><span class="pre">pid</span></code> to below the new parent node identified by <code class="code docutils literal notranslate"><span class="pre">new_pid</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>. A node by the same name as that that for id must not already exist under <code class="code docutils literal notranslate"><span class="pre">new_pid</span></code>. A node may only be moved if it and the parent nodes all reside in the same physical database. Returns 0 on success, else an error code.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-number-children">
 <h2>cgio_number_children<a class="headerlink" href="#cgio-number-children" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_number_children">
-int <code class="sig-name descname">cgio_number_children</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>id</em>, int *<em>num_child</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_number_children" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_number_children</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">num_child</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_number_children" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_number_children_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_number_children_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">id</em>, <em class="sig-param">num_child</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_number_children_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 25%" />
-<col style="width: 75%" />
+<col width="25%" />
+<col width="75%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">num_child</span></code></p></td>
-<td><p>OUT: Number of children of the specified node.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">num_child</span></code></td>
+<td>OUT: Number of children of the specified node.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the number of children of the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>, Returns 0 and the number of children in <code class="code docutils literal notranslate"><span class="pre">num_child</span></code> on success, else an error code.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the number of children of the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>, Returns 0 and the number of children in <code class="code docutils literal notranslate"><span class="pre">num_child</span></code> on success, else an error code.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-children-names">
 <h2>cgio_children_names<a class="headerlink" href="#cgio-children-names" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_children_names">
-int <code class="sig-name descname">cgio_children_names</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>id</em>, int <em>start</em>, int <em>max_ret</em>, int <em>name_len</em>, int *<em>num_ret</em>, char *<em>child_names</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_children_names" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_children_names</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">int</span> <em><span class="pre">start</span></em>, <span class="pre">int</span> <em><span class="pre">max_ret</span></em>, <span class="pre">int</span> <em><span class="pre">name_len</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">num_ret</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">child_names</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_children_names" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_children_names_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_children_names_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">id</em>, <em class="sig-param">start</em>, <em class="sig-param">max_ret</em>, <em class="sig-param">name_len</em>, <em class="sig-param">num_ret</em>, <em class="sig-param">child_names</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_children_names_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">start</span></code></p></td>
-<td><p>IN: Starting index for returned child names or ids (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">start</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child</span></code>).</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">start</span></code></td>
+<td>IN: Starting index for returned child names or ids (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">start</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child</span></code>).</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">max_ret</span></code></p></td>
-<td><p>IN: Maximum child names or ids to be returned (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child-start+1</span></code>).</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">max_ret</span></code></td>
+<td>IN: Maximum child names or ids to be returned (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child-start+1</span></code>).</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">name_len</span></code></p></td>
-<td><p>IN: Length reserved for each returned child name.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">name_len</span></code></td>
+<td>IN: Length reserved for each returned child name.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">num_ret</span></code></p></td>
-<td><p>OUT: Number of returned values of child names or identifiers.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">num_ret</span></code></td>
+<td>OUT: Number of returned values of child names or identifiers.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">child_names</span></code></p></td>
-<td><p>OUT: Child node names (<code class="code docutils literal notranslate"><span class="pre">num_ret</span></code> values). This array should be dimensioned at least (<code class="code docutils literal notranslate"><span class="pre">name_len</span> <span class="pre">*</span> <span class="pre">max_ret</span></code>).</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">child_names</span></code></td>
+<td>OUT: Child node names (<code class="code docutils literal notranslate"><span class="pre">num_ret</span></code> values). This array should be dimensioned at least (<code class="code docutils literal notranslate"><span class="pre">name_len</span> <span class="pre">*</span> <span class="pre">max_ret</span></code>).</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the names of the children of the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the names of the children of the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
 The starting index for the array of names is given by <code class="code docutils literal notranslate"><span class="pre">start</span></code>,
 and the maximum number of names to return by <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code>.
 Both <code class="code docutils literal notranslate"><span class="pre">start</span></code> and <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code> should be between 1 and <code class="code docutils literal notranslate"><span class="pre">num_child</span></code>, inclusively.
@@ -463,57 +397,46 @@ In C, an additional byte should be added to <code class="code docutils literal n
 </div>
 <div class="section" id="cgio-children-ids">
 <h2>cgio_children_ids<a class="headerlink" href="#cgio-children-ids" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_children_ids">
-int <code class="sig-name descname">cgio_children_ids</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>id</em>, int <em>start</em>, int <em>max_ret</em>, int *<em>num_ret</em>, char *<em>child_ids</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_children_ids" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_children_ids</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">int</span> <em><span class="pre">start</span></em>, <span class="pre">int</span> <em><span class="pre">max_ret</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">num_ret</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">child_ids</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_children_ids" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_children_ids_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_children_ids_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">id</em>, <em class="sig-param">start</em>, <em class="sig-param">max_ret</em>, <em class="sig-param">num_ret</em>, <em class="sig-param">child_ids</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_children_ids_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">start</span></code></p></td>
-<td><p>IN: Starting index for returned child names or ids (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">start</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child</span></code>).</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">start</span></code></td>
+<td>IN: Starting index for returned child names or ids (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">start</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child</span></code>).</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">max_ret</span></code></p></td>
-<td><p>IN: Maximum child names or ids to be returned (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child-start+1</span></code>).</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">max_ret</span></code></td>
+<td>IN: Maximum child names or ids to be returned (1 &lt;= <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code> &lt;= <code class="code docutils literal notranslate"><span class="pre">num_child-start+1</span></code>).</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">num_ret</span></code></p></td>
-<td><p>OUT: Number of returned values of child names or identifiers.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">num_ret</span></code></td>
+<td>OUT: Number of returned values of child names or identifiers.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">child_ids</span></code></p></td>
-<td><p>OUT: Child node identifiers (<code class="code docutils literal notranslate"><span class="pre">num_ret</span></code> values). This array should be dimensioned at least (<code class="code docutils literal notranslate"><span class="pre">max_ret</span></code>).</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">child_ids</span></code></td>
+<td>OUT: Child node identifiers (<code class="code docutils literal notranslate"><span class="pre">num_ret</span></code> values). This array should be dimensioned at least (<code class="code docutils literal notranslate"><span class="pre">max_ret</span></code>).</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the node identifiers of the children of the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the node identifiers of the children of the node identified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
 The starting index for the array of ids is given by <code class="code docutils literal notranslate"><span class="pre">start</span></code>, and the maximum ids to return by <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code>.
 Both <code class="code docutils literal notranslate"><span class="pre">start</span></code> and <code class="code docutils literal notranslate"><span class="pre">max_ret</span></code> should be between 1 and <code class="code docutils literal notranslate"><span class="pre">num_child</span></code>, inclusively.
 The array <code class="code docutils literal notranslate"><span class="pre">child_ids</span></code> should be dimensioned at least (<code class="code docutils literal notranslate"><span class="pre">max_ret</span></code>).

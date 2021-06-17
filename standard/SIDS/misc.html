@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,15 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>12. Miscellaneous Data Structures &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -142,57 +141,57 @@
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceStateDescription</span></code>.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceStateDescription</span></code>.</li>
 </ol>
 </div>
 <p>Data-name identifiers associated with <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code> are shown in the table below.</p>
-<table class="docutils align-default" id="id1">
+<table class="table table-bordered" id="id1">
 <caption><span class="caption-text"><strong>Data-Name Identifiers for Reference State</strong></span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 38%" />
-<col style="width: 44%" />
-<col style="width: 17%" />
+<col width="38%" />
+<col width="44%" />
+<col width="17%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Data-Name Identifier</p></th>
-<th class="head"><p>Description</p></th>
-<th class="head"><p>Units</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data-Name Identifier</th>
+<th class="head">Description</th>
+<th class="head">Units</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Mach</span></code></p></td>
-<td><p>Mach number, <span class="math notranslate nohighlight">\(M = q/c\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Mach</span></code></td>
+<td>Mach number, <span class="math notranslate nohighlight">\(M = q/c\)</span></td>
+<td><span class="math notranslate nohighlight">\(-\)</span></td>
 </tr>
-<tr class="row-odd"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Mach_Velocity</span></code></p></td>
-<td><p>Velocity scale, <span class="math notranslate nohighlight">\(q\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L/T\)</span></p></td>
+<tr class="row-odd"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Mach_Velocity</span></code></td>
+<td>Velocity scale, <span class="math notranslate nohighlight">\(q\)</span></td>
+<td><span class="math notranslate nohighlight">\(L/T\)</span></td>
 </tr>
-<tr class="row-even"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Mach_VelocitySound</span></code></p></td>
-<td><p>Speed of sound scale, <span class="math notranslate nohighlight">\(c\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L/T\)</span></p></td>
+<tr class="row-even"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Mach_VelocitySound</span></code></td>
+<td>Speed of sound scale, <span class="math notranslate nohighlight">\(c\)</span></td>
+<td><span class="math notranslate nohighlight">\(L/T\)</span></td>
 </tr>
-<tr class="row-odd"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds</span></code></p></td>
-<td><p>Reynolds number, <span class="math notranslate nohighlight">\(Re = V L_{R} / \nu\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(-\)</span></p></td>
+<tr class="row-odd"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds</span></code></td>
+<td>Reynolds number, <span class="math notranslate nohighlight">\(Re = V L_{R} / \nu\)</span></td>
+<td><span class="math notranslate nohighlight">\(-\)</span></td>
 </tr>
-<tr class="row-even"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds_Velocity</span></code></p></td>
-<td><p>Velocity scale, <span class="math notranslate nohighlight">\(V\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L/T\)</span></p></td>
+<tr class="row-even"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds_Velocity</span></code></td>
+<td>Velocity scale, <span class="math notranslate nohighlight">\(V\)</span></td>
+<td><span class="math notranslate nohighlight">\(L/T\)</span></td>
 </tr>
-<tr class="row-odd"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds_Length</span></code></p></td>
-<td><p>Length scale, <span class="math notranslate nohighlight">\(L_{R}\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<tr class="row-odd"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds_Length</span></code></td>
+<td>Length scale, <span class="math notranslate nohighlight">\(L_{R}\)</span></td>
+<td><span class="math notranslate nohighlight">\(L\)</span></td>
 </tr>
-<tr class="row-even"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds_ViscosityKinematic</span></code></p></td>
-<td><p>Kinematic viscosity scale, <span class="math notranslate nohighlight">\(\nu\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L^{2}/T\)</span></p></td>
+<tr class="row-even"><td><code class="code sidskey docutils literal notranslate"><span class="pre">Reynolds_ViscosityKinematic</span></code></td>
+<td>Kinematic viscosity scale, <span class="math notranslate nohighlight">\(\nu\)</span></td>
+<td><span class="math notranslate nohighlight">\(L^{2}/T\)</span></td>
 </tr>
-<tr class="row-odd"><td><p><code class="code sidskey docutils literal notranslate"><span class="pre">LengthReference</span></code></p></td>
-<td><p>Reference length, <span class="math notranslate nohighlight">\(L\)</span></p></td>
-<td><p><span class="math notranslate nohighlight">\(L\)</span></p></td>
+<tr class="row-odd"><td><code class="code sidskey docutils literal notranslate"><span class="pre">LengthReference</span></code></td>
+<td>Reference length, <span class="math notranslate nohighlight">\(L\)</span></td>
+<td><span class="math notranslate nohighlight">\(L\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -282,10 +281,10 @@ This structure contains the number of iterations and a list of data arrays conta
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">ConvergenceHistory_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">NormDefinitions</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">Iterations</span></code> is the only required field for <code class="code sidskey docutils literal notranslate"><span class="pre">ConvergenceHistory_t</span></code>.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">ConvergenceHistory_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">NormDefinitions</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">Iterations</span></code> is the only required field for <code class="code sidskey docutils literal notranslate"><span class="pre">ConvergenceHistory_t</span></code>.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">Iterations</span></code> identifies the number of iterations for which convergence information is recorded.
@@ -334,14 +333,14 @@ All data contained within this structure must be defined at the same grid locati
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code>.</p></li>
-<li><p>There are no required fields for <code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code>. <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> has a default of <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> if absent. <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code> also has a default if absent; the default is equivalent to having an instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code> whose <code class="code sidskey docutils literal notranslate"><span class="pre">RindPlanes</span></code> array contains all zeros.</p></li>
-<li><p>Both of the fields <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> are optional. Only one of these two fields may be specified.</p></li>
-<li><p>The structure parameter <code class="code sidskey docutils literal notranslate"><span class="pre">DataType</span></code> must be consistent with the data stored in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities.</p></li>
-<li><p>For unstructured zones <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> options are limited to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code>, unless one of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is present.</p></li>
-<li><p>Indexing of data within the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> structures, must be consistent with the associated numbering of vertices or elements.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code>.</li>
+<li>There are no required fields for <code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code>. <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> has a default of <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> if absent. <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code> also has a default if absent; the default is equivalent to having an instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code> whose <code class="code sidskey docutils literal notranslate"><span class="pre">RindPlanes</span></code> array contains all zeros.</li>
+<li>Both of the fields <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> are optional. Only one of these two fields may be specified.</li>
+<li>The structure parameter <code class="code sidskey docutils literal notranslate"><span class="pre">DataType</span></code> must be consistent with the data stored in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities.</li>
+<li>For unstructured zones <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> options are limited to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code>, unless one of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is present.</li>
+<li>Indexing of data within the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> structures, must be consistent with the associated numbering of vertices or elements.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code> requires four structure parameters; <code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span></code> identifies the dimensionality of cells or elements, <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code> identifies the dimensionality of the grid size arrays, and <code class="code sidskey docutils literal notranslate"><span class="pre">VertexSize</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">CellSize</span></code> are the number of core vertices and cells, respectively, in each index direction, excluding rind points. For structured zones, core vertices and cells begin at [1,1,1] (in 3-D) and end at <code class="code sidskey docutils literal notranslate"><span class="pre">VertexSize</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">CellSize</span></code>, respectively. For unstructured zones, <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code> is always 1.</p>
@@ -350,42 +349,42 @@ All data contained within this structure must be defined at the same grid locati
 <p>For unstructured grids, the value of <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> alone specifies location and indexing of discrete data only for vertex and cell-centered data. The reason for this is that element-based grid connectivity provided in the <code class="code sidskey docutils literal notranslate"><span class="pre">Elements_t</span></code> data structures explicitly indexes only vertices and cells.
 For data stored at alternate grid locations (e.g., edges), additional connectivity information is needed. This is provided by the optional fields <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>; these refer to vertices, edges, faces or cell centers, depending on the values of <code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>.
 The following table shows these relations.</p>
-<table class="docutils align-default">
+<table class="table table-bordered">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 14%" />
-<col style="width: 15%" />
-<col style="width: 19%" />
-<col style="width: 32%" />
+<col width="20%" />
+<col width="14%" />
+<col width="15%" />
+<col width="19%" />
+<col width="32%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head" rowspan="2"><p>CellDimension</p></th>
-<th class="head" colspan="4"><p>GridLocation</p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head" rowspan="2">CellDimension</th>
+<th class="head" colspan="4">GridLocation</th>
 </tr>
-<tr class="row-even"><th class="head"><p>Vertex</p></th>
-<th class="head"><p>EdgeCenter</p></th>
-<th class="head"><p>*FaceCenter</p></th>
-<th class="head"><p>CellCenter</p></th>
+<tr class="row-odd"><th class="head">Vertex</th>
+<th class="head">EdgeCenter</th>
+<th class="head">*FaceCenter</th>
+<th class="head">CellCenter</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>vertices</p></td>
-<td><p><cite>-</cite></p></td>
-<td><p><cite>-</cite></p></td>
-<td><p>cells (line elements)</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>vertices</td>
+<td><cite>-</cite></td>
+<td><cite>-</cite></td>
+<td>cells (line elements)</td>
 </tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p>vertices</p></td>
-<td><p>edges</p></td>
-<td><p><cite>-</cite></p></td>
-<td><p>cells (area elements)</p></td>
+<tr class="row-odd"><td>2</td>
+<td>vertices</td>
+<td>edges</td>
+<td><cite>-</cite></td>
+<td>cells (area elements)</td>
 </tr>
-<tr class="row-odd"><td><p>3</p></td>
-<td><p>vertices</p></td>
-<td><p>edges</p></td>
-<td><p>faces</p></td>
-<td><p>cells (volume elements)</p></td>
+<tr class="row-even"><td>3</td>
+<td>vertices</td>
+<td>edges</td>
+<td>faces</td>
+<td>cells (volume elements)</td>
 </tr>
 </tbody>
 </table>
@@ -402,14 +401,10 @@ If present, these two entities take precedence over all corresponding entities a
 <p>The <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> data structure allows arbitrary user-defined data to be stored in <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> children without the restrictions or implicit meanings imposed on these node types at other node locations.</p>
 <dl class="c function">
 <dt id="c.ListLength">
-FUNCTION <code class="sig-name descname">ListLength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange[]</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">ListLength</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body"><code class="docutils literal notranslate"><span class="pre">int</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange[]</span></code></dd>
 </dl>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code> requires the structure function <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code>, which is used to specify the number of entities (e.g. vertices) corresponding to a given <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>. If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> is specified, then <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> is obtained from the number of points (inclusive) between the beginning and ending indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.
 If <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is specified, then <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> is the number of indices in the list of points. In this situation, <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> becomes a user input along with the indices of the list <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>.
@@ -418,14 +413,10 @@ By user we mean the application code that is generating the CGNS database.</p>
 
 <dl class="c function">
 <dt id="c.DataSize">
-FUNCTION <code class="sig-name descname">DataSize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p>one-dimensional <code class="docutils literal notranslate"><span class="pre">int</span></code> array of length <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">VertexSize[]</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">CellSize[]</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength[]</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">DataSize</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body">one-dimensional <code class="docutils literal notranslate"><span class="pre">int</span></code> array of length <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">VertexSize[]</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">CellSize[]</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Rind</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength[]</span></code></dd>
 </dl>
 <p>The function <code class="code sidskey docutils literal notranslate"><span class="pre">DataSize[]</span></code> is the size of discrete-data arrays. It is identical to the function <code class="code sidskey docutils literal notranslate"><span class="pre">DataSize[]</span></code> defined for <code class="code sidskey docutils literal notranslate"><span class="pre">FlowSolution_t</span></code>.</p>
 </dd></dl>
@@ -449,11 +440,11 @@ FUNCTION <code class="sig-name descname">DataSize</code><span class="sig-paren">
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>.</p></li>
-<li><p>There are no required fields for <code class="code sidskey docutils literal notranslate"><span class="pre">IntegralData_t</span></code>.</p></li>
-<li><p>The structure parameter <code class="code sidskey docutils literal notranslate"><span class="pre">DataType</span></code> must be consistent with the data stored in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">DiscreteData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>.</li>
+<li>There are no required fields for <code class="code sidskey docutils literal notranslate"><span class="pre">IntegralData_t</span></code>.</li>
+<li>The structure parameter <code class="code sidskey docutils literal notranslate"><span class="pre">DataType</span></code> must be consistent with the data stored in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code> defines the default class for data contained in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities. For dimensional data, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code> may be used to describe the system of units employed. If present, these two entities take precedence over all corresponding entities at higher levels of the hierarchy, following the standard precedence rules.</p>
@@ -490,17 +481,17 @@ A <code class="code sidskey docutils literal notranslate"><span class="pre">Fami
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>All data structures contained in <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> are optional.</p></li>
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryReference_t</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique at this level and must not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">RotatingCoordinates</span></code>.</p></li>
-<li><p>The CAD referencing data are written in the <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryReference_t</span></code> data structures. They identify the CAD systems and databases where the geometric definition of the family is stored.</p></li>
-<li><p>The boundary condition type pertaining to a family is contained in the data structure <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC_t</span></code>. If this boundary condition type is to be used, the <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> specified under <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code> must be FamilySpecified.</p></li>
-<li><p>For the purpose of defining zone properties, families are extended to a volume of cells. In such case, the <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryReference_t</span></code> structures are not used.</p></li>
-<li><p>The mesh is linked to the family by attributing a family name to a BC patch or a zone in the data structure <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code>, respectively.</p></li>
-<li><p>A hierarchy of families is possible through the list of <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName_t</span></code> nodes. These nodes contain both a user defined node name and a family name. The node name <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyParent</span></code> may be used to specify the family name for the parent of the current <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> node.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code> is defined in the SIDS as a user-defined integer with no restrictions on the values that it can contain. It may be used here to attribute a number to the family.</p></li>
-<li><p>A <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> tree structure can be specified using the list of <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> children nodes. Into each of these children nodes the note #7 can be used to have a back tracking of the node parent.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>All data structures contained in <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> are optional.</li>
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryReference_t</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique at this level and must not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">RotatingCoordinates</span></code>.</li>
+<li>The CAD referencing data are written in the <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryReference_t</span></code> data structures. They identify the CAD systems and databases where the geometric definition of the family is stored.</li>
+<li>The boundary condition type pertaining to a family is contained in the data structure <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC_t</span></code>. If this boundary condition type is to be used, the <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> specified under <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code> must be FamilySpecified.</li>
+<li>For the purpose of defining zone properties, families are extended to a volume of cells. In such case, the <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryReference_t</span></code> structures are not used.</li>
+<li>The mesh is linked to the family by attributing a family name to a BC patch or a zone in the data structure <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code>, respectively.</li>
+<li>A hierarchy of families is possible through the list of <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName_t</span></code> nodes. These nodes contain both a user defined node name and a family name. The node name <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyParent</span></code> may be used to specify the family name for the parent of the current <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> node.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code> is defined in the SIDS as a user-defined integer with no restrictions on the values that it can contain. It may be used here to attribute a number to the family.</li>
+<li>A <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> tree structure can be specified using the list of <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> children nodes. Into each of these children nodes the note #7 can be used to have a back tracking of the node parent.</li>
 </ol>
 </div>
 <p>Rotation of the CFD family may be defined using the <code class="code sidskey docutils literal notranslate"><span class="pre">RotatingCoordinates_t</span></code> data structure.</p>
@@ -540,12 +531,12 @@ The geometry entity or entities within this CAD file that correspond to the fami
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">GeometryEntity_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique at this level and must not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryFile</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryFormat</span></code>.</p></li>
-<li><p>By default, there is only one <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryEntity</span></code> and its name is the family name.</p></li>
-<li><p>There is no limit to the number of CAD files or CAD systems referenced in a CGNS file. Different parts of the same model may be described with different CAD files of different CAD systems.</p></li>
-<li><p>Other CAD geometry formats may be added to this list as needed.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">GeometryEntity_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique at this level and must not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryFile</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryFormat</span></code>.</li>
+<li>By default, there is only one <code class="code sidskey docutils literal notranslate"><span class="pre">GeometryEntity</span></code> and its name is the family name.</li>
+<li>There is no limit to the number of CAD files or CAD systems referenced in a CGNS file. Different parts of the same model may be described with different CAD files of different CAD systems.</li>
+<li>Other CAD geometry formats may be added to this list as needed.</li>
 </ol>
 </div>
 </div>
@@ -562,9 +553,9 @@ The geometry entity or entities within this CAD file that correspond to the fami
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBCDataSet_t</span></code> list are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC_t</span></code> and shall not include the name <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code>.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBCDataSet_t</span></code> list are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC_t</span></code> and shall not include the name <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code>.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> specifies the boundary-condition type, which gives general information on the boundary-condition equations to be enforced.
@@ -599,10 +590,10 @@ For “compound” boundary conditions, where the equations to impose are depend
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBCDataSet_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code> is the only required field. All other fields are optional.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBCDataSet_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code> is the only required field. All other fields are optional.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code> specifies the boundary-condition type, which gives general information on the boundary-condition equations to be enforced.
@@ -646,13 +637,13 @@ The primary difference is that <code class="code sidskey docutils literal notran
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> may be set to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">JFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">KFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>. If <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to node indices, for both structured and unstructured grids. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to face elements.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> may only be used when <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> is located below a <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> structure in the database hierarchy.</p></li>
-<li><p>Only one of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> may be specified.</p></li>
-<li><p>Both <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">AdditionalFamilyName</span></code> should refer to a <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code> level <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code>, in the parent base or in another sibling base (see <span class="xref std std-ref">Base Level Families</span>).</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> may be set to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">JFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">KFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>. If <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is absent, then its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to node indices, for both structured and unstructured grids. When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> refer to face elements.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> may only be used when <code class="code sidskey docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> is located below a <code class="code sidskey docutils literal notranslate"><span class="pre">Zone_t</span></code> structure in the database hierarchy.</li>
+<li>Only one of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> may be specified.</li>
+<li>Both <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">AdditionalFamilyName</span></code> should refer to a <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code> level <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code>, in the parent base or in another sibling base (see <span class="xref std std-ref">Base Level Families</span>).</li>
 </ol>
 </div>
 </div>
@@ -674,8 +665,8 @@ The primary difference is that <code class="code sidskey docutils literal notran
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Gravity_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">GravityVector</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Gravity_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">GravityVector</span></code>.</p>
 </div>
 <p>The only required field under the <code class="code sidskey docutils literal notranslate"><span class="pre">Gravity_t</span></code> data structure is <code class="code sidskey docutils literal notranslate"><span class="pre">GravityVector</span></code>, which contains the components of the gravity vector in the coordinate system being used.</p>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code> defines the default class for data contained in the <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> entity.

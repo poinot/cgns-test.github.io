@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>CGNS File Mapping Figures &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -113,8 +111,8 @@ Each child’s “<strong>Label:</strong>” entry is a link to the definition o
 If a child node has children of its own, the “<strong>Child Nodes:</strong>” entry is a link to the figure showing that node as a parent, with its children.
 To save space, nodes that were shown in a previous figure are abbreviated, with a link to that figure in the “<strong>See:</strong>” entry.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In some of the figures the data type is specified as <code class="code sidskey docutils literal notranslate"><span class="pre">cgsize_t</span></code>.
+<p class="first admonition-title">Note</p>
+<p class="last">In some of the figures the data type is specified as <code class="code sidskey docutils literal notranslate"><span class="pre">cgsize_t</span></code>.
 This data type has been introduced with the advent of CGNS library version 3.1.3, and is the natural size of a word for a given compilation of the library.
 For a 32-bit compilation, <code class="code sidskey docutils literal notranslate"><span class="pre">cgsize_t</span></code> will be a 32-bit integer (<code class="code sidskey docutils literal notranslate"><span class="pre">I4</span></code>), and for a 64-bit compilation it will be a 64-bit integer (<code class="code sidskey docutils literal notranslate"><span class="pre">I8</span></code>).
 Regardless of how the file is written, the data is returned to an application as <code class="code sidskey docutils literal notranslate"><span class="pre">cgsize_t</span></code>.

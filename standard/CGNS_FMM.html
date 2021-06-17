@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
@@ -15,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>CGNS/FMM - Data model mapping to implementation &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -143,16 +141,16 @@ Physical data storage is accomplished via a general database manager, either ADF
 <p>This document describes the general concepts behind and structure of a CGNS Database. The implementation details of reading and writing to a storage medium are left to an underlying database manager. The <a class="reference internal" href="CGNS_CGIO.html#standardcgio"><span class="std std-ref">CGIO User’s Guide</span></a> provides the core routines to access the database manager at that level.</p>
 <p>Since CGNS was originally developed based on the ADF (Advanced Data Format) as the database manager, much of this documentation parallels those concepts. With the introduction of the HDF5 (Hierarchical Data Format) database manager, the concepts in this document have been “mapped” to HDF5.</p>
 <p>We first describe the structure of the database, and the nodes from which it is constructed, followed by a description of the overall layout of the tree structure itself.</p>
-<p>The section <a class="reference internal" href="FMM/save_nodes.html#fmmnodedescriptions"><span class="std std-ref">Detailed CGNS Node Descriptions</span></a> describes the exact conventions for each type of data.</p>
+<p>The section <a class="reference internal" href="FMM/nodes.html#fmmnodedescriptions"><span class="std std-ref">Detailed CGNS Node Descriptions</span></a> describes the exact conventions for each type of data.</p>
 <div class="section" id="conceptual-structure-of-a-cgns-database">
 <h2>Conceptual Structure of a CGNS Database<a class="headerlink" href="#conceptual-structure-of-a-cgns-database" title="Permalink to this headline">¶</a></h2>
 <p>Although the physical structure of a CGNS file in storage is (or should be) of little concern to users of CGNS, an understanding of its logical or conceptual structure is essential. This structure determines its suitability for the type of data at hand and is reflected in all of the low-level database access routines.</p>
 <p>A CGNS file consists entirely of a collection of elements called nodes. These nodes are arranged in a tree structure which is logically similar to a UNIX file system. The nodes are said to be connected in a “child-parent” relationship according to the following simple rules:</p>
 <blockquote>
 <div><ol class="arabic simple">
-<li><p>Each node may have any number of child nodes.</p></li>
-<li><p>Except for one node, called the root, each node is the child of exactly one other node, called its parent.</p></li>
-<li><p>The root node has no parent.</p></li>
+<li>Each node may have any number of child nodes.</li>
+<li>Except for one node, called the root, each node is the child of exactly one other node, called its parent.</li>
+<li>The root node has no parent.</li>
 </ol>
 </div></blockquote>
 <p>Every node in a CGNS file has exactly the same internal structure. Each node contains identifying information, pointers to any children, and, optionally, data.</p>
@@ -163,17 +161,17 @@ Physical data storage is accomplished via a general database manager, either ADF
 <h2>The Structure of a Node<a class="headerlink" href="#the-structure-of-a-node" title="Permalink to this headline">¶</a></h2>
 <p>The File Mapping specifies not only the location of the node at which a particular kind of data is to be stored, but also how the internal structure of the node is to be used. Each node contains a number of fields into which data may be recorded. They are:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#the-node-name">The Node Name</a></p></li>
-<li><p><a class="reference internal" href="#the-label">The Label</a></p></li>
-<li><p><a class="reference internal" href="#the-data-type">The Data Type</a></p></li>
-<li><p><a class="reference internal" href="#the-number-of-dimensions">The Number of Dimensions</a></p></li>
-<li><p><a class="reference internal" href="#the-dimension-values">The Dimension Values</a></p></li>
-<li><p><a class="reference internal" href="#the-data">The Data</a></p></li>
+<li><a class="reference internal" href="#the-node-name">The Node Name</a></li>
+<li><a class="reference internal" href="#the-label">The Label</a></li>
+<li><a class="reference internal" href="#the-data-type">The Data Type</a></li>
+<li><a class="reference internal" href="#the-number-of-dimensions">The Number of Dimensions</a></li>
+<li><a class="reference internal" href="#the-dimension-values">The Dimension Values</a></li>
+<li><a class="reference internal" href="#the-data">The Data</a></li>
 </ul>
 <p>In addition, two other entities associated with the nodes are provided by the database manager itself. These are:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#the-node-id">The Node ID</a></p></li>
-<li><p><a class="reference internal" href="#the-child-table">The Child Table</a></p></li>
+<li><a class="reference internal" href="#the-node-id">The Node ID</a></li>
+<li><a class="reference internal" href="#the-child-table">The Child Table</a></li>
 </ul>
 <div class="section" id="the-node-name">
 <h3>The Node Name<a class="headerlink" href="#the-node-name" title="Permalink to this headline">¶</a></h3>
@@ -196,52 +194,52 @@ Such nodes are generally located by the software through their names, which are 
 <div class="section" id="the-data-type">
 <h3>The Data Type<a class="headerlink" href="#the-data-type" title="Permalink to this headline">¶</a></h3>
 <p>The Data Type is a 2-byte character field which specifies the type and precision of any data which is stored in the data field. The data types allowed by CGNS are:</p>
-<table class="docutils align-default">
+<table class="table table-bordered">
 <colgroup>
-<col style="width: 62%" />
-<col style="width: 38%" />
+<col width="62%" />
+<col width="38%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Data Type</p></th>
-<th class="head"><p>Notation</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Notation</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>No Data</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">MT</span></code></p></td>
+<tbody valign="top">
+<tr class="row-even"><td>No Data</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">MT</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>Link</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">LK</span></code></p></td>
+<tr class="row-odd"><td>Link</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">LK</span></code></td>
 </tr>
-<tr class="row-even"><td><p>Character</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">C1</span></code></p></td>
+<tr class="row-even"><td>Character</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">C1</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>Byte</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">B1</span></code></p></td>
+<tr class="row-odd"><td>Byte</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">B1</span></code></td>
 </tr>
-<tr class="row-even"><td><p>Integer 32</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">I4</span></code></p></td>
+<tr class="row-even"><td>Integer 32</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">I4</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>Integer 64</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">I8</span></code></p></td>
+<tr class="row-odd"><td>Integer 64</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">I8</span></code></td>
 </tr>
-<tr class="row-even"><td><p>Unsigned Integer 32</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">U4</span></code></p></td>
+<tr class="row-even"><td>Unsigned Integer 32</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">U4</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>Unsigned Integer 64</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">U8</span></code></p></td>
+<tr class="row-odd"><td>Unsigned Integer 64</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">U8</span></code></td>
 </tr>
-<tr class="row-even"><td><p>Real 32</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">R4</span></code></p></td>
+<tr class="row-even"><td>Real 32</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">R4</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>Real 64</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">R8</span></code></p></td>
+<tr class="row-odd"><td>Real 64</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">R8</span></code></td>
 </tr>
-<tr class="row-even"><td><p>Complex 64</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">X4</span></code></p></td>
+<tr class="row-even"><td>Complex 64</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">X4</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>Complex 128</p></td>
-<td><p><code class="code sidskey docutils literal notranslate"><span class="pre">X8</span></code></p></td>
+<tr class="row-odd"><td>Complex 128</td>
+<td><code class="code sidskey docutils literal notranslate"><span class="pre">X8</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -255,13 +253,13 @@ Such nodes are generally located by the software through their names, which are 
 The Number of Dimensions specifies the number of integers required to reference a single datum within the array. The limit for the Number of Dimensions is <strong>12</strong>.</p>
 <p>Whenever data is stored at a node, it is in the form of a single array of elements of a single date type.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Fortran-indexing conventions are used within CGNS.
+<p class="first admonition-title">Note</p>
+<p class="last">Fortran-indexing conventions are used within CGNS.
 For multi-dimensional data, this means that the first index of the array varies the fastest, and indexing starts at 1. This is important to understand when reading the data into multi-dimensional “C” arrays, since the indexing order is opposite to that as used by CGNS.</p>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Character data (<code class="code sidskey docutils literal notranslate"><span class="pre">C1</span></code>) is not stored with a “C” terminating ‘<code class="code docutils literal notranslate"><span class="pre">0</span></code>’ character, but rather is padded out with blanks (space character) as in Fortran character data.
+<p class="first admonition-title">Note</p>
+<p class="last">Character data (<code class="code sidskey docutils literal notranslate"><span class="pre">C1</span></code>) is not stored with a “C” terminating ‘<code class="code docutils literal notranslate"><span class="pre">0</span></code>’ character, but rather is padded out with blanks (space character) as in Fortran character data.
 The MLL, however, will add the terminating-‘<code class="code docutils literal notranslate"><span class="pre">0</span></code>’ to the strings when returning this data to a “C” application.</p>
 </div>
 </div>
@@ -276,8 +274,8 @@ The MLL, however, will add the terminating-‘<code class="code docutils literal
 <p>The portion of the node holding the actual stored data array.</p>
 <p>CGNS imposes no conventions on the data itself.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>It is a responsibility of the CGNS software to ensure that the amount and type of stored data agrees with the specification of the data type, number of dimensions, and dimension values.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">It is a responsibility of the CGNS software to ensure that the amount and type of stored data agrees with the specification of the data type, number of dimensions, and dimension values.</p>
 </div>
 </div>
 <div class="section" id="the-node-id">
@@ -298,9 +296,9 @@ Core routine inquiries generally return node IDs as a result and accept node IDs
 <h2>Use of Nodes in CGNS<a class="headerlink" href="#use-of-nodes-in-cgns" title="Permalink to this headline">¶</a></h2>
 <p>There are certain attributes of nodes which are derived from context, i.e., which the node possesses by virtue of its location within a CGNS database. These are often needed by CGNS to properly interpret the data; namely,</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#cardinality">Cardinality</a></p></li>
-<li><p><a class="reference internal" href="#parameters">Parameters</a></p></li>
-<li><p><a class="reference internal" href="#functions">Functions</a></p></li>
+<li><a class="reference internal" href="#cardinality">Cardinality</a></li>
+<li><a class="reference internal" href="#parameters">Parameters</a></li>
+<li><a class="reference internal" href="#functions">Functions</a></li>
 </ul>
 <div class="section" id="cardinality">
 <h3>Cardinality<a class="headerlink" href="#cardinality" title="Permalink to this headline">¶</a></h3>
@@ -327,8 +325,7 @@ Core routine inquiries generally return node IDs as a result and accept node IDs
 <p>Conversely, there is no proscription against the inclusion, anywhere within a CGNS database, of nodes of any form whatsoever, provided only that their naming and labeling does not mimic CGNS conventions. Such “non-CGNS” nodes, and those below them in the tree, are not regarded as part of the CGNS database. CGNS software will not detect the existence of non-CGNS nodes.</p>
 <p>We may therefore take the following as a definition of a CGNS database:</p>
 <blockquote>
-<div><p>A CGNS database is a subtree of a file or files which is rooted at a node with label “<code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code>” and which conforms to the <a class="reference internal" href="SIDS/CGNS_SIDS.html#cgns-sids"><span class="std std-ref">SIDS data model</span></a> as implemented by the SIDS File Mapping.</p>
-</div></blockquote>
+<div>A CGNS database is a subtree of a file or files which is rooted at a node with label “<code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code>” and which conforms to the <a class="reference internal" href="SIDS/CGNS_SIDS.html#cgns-sids"><span class="std std-ref">SIDS data model</span></a> as implemented by the SIDS File Mapping.</div></blockquote>
 </div>
 <div class="section" id="location-of-cgns-databases-within-a-file">
 <h3>Location of CGNS Databases within a File<a class="headerlink" href="#location-of-cgns-databases-within-a-file" title="Permalink to this headline">¶</a></h3>
@@ -342,9 +339,9 @@ In this case, the structure of the file into which the link is made is invisible
 <h3>File Management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h3>
 <p>Beyond <em>Open</em> and <em>Close</em> neither CGNS or the database manager provides any file management facilities. The user is responsible for ensuring that:</p>
 <ul class="simple">
-<li><p>The file containing the root of the required database is available and its permissions are properly set at runtime.</p></li>
-<li><p>If links are made to other files, including any not under the user’s direct control, these are also available at runtime.</p></li>
-<li><p>No file is opened for writing by more than one program at a time.</p></li>
+<li>The file containing the root of the required database is available and its permissions are properly set at runtime.</li>
+<li>If links are made to other files, including any not under the user’s direct control, these are also available at runtime.</li>
+<li>No file is opened for writing by more than one program at a time.</li>
 </ul>
 <p>It is possible, within CGNS, to protect files from inadvertent writing by opening them as “read only”.</p>
 </div>

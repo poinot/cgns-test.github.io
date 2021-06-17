@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Miscellaneous Routines &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -113,86 +111,64 @@
 <span id="standardcgiomiscellaneous"></span><h1>Miscellaneous Routines<a class="headerlink" href="#miscellaneous-routines" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="cgio-flush-to-disk">
 <h2>cgio_flush_to_disk<a class="headerlink" href="#cgio-flush-to-disk" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_flush_to_disk">
-int <code class="sig-name descname">cgio_flush_to_disk</code><span class="sig-paren">(</span>int <em>cgio_num</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_flush_to_disk" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_flush_to_disk</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_flush_to_disk" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_flush_to_disk_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_flush_to_disk_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_flush_to_disk_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>- w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>- w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Forces any buffered data in the database manager to be written to disk. Returns 0 if successfull, else an error code.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Forces any buffered data in the database manager to be written to disk. Returns 0 if successfull, else an error code.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-library-version">
 <h2>cgio_library_version<a class="headerlink" href="#cgio-library-version" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_library_version">
-int <code class="sig-name descname">cgio_library_version</code><span class="sig-paren">(</span>int <em>cgio_num</em>, char *<em>version</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_library_version" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_library_version</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">version</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_library_version" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_library_version_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_library_version_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">version</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_library_version_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">version</span></code></p></td>
-<td><p>OUT: 32-byte character string containing the database library version.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">version</span></code></td>
+<td>OUT: 32-byte character string containing the database library version.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the current library version for the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the current library version for the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
 The version is returned in version which is of maximum length <code class="code docutils literal notranslate"><span class="pre">CGIO_MAX_VERSION_LENGTH</span></code> (32).
 In C, version should be dimensioned at least 33 in the calling routine to allow for the terminating <code class="code docutils literal notranslate"><span class="pre">'0'</span></code>. The function returns 0 if successfull, else an error code.</p>
 </dd>
@@ -200,51 +176,40 @@ In C, version should be dimensioned at least 33 in the calling routine to allow 
 </div>
 <div class="section" id="cgio-file-version">
 <h2>cgio_file_version<a class="headerlink" href="#cgio-file-version" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_file_version">
-int <code class="sig-name descname">cgio_file_version</code><span class="sig-paren">(</span>int <em>cgio_num</em>, char *<em>file_version</em>, char *<em>creation_date</em>, char *<em>modified_date</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_file_version" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_file_version</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">file_version</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">creation_date</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">modified_date</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_file_version" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_file_version_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_file_version_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">file_version</em>, <em class="sig-param">creation_date</em>, <em class="sig-param">modified_date</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_file_version_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Database identifier.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Database identifier.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">file_version</span></code></p></td>
-<td><p>OUT: 32-byte character string containing the database file version.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">file_version</span></code></td>
+<td>OUT: 32-byte character string containing the database file version.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">creation_date</span></code></p></td>
-<td><p>OUT: 32-byte character string containing the database file creation date.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">creation_date</span></code></td>
+<td>OUT: 32-byte character string containing the database file creation date.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">modified_date</span></code></p></td>
-<td><p>OUT: 32-byte character string containing the last modification date for the database file.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">modified_date</span></code></td>
+<td>OUT: 32-byte character string containing the last modification date for the database file.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the version, creation and last modified dates, for the database file given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the version, creation and last modified dates, for the database file given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code>.
 The version is returned in <code class="code docutils literal notranslate"><span class="pre">file_version</span></code>, which is of maximum length <code class="code docutils literal notranslate"><span class="pre">CGIO_MAX_VERSION_LENGTH</span></code> (32).
 The creation date is returned in <code class="code docutils literal notranslate"><span class="pre">creation_date</span></code>, and the last modified date in <code class="code docutils literal notranslate"><span class="pre">modified_date</span></code>,
 which are of maximum length <code class="code docutils literal notranslate"><span class="pre">CGIO_MAX_DATE_LENGTH</span></code> (32).

@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,15 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>9. Boundary Conditions &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
@@ -186,10 +185,10 @@ Although not pictured in the above figure, it is also possible to specify the re
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">BC_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneBC_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code>.</p></li>
-<li><p>All lists within a <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneBC_t</span></code> structure entity may be empty.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">BC_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneBC_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code>.</li>
+<li>All lists within a <code class="code sidskey docutils literal notranslate"><span class="pre">ZoneBC_t</span></code> structure entity may be empty.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">ZoneBC_t</span></code> requires three structure parameters, <code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PhysicalDimension</span></code>, which are passed onto all <code class="code sidsref docutils literal notranslate"><span class="pre">BC_t</span></code> substructures.</p>
@@ -250,14 +249,14 @@ For most boundary conditions, a single data set is all that is needed. The struc
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the Descriptor_t, BCDataSet_t, and UserDefinedData_t lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of BC_t and shall not include the names BCProperty, BCType, DataClass, DimensionalUnits, FamilyName, GridLocation, InwardNormalIndex, InwardNormalList, Ordinal, PointList, PointRange, or ReferenceState.</p></li>
-<li><p>GridLocation is optional; if absent its default value is Vertex. For other allowble values, see the table below.</p></li>
-<li><p>One of PointRange or PointList must be specified but not both. They must define a subrange of the zone.</p></li>
-<li><p>InwardNormalIndex is only an option for structured grids. For unstructured grid boundaries, it should not be used. InwardNormalIndex may have only one nonzero element, whose sign indicates the computational-coordinate direction of the BC patch normal; this normal points into the interior of the zone.</p></li>
-<li><p>InwardNormalList contains a list of vectors normal to the BC patch pointing into the interior of the zone. It is a function of PhysicalDimension and ListLength[]. The vectors are located at the vertices of the BC patch when GridLocation is set to Vertex. Otherwise, they are located at edge/face midpoints. The vectors are not required to have unit magnitude.</p></li>
-<li><p>If PointRange and InwardNormalList are specified, an ordering convention is needed for indices on the BC patch. An ordering convention is also needed if a range is specified and local data is present in the BCDataSet_t substructures. FORTRAN multidimensional array ordering is used.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the Descriptor_t, BCDataSet_t, and UserDefinedData_t lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of BC_t and shall not include the names BCProperty, BCType, DataClass, DimensionalUnits, FamilyName, GridLocation, InwardNormalIndex, InwardNormalList, Ordinal, PointList, PointRange, or ReferenceState.</li>
+<li>GridLocation is optional; if absent its default value is Vertex. For other allowble values, see the table below.</li>
+<li>One of PointRange or PointList must be specified but not both. They must define a subrange of the zone.</li>
+<li>InwardNormalIndex is only an option for structured grids. For unstructured grid boundaries, it should not be used. InwardNormalIndex may have only one nonzero element, whose sign indicates the computational-coordinate direction of the BC patch normal; this normal points into the interior of the zone.</li>
+<li>InwardNormalList contains a list of vectors normal to the BC patch pointing into the interior of the zone. It is a function of PhysicalDimension and ListLength[]. The vectors are located at the vertices of the BC patch when GridLocation is set to Vertex. Otherwise, they are located at edge/face midpoints. The vectors are not required to have unit magnitude.</li>
+<li>If PointRange and InwardNormalList are specified, an ordering convention is needed for indices on the BC patch. An ordering convention is also needed if a range is specified and local data is present in the BCDataSet_t substructures. FORTRAN multidimensional array ordering is used.</li>
 </ol>
 </div>
 <p><code class="code sidsref docutils literal notranslate"><span class="pre">BCType</span></code> specifies the boundary-condition type, which gives general information on the boundary-condition equations to be enforced.</p>
@@ -267,42 +266,42 @@ When <code class="code sidskey docutils literal notranslate"><span class="pre">G
 When <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>, then <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange/List</span></code> refer to edge elements.
 For 3-D grids, when <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is set to <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IFaceCenter</span></code>, etc., then <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange/List</span></code> refer to face elements.
 The interpretation of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange/List</span></code> is summarized in the table below:</p>
-<table class="docutils align-center">
+<table class="table table-bordered">
 <colgroup>
-<col style="width: 17%" />
-<col style="width: 18%" />
-<col style="width: 21%" />
-<col style="width: 21%" />
-<col style="width: 23%" />
+<col width="17%" />
+<col width="18%" />
+<col width="21%" />
+<col width="21%" />
+<col width="23%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head" rowspan="2"><p><strong>CellDimension</strong></p></th>
-<th class="head" colspan="4"><p><strong>GridLocation</strong></p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" rowspan="2"><strong>CellDimension</strong></th>
+<th class="head" colspan="4"><strong>GridLocation</strong></th>
 </tr>
-<tr class="row-even"><th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code></p></th>
-<th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code></p></th>
-<th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">*FaceCenter</span></code></p></th>
-<th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code></p></th>
+<tr class="row-even"><th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code></th>
+<th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code></th>
+<th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">*FaceCenter</span></code></th>
+<th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">CellCenter</span></code></th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-odd"><td><p>1</p></td>
-<td><p>vertices</p></td>
-<td><p><cite>-</cite></p></td>
-<td><p><cite>-</cite></p></td>
-<td><p>cells (line elements)</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td>1</td>
+<td>vertices</td>
+<td><cite>-</cite></td>
+<td><cite>-</cite></td>
+<td>cells (line elements)</td>
 </tr>
-<tr class="row-even"><td><p>2</p></td>
-<td><p>vertices</p></td>
-<td><p>edges</p></td>
-<td><p><cite>-</cite></p></td>
-<td><p>cells (area elements)</p></td>
+<tr class="row-even"><td>2</td>
+<td>vertices</td>
+<td>edges</td>
+<td><cite>-</cite></td>
+<td>cells (area elements)</td>
 </tr>
-<tr class="row-odd"><td><p>3</p></td>
-<td><p>vertices</p></td>
-<td><p>edges</p></td>
-<td><p>faces</p></td>
-<td><p>cells (volume elements)</p></td>
+<tr class="row-odd"><td>3</td>
+<td>vertices</td>
+<td>edges</td>
+<td>faces</td>
+<td>cells (volume elements)</td>
 </tr>
 </tbody>
 </table>
@@ -319,35 +318,35 @@ For structured zones a computational-coordinate normal can be derived from the B
 Alternatively, for structured zones this information can be provided directly by <code class="code sidskey docutils literal notranslate"><span class="pre">InwardNormalIndex</span></code>.
 From Note 4, this vector points into the zone and can have only one non-zero element.
 For exterior faces of a zone in 3-D, <code class="code sidskey docutils literal notranslate"><span class="pre">InwardNormalIndex</span></code> should take the following values:</p>
-<table class="docutils align-center">
+<table class="table table-bordered">
 <colgroup>
-<col style="width: 13%" />
-<col style="width: 38%" />
-<col style="width: 12%" />
-<col style="width: 37%" />
+<col width="13%" />
+<col width="38%" />
+<col width="12%" />
+<col width="37%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Face</p></th>
-<th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">InwardNormalIndex</span></code></p></th>
-<th class="head"><p>Face</p></th>
-<th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">InwardNormalIndex</span></code></p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head">Face</th>
+<th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">InwardNormalIndex</span></code></th>
+<th class="head">Face</th>
+<th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">InwardNormalIndex</span></code></th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p><em>i</em>-min</p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">[+1,0,0]</span></code></p></td>
-<td><p><em>i</em>-max</p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">[−1,0,0]</span></code></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><em>i</em>-min</td>
+<td><code class="code docutils literal notranslate"><span class="pre">[+1,0,0]</span></code></td>
+<td><em>i</em>-max</td>
+<td><code class="code docutils literal notranslate"><span class="pre">[−1,0,0]</span></code></td>
 </tr>
-<tr class="row-odd"><td><p><em>j</em>-min</p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">[0,+1,0]</span></code></p></td>
-<td><p><em>j</em>-max</p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">[0,−1,0]</span></code></p></td>
+<tr class="row-even"><td><em>j</em>-min</td>
+<td><code class="code docutils literal notranslate"><span class="pre">[0,+1,0]</span></code></td>
+<td><em>j</em>-max</td>
+<td><code class="code docutils literal notranslate"><span class="pre">[0,−1,0]</span></code></td>
 </tr>
-<tr class="row-even"><td><p><em>k</em>-min</p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">[0,0,+1]</span></code></p></td>
-<td><p><em>k</em>-max</p></td>
-<td><p><code class="code docutils literal notranslate"><span class="pre">[0,0,−1]</span></code></p></td>
+<tr class="row-odd"><td><em>k</em>-min</td>
+<td><code class="code docutils literal notranslate"><span class="pre">[0,0,+1]</span></code></td>
+<td><em>k</em>-max</td>
+<td><code class="code docutils literal notranslate"><span class="pre">[0,0,−1]</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -361,7 +360,7 @@ The mechanics of determining the proper data set to impose is described in the s
 For “simple” boundary conditions, where a single set of Dirichlet and/or Neumann data is applied, a single <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> will likely appear (although this is not a requirement).
 For “compound” boundary conditions, where the equations to impose are dependent on local flow conditions, several instances of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> will likely appear; the procedure for choosing the proper data set is more complex as described in the section <span class="xref std std-ref">Matching Boundary Condition Data Sets</span>.</p>
 <p>A <code class="code sidsref docutils literal notranslate"><span class="pre">BCProperty_t</span></code> data structure may be used to record special properties associated with particular boundary condition patches, such as wall functions or bleed regions.</p>
-<p><code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName</span></code> identifies the family to which the boundary belongs. Family names link the mesh boundaries to the CAD surfaces. (See the section on <a class="reference internal" href="../FMM/save_nodes.html#family"><span class="std std-ref">Family Data Structure Definition</span></a> for more details.)
+<p><code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName</span></code> identifies the family to which the boundary belongs. Family names link the mesh boundaries to the CAD surfaces. (See the section on <a class="reference internal" href="../FMM/nodes.html#family"><span class="std std-ref">Family Data Structure Definition</span></a> for more details.)
 Boundary conditions may also be defined directly on families. In this case, the <code class="code sidsref docutils literal notranslate"><span class="pre">BCType</span></code> must be <code class="code sidskey docutils literal notranslate"><span class="pre">FamilySpecified</span></code>.
 If, under a <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code> structure, both <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> are present, and the <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> is not <code class="code sidskey docutils literal notranslate"><span class="pre">FamilySpecified</span></code>, then the <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> that is specified takes precedence over any <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> that might be stored in a <code class="code sidsref docutils literal notranslate"><span class="pre">FamilyBC_t</span></code> structure under the specified <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code>.
 The actual name of the referred-to <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> can be in the same base or another base, as detailed in <span class="xref std std-ref">Base Level Families</span>.</p>
@@ -375,14 +374,10 @@ Since there are no restrictions on the values contained in <code class="code sid
 Use of <code class="code sidskey docutils literal notranslate"><span class="pre">Ordinal</span></code> is discouraged and is on a user-beware basis.</p>
 <dl class="c function">
 <dt id="c.ListLength">
-FUNCTION <code class="sig-name descname">ListLength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.ListLength" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">ListLength</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.ListLength" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body"><code class="docutils literal notranslate"><span class="pre">int</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></dd>
 </dl>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code> requires the structure function <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code>, which is used to specify the number of vertices or edge/face elements making up the BC patch.
 If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> is specified, then <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> is obtained from the number of points (inclusive) between the beginning and ending indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>.
@@ -424,12 +419,12 @@ Its intended use is for simple boundary-condition types, where the equations imp
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code> is the only required field. All other fields are optional and the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> list may be empty.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is optional; if absent its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocationParameter</span></code>. For 2-D grids (<code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span> <span class="pre">=</span> <span class="pre">2</span></code>), <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> may take the values of <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>. For 3-D grids (<code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span> <span class="pre">=</span> <span class="pre">3</span></code>), <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> may take the values of <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">JFaceCenter</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">KFaceCenter</span></code>.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> are both optional; only one of them may be specified. They must define a face subrange of the zone.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">ReferenceState</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code> is the only required field. All other fields are optional and the <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> list may be empty.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> is optional; if absent its default value is <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocationParameter</span></code>. For 2-D grids (<code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span> <span class="pre">=</span> <span class="pre">2</span></code>), <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> may take the values of <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>. For 3-D grids (<code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span> <span class="pre">=</span> <span class="pre">3</span></code>), <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocation</span></code> may take the values of <code class="code sidskey docutils literal notranslate"><span class="pre">Vertex</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">EdgeCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">FaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IFaceCenter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">JFaceCenter</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">KFaceCenter</span></code>.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> are both optional; only one of them may be specified. They must define a face subrange of the zone.</li>
 </ol>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> requires the structure parameters <code class="code sidskey docutils literal notranslate"><span class="pre">CellDimension</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">IndexDimension</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">ListLengthParameter</span></code>, and <code class="code sidskey docutils literal notranslate"><span class="pre">GridLocationParameter</span></code>.
@@ -448,14 +443,10 @@ If present, these three entities take precedence over all corresponding entities
 <p>The <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> data structure allows arbitrary user-defined data to be stored in <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> children without the restrictions or implicit meanings imposed on these node types at other node locations.</p>
 <dl class="c function">
 <dt>
-FUNCTION <code class="sig-name descname">ListLength</code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">ListLength</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body"><code class="docutils literal notranslate"><span class="pre">int</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></dd>
 </dl>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> requires the structure function <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code>, which is used to specify the length of locally defined Dirichlet and Neumann data arrays when the grid location of these quantities differs from that of the BC patch definition. If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> is specified, then <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> is obtained from the number of points (inclusive) between the beginning and ending indices of <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>. If <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is specified, then <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> is the number of indices in the list of points. In this situation, <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> becomes a user input along with the indices of the list <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code>. By user we mean the application code that is generating the CGNS database.</p>
 <p>If neither <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is specified in a particular <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> substructure, <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code> must be passed into it to determine the length of BC data arrays.</p>
@@ -463,14 +454,10 @@ FUNCTION <code class="sig-name descname">ListLength</code><span class="sig-paren
 
 <dl class="c function">
 <dt id="c.ListLengthBCData">
-FUNCTION <code class="sig-name descname">ListLengthBCData</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.ListLengthBCData" title="Permalink to this definition">¶</a><br /></dt>
-<dd><dl class="field-list simple">
-<dt class="field-odd">Return value</dt>
-<dd class="field-odd"><p><code class="docutils literal notranslate"><span class="pre">int</span></code></p>
-</dd>
-<dt class="field-even">Dependencies</dt>
-<dd class="field-even"><p><code class="code sidskey docutils literal notranslate"><span class="pre">ListLengthParameter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></p>
-</dd>
+<span class="pre">FUNCTION</span> <code class="descname"><span class="pre">ListLengthBCData</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#c.ListLengthBCData" title="Permalink to this definition">¶</a><br /></dt>
+<dd><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Return value</dt><dd class="field-body"><code class="docutils literal notranslate"><span class="pre">int</span></code></dd>
+<dt class="field-name">Dependencies</dt><dd class="field-body"><code class="code sidskey docutils literal notranslate"><span class="pre">ListLengthParameter</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code></dd>
 </dl>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> also requires the structure function <code class="code sidskey docutils literal notranslate"><span class="pre">ListLengthBCData</span></code>. If <code class="code sidskey docutils literal notranslate"><span class="pre">PointRange</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">PointList</span></code> is present, then <code class="code sidskey docutils literal notranslate"><span class="pre">ListLengthBCData</span></code> takes the value of <code class="code sidskey docutils literal notranslate"><span class="pre">ListLength</span></code>. If both are absent, then it takes the value <code class="code sidskey docutils literal notranslate"><span class="pre">ListLengthParameter</span></code>.</p>
 </dd></dl>
@@ -501,10 +488,10 @@ For example, the use of separate <code class="code sidskey docutils literal notr
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<ol class="arabic simple">
-<li><p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>.</p></li>
-<li><p>There are no required elements; all three lists may be empty.</p></li>
+<p class="first admonition-title">Note</p>
+<ol class="last arabic simple">
+<li>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code>, <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>, and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCData_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">DataClass</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">DimensionalUnits</span></code>.</li>
+<li>There are no required elements; all three lists may be empty.</li>
 </ol>
 </div>
 <p>This structure definition shows separate lists for <span class="xref std std-ref">global verses local</span> data.
@@ -539,8 +526,8 @@ At the current time, only two properties (<code class="code sidskey docutils lit
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCProperty_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunction</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Area</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCProperty_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunction</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">Area</span></code>.</p>
 </div>
 <p>The <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunction_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">Area_t</span></code> data structures may be used to record properties associated with the use of wall functions, or area-related boundary conditions such as bleed, respectively.</p>
 <p>The <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> data structure allows arbitrary user-defined data to be stored in <code class="code sidskey docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code> children without the restrictions or implicit meanings imposed on these node types at other node locations.</p>
@@ -558,8 +545,8 @@ At the current time, only two properties (<code class="code sidskey docutils lit
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunction_t</span></code> and shall not include the name <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunctionType</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunction_t</span></code> and shall not include the name <code class="code sidskey docutils literal notranslate"><span class="pre">WallFunctionType</span></code>.</p>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">WallFunctionType_t</span></code> is a required enumeration data structure that is used to define the type of wall functions being used.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">WallFunctionType_t</span> <span class="o">:=</span> <span class="n">Enumeration</span><span class="p">(</span>
@@ -586,8 +573,8 @@ At the current time, only two properties (<code class="code sidskey docutils lit
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Area_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">AreaType</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">RegionName</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">SurfaceArea</span></code>.</p>
+<p class="first admonition-title">Note</p>
+<p class="last">Default names for the <code class="code sidsref docutils literal notranslate"><span class="pre">Descriptor_t</span></code> and <code class="code sidsref docutils literal notranslate"><span class="pre">UserDefinedData_t</span></code> lists are as shown; users may choose other legitimate names. Legitimate names must be unique within a given instance of <code class="code sidskey docutils literal notranslate"><span class="pre">Area_t</span></code> and shall not include the names <code class="code sidskey docutils literal notranslate"><span class="pre">AreaType</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">RegionName</span></code>, or <code class="code sidskey docutils literal notranslate"><span class="pre">SurfaceArea</span></code>.</p>
 </div>
 <p><code class="code sidskey docutils literal notranslate"><span class="pre">AreaType_t</span></code> is a required enumeration data structure that is used to define the type of area being defined.</p>
 <div class="highlight-sids notranslate"><div class="highlight"><pre><span></span><span class="kt">AreaType_t</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">Enumeration</span><span class="p">(</span><span class="w"></span>
@@ -643,167 +630,167 @@ The specific boundary-condition equations to enforce for each value of <code cla
 <p>The subdivision of <code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> is based on function. For simple boundary conditions, the equations and data imposed are fixed; whereas, for compound boundary conditions different sets of equations are imposed depending on local flow conditions at the boundary. This distinction requires additional rules for dealing with simple and compound boundary-condition types.</p>
 <p>For the inflow/outflow boundary-condition descriptions, 3-D inviscid compressible flow is assumed; the 2-D equivalent should be obvious. These same boundary conditions are typically used for viscous cases also. This “3-D Euler” assumption will be noted wherever used.</p>
 <p>In the following tables, <span class="math notranslate nohighlight">\(Q\)</span> is the solution vector, <span class="math notranslate nohighlight">\(\mathbf{q}\)</span> is the velocity vector whose magnitude is <span class="math notranslate nohighlight">\(q\)</span>, the unit normal to the boundary is <span class="math notranslate nohighlight">\(\mathbf{n}\)</span>, and <span class="math notranslate nohighlight">\(\partial () / \partial n =\mathbf{n} \cdot \nabla\)</span> is differentiation normal to the boundary.</p>
-<table class="docutils align-default" id="id2">
+<table class="table table-bordered" id="id2">
 <caption><span class="caption-text"><strong>Simple Boundary Condition Types</strong></span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 28%" />
-<col style="width: 72%" />
+<col width="28%" />
+<col width="72%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> Identifier</p></th>
-<th class="head"><p>Boundary Condition Description</p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> Identifier</th>
+<th class="head">Boundary Condition Description</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>BCGeneral</p></td>
-<td><p>Arbitrary conditions on <span class="math notranslate nohighlight">\(Q\)</span> or <span class="math notranslate nohighlight">\(\partial Q / \partial n\)</span></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td>BCGeneral</td>
+<td>Arbitrary conditions on <span class="math notranslate nohighlight">\(Q\)</span> or <span class="math notranslate nohighlight">\(\partial Q / \partial n\)</span></td>
 </tr>
-<tr class="row-odd"><td><p>BCDirichlet</p></td>
-<td><p>Dirichlet condition on <span class="math notranslate nohighlight">\(Q\)</span> vector</p></td>
+<tr class="row-even"><td>BCDirichlet</td>
+<td>Dirichlet condition on <span class="math notranslate nohighlight">\(Q\)</span> vector</td>
 </tr>
-<tr class="row-even"><td><p>BCNeumann</p></td>
-<td><p>Neumann condition on <span class="math notranslate nohighlight">\(\partial Q / \partial n\)</span></p></td>
+<tr class="row-odd"><td>BCNeumann</td>
+<td>Neumann condition on <span class="math notranslate nohighlight">\(\partial Q / \partial n\)</span></td>
 </tr>
-<tr class="row-odd"><td><p>BCExtrapolate</p></td>
-<td><p>Extrapolate <span class="math notranslate nohighlight">\(Q\)</span> from interior</p></td>
+<tr class="row-even"><td>BCExtrapolate</td>
+<td>Extrapolate <span class="math notranslate nohighlight">\(Q\)</span> from interior</td>
 </tr>
-<tr class="row-even"><td><p>BCWallInviscid</p></td>
-<td><p>Inviscid (slip) wall</p>
-<ul class="simple">
-<li><p>normal velocity specified (default: <span class="math notranslate nohighlight">\(\mathbf{q} \cdot \mathbf{n} = 0\)</span>)</p></li>
+<tr class="row-odd"><td>BCWallInviscid</td>
+<td><p class="first">Inviscid (slip) wall</p>
+<ul class="last simple">
+<li>normal velocity specified (default: <span class="math notranslate nohighlight">\(\mathbf{q} \cdot \mathbf{n} = 0\)</span>)</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCWallViscousHeatFlux</p></td>
-<td><p>Viscous no-slip wall with heat flux</p>
-<ul class="simple">
-<li><p>velocity Dirichlet (default: <span class="math notranslate nohighlight">\(q = 0\)</span>)</p></li>
-<li><p>temperature Neumann (default: adiabatic, <span class="math notranslate nohighlight">\(\partial T / \partial n = 0\)</span>)</p></li>
+<tr class="row-even"><td>BCWallViscousHeatFlux</td>
+<td><p class="first">Viscous no-slip wall with heat flux</p>
+<ul class="last simple">
+<li>velocity Dirichlet (default: <span class="math notranslate nohighlight">\(q = 0\)</span>)</li>
+<li>temperature Neumann (default: adiabatic, <span class="math notranslate nohighlight">\(\partial T / \partial n = 0\)</span>)</li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCWallViscousIsothermal</p></td>
-<td><p>Viscous no-slip, isothermal wall</p>
-<ul class="simple">
-<li><p>velocity Dirichlet (default: <span class="math notranslate nohighlight">\(q = 0\)</span>)</p></li>
-<li><p>temperature Dirichlet</p></li>
+<tr class="row-odd"><td>BCWallViscousIsothermal</td>
+<td><p class="first">Viscous no-slip, isothermal wall</p>
+<ul class="last simple">
+<li>velocity Dirichlet (default: <span class="math notranslate nohighlight">\(q = 0\)</span>)</li>
+<li>temperature Dirichlet</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCWallViscous</p></td>
-<td><p>Viscous no-slip wall; special cases are <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousHeatFlux</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousIsothermal</span></code></p>
-<ul class="simple">
-<li><p>velocity Dirichlet (default: <span class="math notranslate nohighlight">\(q = 0\)</span>)</p></li>
-<li><p>Dirichlet or Neumann on temperature</p></li>
+<tr class="row-even"><td>BCWallViscous</td>
+<td><p class="first">Viscous no-slip wall; special cases are <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousHeatFlux</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousIsothermal</span></code></p>
+<ul class="last simple">
+<li>velocity Dirichlet (default: <span class="math notranslate nohighlight">\(q = 0\)</span>)</li>
+<li>Dirichlet or Neumann on temperature</li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCWall</p></td>
-<td><p>General wall condition; special cases are <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallInviscid</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscous</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousHeatFlux</span></code>,
-and <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousIsothermal</span></code></p></td>
+<tr class="row-odd"><td>BCWall</td>
+<td>General wall condition; special cases are <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallInviscid</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscous</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousHeatFlux</span></code>,
+and <code class="code sidskey docutils literal notranslate"><span class="pre">BCWallViscousIsothermal</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>BCInflowSubsonic</p></td>
-<td><p>Inflow with subsonic normal velocity</p>
-<ul class="simple">
-<li><p>specify 4; extrapolate 1 (3-D Euler)</p></li>
+<tr class="row-even"><td>BCInflowSubsonic</td>
+<td><p class="first">Inflow with subsonic normal velocity</p>
+<ul class="last simple">
+<li>specify 4; extrapolate 1 (3-D Euler)</li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCInflowSupersonic</p></td>
-<td><p>Inflow with supersonic normal velocity</p>
+<tr class="row-odd"><td>BCInflowSupersonic</td>
+<td><p class="first">Inflow with supersonic normal velocity</p>
 <ul class="simple">
-<li><p>specify 5; extrapolate 0 (3-D Euler)</p></li>
+<li>specify 5; extrapolate 0 (3-D Euler)</li>
 </ul>
-<p>Same as <code class="code sidskey docutils literal notranslate"><span class="pre">BCDirichlet</span></code></p>
+<p class="last">Same as <code class="code sidskey docutils literal notranslate"><span class="pre">BCDirichlet</span></code></p>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCOutflowSubsonic</p></td>
-<td><p>Outflow with subsonic normal velocity</p>
-<ul class="simple">
-<li><p>specify 1; extrapolate 4 (3-D Euler)</p></li>
-</ul>
-</td>
-</tr>
-<tr class="row-even"><td><p>BCOutflowSupersonic</p></td>
-<td><p>Outflow with supersonic normal velocity</p>
-<ul class="simple">
-<li><p>specify 0; extrapolate 5 (3-D Euler)</p></li>
-</ul>
-<p>Same as <code class="code sidskey docutils literal notranslate"><span class="pre">BCExtrapolate</span></code></p>
-</td>
-</tr>
-<tr class="row-odd"><td><p>BCTunnelInflow</p></td>
-<td><p>Tunnel inlet (subsonic normal velocity)</p>
-<ul class="simple">
-<li><p>specify cross-flow velocity, stagnation enthalpy, entropy</p></li>
-<li><p>extrapolate 1 (3-D Euler)</p></li>
+<tr class="row-even"><td>BCOutflowSubsonic</td>
+<td><p class="first">Outflow with subsonic normal velocity</p>
+<ul class="last simple">
+<li>specify 1; extrapolate 4 (3-D Euler)</li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCTunnelOutflow</p></td>
-<td><p>Tunnel exit (subsonic normal velocity)</p>
+<tr class="row-odd"><td>BCOutflowSupersonic</td>
+<td><p class="first">Outflow with supersonic normal velocity</p>
 <ul class="simple">
-<li><p>specify static pressure</p></li>
-<li><p>extrapolate 4 (3-D Euler)</p></li>
+<li>specify 0; extrapolate 5 (3-D Euler)</li>
+</ul>
+<p class="last">Same as <code class="code sidskey docutils literal notranslate"><span class="pre">BCExtrapolate</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td>BCTunnelInflow</td>
+<td><p class="first">Tunnel inlet (subsonic normal velocity)</p>
+<ul class="last simple">
+<li>specify cross-flow velocity, stagnation enthalpy, entropy</li>
+<li>extrapolate 1 (3-D Euler)</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCDegenerateLine</p></td>
-<td><p>Face degenerated to a line    <a class="reference internal" href="../../_images/face2line.gif"><img alt="3-D region with a rectangular front face; top and bottom edges merge to a line at the back 'face'" src="../../_images/face2line.gif" style="width: 100px;" /></a></p></td>
-</tr>
-<tr class="row-even"><td><p>BCDegeneratePoint</p></td>
-<td><p>Face degenerated to a point   <a class="reference internal" href="../../_images/face2point.gif"><img alt="3-D region with a rectangular front face; all four edges merge to a point at the back 'face'" src="../../_images/face2point.gif" style="width: 100px;" /></a></p></td>
-</tr>
-<tr class="row-odd"><td><p>BCSymmetryPlane</p></td>
-<td><p>Symmetry plane; face should be coplanar</p>
-<ul class="simple">
-<li><p>density, pressure: <span class="math notranslate nohighlight">\(\partial () / \partial n = \mathbf{n} \cdot \nabla = 0\)</span></p></li>
-<li><p>tangential velocity: <span class="math notranslate nohighlight">\(\partial (\mathbf{q} \times \mathbf{n}) / \partial n = 0\)</span></p></li>
-<li><p>normal velocity: <span class="math notranslate nohighlight">\(\mathbf{q} \cdot \mathbf{n} = 0\)</span></p></li>
+<tr class="row-odd"><td>BCTunnelOutflow</td>
+<td><p class="first">Tunnel exit (subsonic normal velocity)</p>
+<ul class="last simple">
+<li>specify static pressure</li>
+<li>extrapolate 4 (3-D Euler)</li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCSymmetryPolar</p></td>
-<td><p>Polar-coordinate singularity line; special case of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDegenerateLine</span></code> where degenerate face is a straight line and flowfield has polar symmetry;
+<tr class="row-even"><td>BCDegenerateLine</td>
+<td>Face degenerated to a line    <a class="reference internal" href="../../_images/face2line.gif"><img alt="3-D region with a rectangular front face; top and bottom edges merge to a line at the back 'face'" src="../../_images/face2line.gif" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-odd"><td>BCDegeneratePoint</td>
+<td>Face degenerated to a point   <a class="reference internal" href="../../_images/face2point.gif"><img alt="3-D region with a rectangular front face; all four edges merge to a point at the back 'face'" src="../../_images/face2point.gif" style="width: 100px;" /></a></td>
+</tr>
+<tr class="row-even"><td>BCSymmetryPlane</td>
+<td><p class="first">Symmetry plane; face should be coplanar</p>
+<ul class="last simple">
+<li>density, pressure: <span class="math notranslate nohighlight">\(\partial () / \partial n = \mathbf{n} \cdot \nabla = 0\)</span></li>
+<li>tangential velocity: <span class="math notranslate nohighlight">\(\partial (\mathbf{q} \times \mathbf{n}) / \partial n = 0\)</span></li>
+<li>normal velocity: <span class="math notranslate nohighlight">\(\mathbf{q} \cdot \mathbf{n} = 0\)</span></li>
+</ul>
+</td>
+</tr>
+<tr class="row-odd"><td>BCSymmetryPolar</td>
+<td><p class="first">Polar-coordinate singularity line; special case of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDegenerateLine</span></code> where degenerate face is a straight line and flowfield has polar symmetry;
 <span class="math notranslate nohighlight">\(\mathbf{s}\)</span> is singularity line tangential unit vector</p>
-<ul class="simple">
-<li><p>normal velocity: <span class="math notranslate nohighlight">\(\mathbf{q} \times \mathbf{s} = 0\)</span></p></li>
-<li><p>all others: <span class="math notranslate nohighlight">\(\partial () / \partial n = \mathbf{n} \cdot \nabla = 0\)</span>, <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> normal to <span class="math notranslate nohighlight">\(\mathbf{s}\)</span></p></li>
+<ul class="last simple">
+<li>normal velocity: <span class="math notranslate nohighlight">\(\mathbf{q} \times \mathbf{s} = 0\)</span></li>
+<li>all others: <span class="math notranslate nohighlight">\(\partial () / \partial n = \mathbf{n} \cdot \nabla = 0\)</span>, <span class="math notranslate nohighlight">\(\mathbf{n}\)</span> normal to <span class="math notranslate nohighlight">\(\mathbf{s}\)</span></li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCAxisymmetricWedge</p></td>
-<td><p>Axisymmetric wedge; special case of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDegenerateLine</span></code> where degenerate face is a straight line</p></td>
+<tr class="row-even"><td>BCAxisymmetricWedge</td>
+<td>Axisymmetric wedge; special case of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDegenerateLine</span></code> where degenerate face is a straight line</td>
 </tr>
-<tr class="row-even"><td><p>FamilySpecified</p></td>
-<td><p>A boundary condition type is being specified for the family to which the current boundary belongs. A <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName_t</span></code> specification must exist
+<tr class="row-odd"><td>FamilySpecified</td>
+<td>A boundary condition type is being specified for the family to which the current boundary belongs. A <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyName_t</span></code> specification must exist
 under <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t</span></code>, corresponding to a <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> structure under <code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code>.
 Under the <code class="code sidskey docutils literal notranslate"><span class="pre">Family_t</span></code> structure there must be a <code class="code sidskey docutils literal notranslate"><span class="pre">FamilyBC_t</span></code> structure specifying a valid <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code>
-(other than <code class="code sidskey docutils literal notranslate"><span class="pre">FamilySpecified</span></code>!). If any of these are absent, the boundary condition type is undefined.</p></td>
+(other than <code class="code sidskey docutils literal notranslate"><span class="pre">FamilySpecified</span></code>!). If any of these are absent, the boundary condition type is undefined.</td>
 </tr>
 </tbody>
 </table>
-<table class="docutils align-default" id="id3">
+<table class="table table-bordered" id="id3">
 <caption><span class="caption-text"><strong>Compound Boundary Condition Types</strong></span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 31%" />
-<col style="width: 69%" />
+<col width="31%" />
+<col width="69%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> Identifier</p></th>
-<th class="head"><p>Boundary Condition Description</p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> Identifier</th>
+<th class="head">Boundary Condition Description</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>BCInflow</p></td>
-<td><p>Inflow, arbitrary normal Mach; test on normal Mach, then perform one of: <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code></p></td>
+<tbody valign="top">
+<tr class="row-odd"><td>BCInflow</td>
+<td>Inflow, arbitrary normal Mach; test on normal Mach, then perform one of: <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code></td>
 </tr>
-<tr class="row-odd"><td><p>BCOutflow</p></td>
-<td><p>Outflow, arbitrary normal Mach; test on normal Mach, then perform one of: <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></p></td>
+<tr class="row-even"><td>BCOutflow</td>
+<td>Outflow, arbitrary normal Mach; test on normal Mach, then perform one of: <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></td>
 </tr>
-<tr class="row-even"><td><p>BCFarfield</p></td>
-<td><p>Farfield inflow/outflow, arbitrary normal Mach; test on normal velocity and normal Mach, then perform one of: <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code>,
-<code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></p></td>
+<tr class="row-odd"><td>BCFarfield</td>
+<td>Farfield inflow/outflow, arbitrary normal Mach; test on normal velocity and normal Mach, then perform one of: <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code>,
+<code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></td>
 </tr>
 </tbody>
 </table>
@@ -827,82 +814,82 @@ The accompanying rule determines which of the matching data sets to apply at a g
 <p>This provides a general procedure applicable to both <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> situations.
 For a given <code class="code sidskey docutils literal notranslate"><span class="pre">BC_t/BCType</span></code> use those instances of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code> whose field <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t/BCTypeSimple</span></code> matches according to the following table.
 Apply the matching data set or sets as prescribed by the appropriate usage rule.</p>
-<table class="docutils align-default" id="id4">
+<table class="table table-bordered" id="id4">
 <caption><span class="caption-text"><strong>Associated Boundary Condition Types and Usage Rules</strong></span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 28%" />
-<col style="width: 72%" />
+<col width="28%" />
+<col width="72%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> Identifier</p></th>
-<th class="head"><p>Associated <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> Identifiers and Usage Rules</p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head"><code class="code sidskey docutils literal notranslate"><span class="pre">BCType_t</span></code> Identifier</th>
+<th class="head">Associated <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> Identifiers and Usage Rules</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>BCInflow</p></td>
-<td><div class="line-block">
+<tbody valign="top">
+<tr class="row-odd"><td>BCInflow</td>
+<td><div class="first line-block">
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code></div>
 </div>
 <p><em>Usage Rule:</em></p>
-<ul class="simple">
-<li><p>if supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code>;</p></li>
-<li><p>else, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code></p></li>
+<ul class="last simple">
+<li>if supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code>;</li>
+<li>else, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code></li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCOutflow</p></td>
-<td><div class="line-block">
+<tr class="row-even"><td>BCOutflow</td>
+<td><div class="first line-block">
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code></div>
 </div>
 <p><em>Usage Rule:</em></p>
-<ul class="simple">
-<li><p>if supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code>;</p></li>
-<li><p>else, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code></p></li>
+<ul class="last simple">
+<li>if supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code>;</li>
+<li>else, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code></li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCFarfield</p></td>
-<td><div class="line-block">
+<tr class="row-odd"><td>BCFarfield</td>
+<td><div class="first line-block">
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code></div>
 </div>
 <p><em>Usage Rule:</em></p>
-<ul class="simple">
-<li><p>if inflow and supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code>;</p></li>
-<li><p>else if inflow, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code>;</p></li>
-<li><p>else if outflow and supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code>;</p></li>
-<li><p>else, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code></p></li>
+<ul class="last simple">
+<li>if inflow and supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code>;</li>
+<li>else if inflow, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code>;</li>
+<li>else if outflow and supersonic normal Mach, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code>;</li>
+<li>else, choose <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSubsonic</span></code></li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>BCInflowSupersonic</p></td>
-<td><div class="line-block">
+<tr class="row-even"><td>BCInflowSupersonic</td>
+<td><div class="first line-block">
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCDirichlet</span></code></div>
 </div>
 <p><em>Usage Rule:</em></p>
-<ul class="simple">
-<li><p>choose either; <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code> takes precedence</p></li>
+<ul class="last simple">
+<li>choose either; <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSupersonic</span></code> takes precedence</li>
 </ul>
 </td>
 </tr>
-<tr class="row-even"><td><p>BCOutflowSupersonic</p></td>
-<td><div class="line-block">
+<tr class="row-odd"><td>BCOutflowSupersonic</td>
+<td><div class="first line-block">
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code></div>
 <div class="line"><code class="code sidskey docutils literal notranslate"><span class="pre">BCExtrapolate</span></code></div>
 </div>
 <p><em>Usage Rule:</em></p>
-<ul class="simple">
-<li><p>choose either; <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code> takes precedence</p></li>
+<ul class="last simple">
+<li>choose either; <code class="code sidskey docutils literal notranslate"><span class="pre">BCOutflowSupersonic</span></code> takes precedence</li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>All others</p></td>
-<td><p>Self-matching</p></td>
+<tr class="row-even"><td>All others</td>
+<td>Self-matching</td>
 </tr>
 </tbody>
 </table>
@@ -910,9 +897,9 @@ Apply the matching data set or sets as prescribed by the appropriate usage rule.
 For example, some of the more general simple boundary-condition types, such as <code class="code sidskey docutils literal notranslate"><span class="pre">BCWall</span></code>, may include a situation of inflow/outflow (say if the wall is porous).
 These complications require further guidelines on appropriate definition and use of boundary-condition types. The real distinctions between <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> are as follows:</p>
 <ul class="simple">
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> identifiers always match themselves; <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> identifiers never match themselves.</p></li>
-<li><p><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> identifiers always produce a single match; <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> will produce multiple matches.</p></li>
-<li><p>The usage rule for <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> identifiers is always trivial - apply the single matching data set regardless of local flow conditions.</p></li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> identifiers always match themselves; <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> identifiers never match themselves.</li>
+<li><code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> identifiers always produce a single match; <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code> will produce multiple matches.</li>
+<li>The usage rule for <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> identifiers is always trivial - apply the single matching data set regardless of local flow conditions.</li>
 </ul>
 <p>Therefore, any boundary condition that involves application of different data sets depending on local flow conditions should be classified <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeCompound_t</span></code>.
 If a type that we have classified <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple_t</span></code> is used as a compound type (<code class="code sidskey docutils literal notranslate"><span class="pre">BCWall</span></code> for a porous wall is an example), then it should somehow be reclassified.
@@ -925,31 +912,23 @@ Another option may be to allow some identifiers to be both <code class="code sid
 Apart from the boundary-condition type, the precise equations to be enforced are described by boundary-condition solution data.
 These specified solution data are arranged by “equation type”:</p>
 <blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">Dirichlet</dt>
-<dd class="field-odd"><p><span class="math notranslate nohighlight">\(Q = Q_{specified}\)</span></p>
-</dd>
-<dt class="field-even">Neumann</dt>
-<dd class="field-even"><p><span class="math notranslate nohighlight">\(\partial Q / \partial n = (\partial Q / \partial n)_{specified}\)</span></p>
-</dd>
+<div><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Dirichlet</dt><dd class="field-body"><span class="math notranslate nohighlight">\(Q = Q_{specified}\)</span></dd>
+<dt class="field-name">Neumann</dt><dd class="field-body"><span class="math notranslate nohighlight">\(\partial Q / \partial n = (\partial Q / \partial n)_{specified}\)</span></dd>
 </dl>
 </div></blockquote>
 <p>The <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code> entities of <code class="code sidsref docutils literal notranslate"><span class="pre">BCData_t</span></code> list both the solution variables involved in the equations (through the <a class="reference internal" href="appendix_a.html#dataname"><span class="std std-ref">data-name identifier conventions</span></a>) and the specified solution data.</p>
 <p>Two issues need to be addressed for specifying Dirichlet or Neumann boundary-condition data. The first is whether the data is global or local:</p>
 <blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">Global BC data</dt>
-<dd class="field-odd"><p>Data applied globally to the BC patch; for example, specifying a uniform total pressure at an inflow boundary</p>
-</dd>
-<dt class="field-even">Local BC data</dt>
-<dd class="field-even"><p>Data applied locally at each vertex or cell face of the BC patch; an example of this is varying total pressure specified at each grid point at an inflow boundary</p>
-</dd>
+<div><dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">Global BC data</dt><dd class="field-body">Data applied globally to the BC patch; for example, specifying a uniform total pressure at an inflow boundary</dd>
+<dt class="field-name">Local BC data</dt><dd class="field-body">Data applied locally at each vertex or cell face of the BC patch; an example of this is varying total pressure specified at each grid point at an inflow boundary</dd>
 </dl>
 </div></blockquote>
 <p>The second issue is describing the actual solution quantities that are to be specified. Both of these issues are addressed by use of the <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code> structure.</p>
 <p>For some types of boundary conditions, many different combinations of solution quantities could be specified.
 For example, <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic</span></code> requires 4 solution quantities to be specified in 3-D, but what those 4 quantities are varies with applications (e.g., internal verses external flows) and codes.
-We propose the convention that the actual data being specified for any <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> is given by the list of <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities included in <a class="reference internal" href="../FMM/save_nodes.html#bcdata"><span class="std std-ref">DirichletData and NeumannData</span></a> structures (actually by the identifier attached to each instance of <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code>).
+We propose the convention that the actual data being specified for any <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> is given by the list of <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code> entities included in <a class="reference internal" href="../FMM/nodes.html#bcdata"><span class="std std-ref">DirichletData and NeumannData</span></a> structures (actually by the identifier attached to each instance of <code class="code sidskey docutils literal notranslate"><span class="pre">DataArray_t</span></code>).
 This frees us from having to define <em>many</em> versions of a given <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> (e.g., <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic1</span></code>, <code class="code sidskey docutils literal notranslate"><span class="pre">BCInflowSubsonic2</span></code>, etc.), where each has a precisely defined set of Dirichlet data.
 We are left with the easier task of defining <em>how many</em> Dirichlet or Neumann quantities must be provided for each <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code>.</p>
 <p>An example of using <code class="code sidsref docutils literal notranslate"><span class="pre">DataArray_t</span></code>-<a class="reference internal" href="appendix_a.html#dataname"><span class="std std-ref">identifier conventions</span></a> to describe BC specification data is the following: subsonic inflow with uniform stagnation pressure, mass flow and cross-flow angle specified; the Dirichlet data are stagnation pressure = 2.56, mass flow = 1.34, and cross-flow angle has a y-component of 0.043 and a z-component of 0.02 (ignore dimensional-units or normalization for the present). The specified solution variables and associated data are described as shown:</p>
@@ -983,19 +962,19 @@ This includes situations where entities of <code class="code sidskey docutils li
 By convention, if no <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet</span></code> entities are present, then application codes are free to enforce appropriate BCs for the given value of <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code>.
 Furthermore, if the entities <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code> and <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code> are not present in an instance of <code class="code sidskey docutils literal notranslate"><span class="pre">BCDataSet_t</span></code>, or if insufficient data is present in <code class="code sidskey docutils literal notranslate"><span class="pre">DirichletData</span></code> or <code class="code sidskey docutils literal notranslate"><span class="pre">NeumannData</span></code> (e.g., if only one Dirichlet variable is present for a subsonic inflow condition), then application codes are free to fill out the boundary-condition data as appropriate for the <code class="code sidskey docutils literal notranslate"><span class="pre">BCTypeSimple</span></code> identifier.</p>
 <p>The various levels of BC implementation allowed are shown in the following figure, from the lowest level in which the application codes interpret the <code class="code sidsref docutils literal notranslate"><span class="pre">BCType</span></code>, to the fully SIDS-compliant BC implementation that completely defines the BC within the CGNS file.</p>
-<table class="docutils align-default" id="id5">
+<table class="table table-bordered" id="id5">
 <caption><span class="caption-text"><strong>Boundary Condition Implementation Levels</strong></span><a class="headerlink" href="#id5" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
+<col width="50%" />
+<col width="50%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><div class="figure align-center" id="id6">
+<tbody valign="top">
+<tr class="row-odd"><td><div class="first last figure align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/bcimpl_low.gif"><img alt="CGNS dataset nodes for lowest boundary condition implementation level allowed" src="../../_images/bcimpl_low.gif" style="width: 170px;" /></a>
 <p class="caption"><span class="caption-text"><em>Lowest-level allowed (application code interprets meaning of</em> <code class="code sidskey docutils literal notranslate"><span class="pre">BCType</span></code> <em>)</em></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
 </td>
-<td><div class="figure align-center" id="id7">
+<td><div class="first last figure align-center" id="id7">
 <a class="reference internal image-reference" href="../../_images/bcimpl_full.gif"><img alt="CGNS dataset nodes for fully SIDS-compliant boundary condition implementation" src="../../_images/bcimpl_full.gif" style="width: 370px;" /></a>
 <p class="caption"><span class="caption-text"><em>Fully SIDS-compliant</em></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
 </div>

@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
@@ -15,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>CGNS/HDF5 - An HPC implementation &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -179,37 +177,37 @@ It offers a free storage system, with support for a very large number of platfor
 A basic CGNS node is composed of elements listed in the following table.
 The attribute names have been enclosed in square brackets, because the SLL uses private attributes with a leading <em>space</em> character.
 These brackets are not part of the names.</p>
-<table class="docutils align-center" id="id12">
+<table class="table table-bordered" id="id12">
 <caption><span class="caption-text"><strong>Basic Node</strong></span><a class="headerlink" href="#id12" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 43%" />
-<col style="width: 23%" />
-<col style="width: 34%" />
+<col width="43%" />
+<col width="23%" />
+<col width="34%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head" colspan="3"><p>GROUP</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head" colspan="3">GROUP</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[name]</p></td>
-<td><p>U8LE[33]</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>REQUIRED ATTRIBUTE</td>
+<td>[name]</td>
+<td>U8LE[33]</td>
 </tr>
-<tr class="row-odd"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[label]</p></td>
-<td><p>U8LE[33]</p></td>
+<tr class="row-odd"><td>REQUIRED ATTRIBUTE</td>
+<td>[label]</td>
+<td>U8LE[33]</td>
 </tr>
-<tr class="row-even"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[type]</p></td>
-<td><p>U8LE[3]</p></td>
+<tr class="row-even"><td>REQUIRED ATTRIBUTE</td>
+<td>[type]</td>
+<td>U8LE[3]</td>
 </tr>
-<tr class="row-odd"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[ order]</p></td>
-<td><p>H5T_NATIVE_INT</p></td>
+<tr class="row-odd"><td>REQUIRED ATTRIBUTE</td>
+<td>[ order]</td>
+<td>H5T_NATIVE_INT</td>
 </tr>
-<tr class="row-even"><td><p>OPTIONAL DATASET</p></td>
-<td><p>[ data]</p></td>
-<td></td>
+<tr class="row-even"><td>OPTIONAL DATASET</td>
+<td>[ data]</td>
+<td>&#160;</td>
 </tr>
 </tbody>
 </table>
@@ -217,26 +215,26 @@ These brackets are not part of the names.</p>
 In the case of a node without data (i.e. <code class="code docutils literal notranslate"><span class="pre">MT</span></code> type), the dataset does not exist.</p>
 <p>In addition to the attributes of a <em>normal</em> node, special attribute names are reserved for the root node, shown in the following table.
 The name of the root node is <code class="docutils literal notranslate"><span class="pre">[HDF5</span> <span class="pre">MotherNode]</span></code>, its label is <code class="docutils literal notranslate"><span class="pre">[Root</span> <span class="pre">Node</span> <span class="pre">of</span> <span class="pre">HDF5</span> <span class="pre">File]</span></code>, type is <code class="docutils literal notranslate"><span class="pre">MT</span></code>.</p>
-<table class="docutils align-center" id="id13">
+<table class="table table-bordered" id="id13">
 <caption><span class="caption-text"><strong>Root Node</strong></span><a class="headerlink" href="#id13" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 46%" />
-<col style="width: 26%" />
-<col style="width: 28%" />
+<col width="46%" />
+<col width="26%" />
+<col width="28%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>GROUP</p></th>
-<th class="head" colspan="2"><p>[/]</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">GROUP</th>
+<th class="head" colspan="2">[/]</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[ version]</p></td>
-<td><p>U8LE[33]</p></td>
+<tbody valign="top">
+<tr class="row-even"><td>REQUIRED ATTRIBUTE</td>
+<td>[ version]</td>
+<td>U8LE[33]</td>
 </tr>
-<tr class="row-odd"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[ format]</p></td>
-<td><p>U8LE[33]</p></td>
+<tr class="row-odd"><td>REQUIRED ATTRIBUTE</td>
+<td>[ format]</td>
+<td>U8LE[33]</td>
 </tr>
 </tbody>
 </table>
@@ -246,26 +244,26 @@ The group <code class="docutils literal notranslate"><span class="pre">[</span> 
 Each entry has the attributes described in the table below.
 The link node itself is a group with the special name <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">link]</span></code>.
 This implementation is discussed further in the section describing the <a class="reference internal" href="#link-mechanism"><span class="std std-ref">link mechanism</span></a>.</p>
-<table class="docutils align-center" id="id14">
+<table class="table table-bordered" id="id14">
 <caption><span class="caption-text"><strong>Link Node</strong></span><a class="headerlink" href="#id14" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 42%" />
-<col style="width: 24%" />
-<col style="width: 34%" />
+<col width="42%" />
+<col width="24%" />
+<col width="34%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>GROUP</p></th>
-<th class="head" colspan="2"><p><strong>[/ mount/ *]</strong></p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head">GROUP</th>
+<th class="head" colspan="2"><strong>[/ mount/ *]</strong></th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[ refcnt]</p></td>
-<td><p>H5T_NATIVE_INT</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td>REQUIRED ATTRIBUTE</td>
+<td>[ refcnt]</td>
+<td>H5T_NATIVE_INT</td>
 </tr>
-<tr class="row-odd"><td><p>REQUIRED ATTRIBUTE</p></td>
-<td><p>[ file]</p></td>
-<td><p>H5T_NATIVE_CHAR</p></td>
+<tr class="row-even"><td>REQUIRED ATTRIBUTE</td>
+<td>[ file]</td>
+<td>H5T_NATIVE_CHAR</td>
 </tr>
 </tbody>
 </table>
@@ -290,70 +288,70 @@ Constraints related to the node name are detailed in the <em>General CGNS SLL Ma
 <div class="section" id="the-data-type">
 <h4>The Data Type<a class="headerlink" href="#the-data-type" title="Permalink to this headline">¶</a></h4>
 <p>The Data Type is a 32-byte character field which specifies the type and precision of any data which is stored in the data field. Types provided by HDF5 are:</p>
-<table class="docutils align-default" id="id15">
+<table class="table table-bordered" id="id15">
 <caption><span class="caption-text"><strong>Data Types</strong></span><a class="headerlink" href="#id15" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 42%" />
-<col style="width: 20%" />
-<col style="width: 38%" />
+<col width="42%" />
+<col width="20%" />
+<col width="38%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Data Type</p></th>
-<th class="head"><p>Notation</p></th>
-<th class="head"><p>HDF5 Type</p></th>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Data Type</th>
+<th class="head">Notation</th>
+<th class="head">HDF5 Type</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>No Data</p></td>
-<td><p>MT</p></td>
-<td><ul class="simple">
+<tbody valign="top">
+<tr class="row-even"><td>No Data</td>
+<td>MT</td>
+<td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
 </tr>
-<tr class="row-odd"><td><p>Integer 32</p></td>
-<td><p>I4</p></td>
-<td><p>H5T_NATIVE_INT32</p></td>
+<tr class="row-odd"><td>Integer 32</td>
+<td>I4</td>
+<td>H5T_NATIVE_INT32</td>
 </tr>
-<tr class="row-even"><td><p>Integer 64</p></td>
-<td><p>I8</p></td>
-<td><p>H5T_NATIVE_INT64</p></td>
+<tr class="row-even"><td>Integer 64</td>
+<td>I8</td>
+<td>H5T_NATIVE_INT64</td>
 </tr>
-<tr class="row-odd"><td><p>Unsigned Integer 32</p></td>
-<td><p>U4</p></td>
-<td><p>H5T_NATIVE_UINT32</p></td>
+<tr class="row-odd"><td>Unsigned Integer 32</td>
+<td>U4</td>
+<td>H5T_NATIVE_UINT32</td>
 </tr>
-<tr class="row-even"><td><p>Unsigned Integer 64</p></td>
-<td><p>U8</p></td>
-<td><p>H5T_NATIVE_UINT64</p></td>
+<tr class="row-even"><td>Unsigned Integer 64</td>
+<td>U8</td>
+<td>H5T_NATIVE_UINT64</td>
 </tr>
-<tr class="row-odd"><td><p>Real 32</p></td>
-<td><p>R4</p></td>
-<td><p>H5T_NATIVE_FLOAT</p></td>
+<tr class="row-odd"><td>Real 32</td>
+<td>R4</td>
+<td>H5T_NATIVE_FLOAT</td>
 </tr>
-<tr class="row-even"><td><p>Real 64</p></td>
-<td><p>R8</p></td>
-<td><p>H5T_NATIVE_DOUBLE</p></td>
+<tr class="row-even"><td>Real 64</td>
+<td>R8</td>
+<td>H5T_NATIVE_DOUBLE</td>
 </tr>
-<tr class="row-odd"><td><p>Complex 64</p></td>
-<td><p>X4</p></td>
-<td><p>H5T_COMPOUND <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p></td>
+<tr class="row-odd"><td>Complex 64</td>
+<td>X4</td>
+<td>H5T_COMPOUND <a class="footnote-reference" href="#id3" id="id1">[1]</a></td>
 </tr>
-<tr class="row-even"><td><p>Complex 128</p></td>
-<td><p>X8</p></td>
-<td><p>H5T_COMPOUND <a class="footnote-reference brackets" href="#id3" id="id2">1</a></p></td>
+<tr class="row-even"><td>Complex 128</td>
+<td>X8</td>
+<td>H5T_COMPOUND <a class="footnote-reference" href="#id3" id="id2">[1]</a></td>
 </tr>
-<tr class="row-odd"><td><p>Character</p></td>
-<td><p>C1</p></td>
-<td><p>H5T_NATIVE_CHAR</p></td>
+<tr class="row-odd"><td>Character</td>
+<td>C1</td>
+<td>H5T_NATIVE_CHAR</td>
 </tr>
-<tr class="row-even"><td><p>Byte</p></td>
-<td><p>B1</p></td>
-<td><p>H5T_NATIVE_UCHAR</p></td>
+<tr class="row-even"><td>Byte</td>
+<td>B1</td>
+<td>H5T_NATIVE_UCHAR</td>
 </tr>
-<tr class="row-odd"><td><p>Link</p></td>
-<td><p>LK</p></td>
-<td><ul class="simple">
+<tr class="row-odd"><td>Link</td>
+<td>LK</td>
+<td><ul class="first last simple">
 <li></li>
 </ul>
 </td>
@@ -362,37 +360,38 @@ Constraints related to the node name are detailed in the <em>General CGNS SLL Ma
 </table>
 <p>There is no mapping to HDF5 MT and LK types, because there is no actual data space associated with the nodes. The type information itself is stored in the node as the strings “MT” and “LK”.</p>
 <div class="admonition note">
-<p class="admonition-title">Note</p>
-<dl class="footnote brackets">
-<dt class="label" id="id3"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id2">2</a>)</span></dt>
-<dd><p>The types X4 and X8 are not true types in HDF5. They are mapped to H5T_COMPOUND structures to combine the real and imaginary parts. This support is experimental.</p>
-</dd>
-</dl>
+<p class="first admonition-title">Note</p>
+<table class="last docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td><em>(<a class="fn-backref" href="#id1">1</a>, <a class="fn-backref" href="#id2">2</a>)</em> The types X4 and X8 are not true types in HDF5. They are mapped to H5T_COMPOUND structures to combine the real and imaginary parts. This support is experimental.</td></tr>
+</tbody>
+</table>
 </div>
 <p>The data storage format is translated as described below.</p>
-<table class="docutils align-default" id="id16">
+<table class="table table-bordered" id="id16">
 <caption><span class="caption-text"><strong>Native Formats</strong></span><a class="headerlink" href="#id16" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 49%" />
-<col style="width: 51%" />
+<col width="49%" />
+<col width="51%" />
 </colgroup>
-<thead>
-<tr class="row-odd"><th class="head"><p>Native Format</p></th>
-<th class="head"><p>HDF5 Type</p></th>
+<thead valign="bottom">
+<tr class="row-even"><th class="head">Native Format</th>
+<th class="head">HDF5 Type</th>
 </tr>
 </thead>
-<tbody>
-<tr class="row-even"><td><p>H5T_IEEE_F32BE</p></td>
-<td><p>IEEE_BIG_32</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td>H5T_IEEE_F32BE</td>
+<td>IEEE_BIG_32</td>
 </tr>
-<tr class="row-odd"><td><p>H5T_IEEE_F32LE</p></td>
-<td><p>IEEE_LITTLE_32</p></td>
+<tr class="row-even"><td>H5T_IEEE_F32LE</td>
+<td>IEEE_LITTLE_32</td>
 </tr>
-<tr class="row-even"><td><p>H5T_IEEE_F64BE</p></td>
-<td><p>IEEE_BIG_64</p></td>
+<tr class="row-odd"><td>H5T_IEEE_F64BE</td>
+<td>IEEE_BIG_64</td>
 </tr>
-<tr class="row-odd"><td><p>H5T_IEEE_F64LE</p></td>
-<td><p>IEEE_LITTLE_64</p></td>
+<tr class="row-even"><td>H5T_IEEE_F64LE</td>
+<td>IEEE_LITTLE_64</td>
 </tr>
 </tbody>
 </table>
@@ -539,8 +538,7 @@ Therefore, beyond the occurrence of a <code class="code sidskey docutils literal
 <p>Conversely, there is no proscription against the inclusion, anywhere within an HDF5 file containing a CGNS database, of nodes of any form whatsoever, provided only that their naming and labelling does not mimic CGNS conventions. Such “non-CGNS” nodes, and those below them in the HDF5 tree, are not regarded as part of the CGNS database. CGNS software will not detect the existence of non-CGNS nodes.</p>
 <p>We may therefore take the following as a definition of a CGNS database:</p>
 <blockquote>
-<div><p>A CGNS database is a subtree of an HDF5 file or files which is rooted at a node with label “<code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code>” and which conforms to the <a class="reference internal" href="SIDS/CGNS_SIDS.html#cgns-sids"><span class="std std-ref">SIDS data model</span></a> as implemented by the <a class="reference internal" href="CGNS_FMM.html#standardfmm"><span class="std std-ref">SIDS File Mapping</span></a>.</p>
-</div></blockquote>
+<div>A CGNS database is a subtree of an HDF5 file or files which is rooted at a node with label “<code class="code sidskey docutils literal notranslate"><span class="pre">CGNSBase_t</span></code>” and which conforms to the <a class="reference internal" href="SIDS/CGNS_SIDS.html#cgns-sids"><span class="std std-ref">SIDS data model</span></a> as implemented by the <a class="reference internal" href="CGNS_FMM.html#standardfmm"><span class="std std-ref">SIDS File Mapping</span></a>.</div></blockquote>
 </div>
 <div class="section" id="location-of-cgns-databases-within-hdf5-files">
 <h4>Location of CGNS Databases within HDF5 Files<a class="headerlink" href="#location-of-cgns-databases-within-hdf5-files" title="Permalink to this headline">¶</a></h4>
@@ -555,9 +553,9 @@ In this case, the structure of the HDF5 file into which the link is made is invi
 <h4>File Management<a class="headerlink" href="#file-management" title="Permalink to this headline">¶</a></h4>
 <p>Beyond <em>Open</em> and <em>Close</em> neither HDF5 nor CGNS provides any file management facilities. The user is responsible for ensuring that:</p>
 <ul class="simple">
-<li><p>The HDF5 file containing the root of the required database is available and its permissions are properly set at runtime.</p></li>
-<li><p>If links are made to other HDF5 files, including any not under the user’s direct control, these are also available at runtime.</p></li>
-<li><p>No file is opened for writing by more than one program at a time.</p></li>
+<li>The HDF5 file containing the root of the required database is available and its permissions are properly set at runtime.</li>
+<li>If links are made to other HDF5 files, including any not under the user’s direct control, these are also available at runtime.</li>
+<li>No file is opened for writing by more than one program at a time.</li>
 </ul>
 <p>It is possible, within CGNS, to protect files from inadvertent writing by opening them as “read only”.</p>
 </div>

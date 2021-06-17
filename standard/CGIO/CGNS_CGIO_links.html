@@ -4,7 +4,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <!-- Licensed under the Apache 2.0 License -->
   <link rel="stylesheet" type="text/css" href="../../_static/fonts/open-sans/stylesheet.css" />
@@ -15,16 +15,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <title>Link Management Routines &#8212; CGNS Official Web Site</title>
-    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/filemap.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/math_override.css" />
     <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script src="../../_static/language_data.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="shortcut icon" href="../../_static/CGNS_empty.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
@@ -114,204 +112,160 @@
 <span id="standardcgiolinks"></span><h1>Link Management Routines<a class="headerlink" href="#link-management-routines" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="cgio-is-link">
 <h2>cgio_is_link<a class="headerlink" href="#cgio-is-link" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_is_link">
-int <code class="sig-name descname">cgio_is_link</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>id</em>, int *<em>link_len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_is_link" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_is_link</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">link_len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_is_link" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_is_link_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_is_link_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">id</em>, <em class="sig-param">link_len</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_is_link_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Identifier for the open database file.</p></td>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Identifier for the open database file.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">link_len</span></code></p></td>
-<td><p>OUT: Total length of the link information (<code class="code docutils literal notranslate"><span class="pre">file_len</span> <span class="pre">+</span> <span class="pre">name_len</span></code>).</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">link_len</span></code></td>
+<td>OUT: Total length of the link information (<code class="code docutils literal notranslate"><span class="pre">file_len</span> <span class="pre">+</span> <span class="pre">name_len</span></code>).</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Determines if the node indentified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code> is a link or not. The function returns 0 if successfull, else an error code. If this node is a link, then the total length of the linked-to file and node information is returned in <code class="code docutils literal notranslate"><span class="pre">link_len</span></code>. If the node is not a link, <code class="code docutils literal notranslate"><span class="pre">link_len</span></code> will be 0.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Determines if the node indentified by <code class="code docutils literal notranslate"><span class="pre">id</span></code> in the database given by <code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code> is a link or not. The function returns 0 if successfull, else an error code. If this node is a link, then the total length of the linked-to file and node information is returned in <code class="code docutils literal notranslate"><span class="pre">link_len</span></code>. If the node is not a link, <code class="code docutils literal notranslate"><span class="pre">link_len</span></code> will be 0.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-link-size">
 <h2>cgio_link_size<a class="headerlink" href="#cgio-link-size" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_link_size">
-int <code class="sig-name descname">cgio_link_size</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>id</em>, int *<em>file_len</em>, int *<em>name_len</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_link_size" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_link_size</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">file_len</span></em>, <span class="pre">int</span> <span class="pre">*</span><em><span class="pre">name_len</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_link_size" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_link_size_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_link_size_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">id</em>, <em class="sig-param">file_len</em>, <em class="sig-param">name_len</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_link_size_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Identifier for the open database file.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Identifier for the open database file.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">file_len</span></code></p></td>
-<td><p>OUT: Length of the name of the linked-to file. This will be 0 if this is an internal link.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">file_len</span></code></td>
+<td>OUT: Length of the name of the linked-to file. This will be 0 if this is an internal link.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">name_len</span></code></p></td>
-<td><p>OUT: Length of the pathname of the linked-to node.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">name_len</span></code></td>
+<td>OUT: Length of the pathname of the linked-to node.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the size of the linked-to file name in file_len and the node pathname length in name_len for the node identified by id in the database given by cgio_num. The function returns 0 for success, else an error code. If this is an internal link (link to a node in the same database), then file_len will be returned as 0.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the size of the linked-to file name in file_len and the node pathname length in name_len for the node identified by id in the database given by cgio_num. The function returns 0 for success, else an error code. If this is an internal link (link to a node in the same database), then file_len will be returned as 0.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-create-link">
 <h2>cgio_create_link<a class="headerlink" href="#cgio-create-link" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_create_link">
-int <code class="sig-name descname">cgio_create_link</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>pid</em>, <em class="property">const</em> char *<em>name</em>, <em class="property">const</em> char *<em>filename</em>, <em class="property">const</em> char *<em>name_in_file</em>, double *<em>id</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_create_link" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_create_link</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">pid</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">filename</span></em>, <em class="property"><span class="pre">const</span></em> <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name_in_file</span></em>, <span class="pre">double</span> <span class="pre">*</span><em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_create_link" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_create_link_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_create_link_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">pid</em>, <em class="sig-param">name</em>, <em class="sig-param">filename</em>, <em class="sig-param">name_in_file</em>, <em class="sig-param">id</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_create_link_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Identifier for the open database file.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Identifier for the open database file.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">pid</span></code></p></td>
-<td><p>IN: Parent node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">pid</span></code></td>
+<td>IN: Parent node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">name</span></code></p></td>
-<td><p>IN: Name of the link node.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">name</span></code></td>
+<td>IN: Name of the link node.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">filename</span></code></p></td>
-<td><p>IN: Name of the linked-to file. If creating an internal link, then this should be NULL or an empty string. When reading an internal link, this will be returned as an empty string.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">filename</span></code></td>
+<td>IN: Name of the linked-to file. If creating an internal link, then this should be NULL or an empty string. When reading an internal link, this will be returned as an empty string.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">name_in_file</span></code></p></td>
-<td><p>IN: Pathname of the linked-to node.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">name_in_file</span></code></td>
+<td>IN: Pathname of the linked-to node.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>OUT: Node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>OUT: Node identifier.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>- w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>- w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Creates a link node as a child of the parent node identified by pid in the database given by cgio_num. The name of the node is given by name, the name of the linked-to file by filename, and the pathname to the linked-to node by name_in_file. If this is an internal link (link to a node in the same database), then filename should be defined as NULL or an empty string. The function returns 0 and the indentifier of the new node in id on success, otherwise an error code is returned.</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Creates a link node as a child of the parent node identified by pid in the database given by cgio_num. The name of the node is given by name, the name of the linked-to file by filename, and the pathname to the linked-to node by name_in_file. If this is an internal link (link to a node in the same database), then filename should be defined as NULL or an empty string. The function returns 0 and the indentifier of the new node in id on success, otherwise an error code is returned.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="cgio-get-link">
 <h2>cgio_get_link<a class="headerlink" href="#cgio-get-link" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list">
-<dt class="field-odd">C Signature</dt>
-<dd class="field-odd"><dl class="c function">
+<dl class="docutils field-list" frame="void" rules="none">
+<dt class="field-name">C Signature</dt><dd class="field-body"><dl class="c first function">
 <dt id="c.cgio_get_link">
-int <code class="sig-name descname">cgio_get_link</code><span class="sig-paren">(</span>int <em>cgio_num</em>, double <em>id</em>, char *<em>filename</em>, char *<em>name_in_file</em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_get_link" title="Permalink to this definition">¶</a><br /></dt>
+<span class="pre">int</span> <code class="descname"><span class="pre">cgio_get_link</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">cgio_num</span></em>, <span class="pre">double</span> <em><span class="pre">id</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">filename</span></em>, <span class="pre">char</span> <span class="pre">*</span><em><span class="pre">name_in_file</span></em><span class="sig-paren">)</span><a class="headerlink" href="#c.cgio_get_link" title="Permalink to this definition">¶</a><br /></dt>
 <dd></dd></dl>
 
 </dd>
-<dt class="field-even">Fortran Signature</dt>
-<dd class="field-even"><dl class="subroutine">
-<dt id="f/_/cgio_get_link_f">
-<em class="property">subroutine  </em><code class="sig-name descname">cgio_get_link_f</code><span class="sig-paren">(</span><em class="sig-param">cgio_num</em>, <em class="sig-param">id</em>, <em class="sig-param">filename</em>, <em class="sig-param">name_in_file</em>, <em class="sig-param">ier</em><span class="sig-paren">)</span><a class="headerlink" href="#f/_/cgio_get_link_f" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-</dd>
-<dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><table class="colwidths-given docutils align-default">
+<dt class="field-name">Fortran Signature</dt><dd class="field-body"></dd>
+<dt class="field-name">Parameters</dt><dd class="field-body"><table class="colwidths-given first table table-bordered">
 <colgroup>
-<col style="width: 15%" />
-<col style="width: 85%" />
+<col width="15%" />
+<col width="85%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></p></td>
-<td><p>IN: Identifier for the open database file.</p></td>
+<tbody valign="top">
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">cgio_num</span></code></td>
+<td>IN: Identifier for the open database file.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">id</span></code></p></td>
-<td><p>IN: Node identifier.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">id</span></code></td>
+<td>IN: Node identifier.</td>
 </tr>
-<tr class="row-odd"><td><p><code class="code docutils literal notranslate"><span class="pre">filename</span></code></p></td>
-<td><p>OUT: Name of the linked-to file. If creating an internal link, then this should be NULL or an empty string. When reading an internal link, this will be returned as an empty string.</p></td>
+<tr class="row-even"><td><code class="code docutils literal notranslate"><span class="pre">filename</span></code></td>
+<td>OUT: Name of the linked-to file. If creating an internal link, then this should be NULL or an empty string. When reading an internal link, this will be returned as an empty string.</td>
 </tr>
-<tr class="row-even"><td><p><code class="code docutils literal notranslate"><span class="pre">name_in_file</span></code></p></td>
-<td><p>OUT: Pathname of the linked-to node.</p></td>
+<tr class="row-odd"><td><code class="code docutils literal notranslate"><span class="pre">name_in_file</span></code></td>
+<td>OUT: Pathname of the linked-to node.</td>
 </tr>
 </tbody>
 </table>
 </dd>
-<dt class="field-even">Returns</dt>
-<dd class="field-even"><p><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
+<dt class="field-name">Returns</dt><dd class="field-body"><p class="first"><code class="code docutils literal notranslate"><span class="pre">ier</span></code> - Error status</p>
 </dd>
-<dt class="field-odd">Modes</dt>
-<dd class="field-odd"><p><cite>r w m</cite></p>
+<dt class="field-name">Modes</dt><dd class="field-body"><p class="first"><cite>r w m</cite></p>
 </dd>
-<dt class="field-even">Description</dt>
-<dd class="field-even"><p>Gets the link information for the node identified by id in the database given by cgio_num. If successfull, the function returns 0 and the linked-to file name in filename and the node pathname in name_in_file. These strings are ‘0’-terminated, and thus should be dimensioned at least (file_len + 1) and (name_len + 1), respectively If this is an internal link (link to a node in the same database), then filename will be an empty string. The maximum length for a file name is given by CGIO_MAX_FILE_LENGTH (1024) and for a link pathname by CGIO_MAX_LINK_LENGTH (4096).</p>
+<dt class="field-name">Description</dt><dd class="field-body"><p class="first last">Gets the link information for the node identified by id in the database given by cgio_num. If successfull, the function returns 0 and the linked-to file name in filename and the node pathname in name_in_file. These strings are ‘0’-terminated, and thus should be dimensioned at least (file_len + 1) and (name_len + 1), respectively If this is an internal link (link to a node in the same database), then filename will be an empty string. The maximum length for a file name is given by CGIO_MAX_FILE_LENGTH (1024) and for a link pathname by CGIO_MAX_LINK_LENGTH (4096).</p>
 </dd>
 </dl>
 </div>
